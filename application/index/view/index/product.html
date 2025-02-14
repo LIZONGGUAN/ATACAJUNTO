@@ -93,13 +93,13 @@
     <div class="container">
         <div class="product-detail">
             <div class="product-image">
-                <p>图片路径：{$m.news_slt}</p>
-                <img src="{$m.news_slt}" alt="商品图片">
+               <p>图片路径测试：<?php var_dump($m); ?></p>
+                <img src="<?php echo isset($m['news_slt']) ? '/' . $m['news_slt'] : '/static/page/image/default.jpg'; ?>" alt="商品图片">
             </div>
             <div class="product-info">
-                <h2>{$m.newsclass}</h2>
-                <p>{$m.news_tit}</p>
-                <div class="product-price">￥{$m.jiage}</div>
+                <h2><?php echo isset($m['newsclass']) ? $m['newsclass'] : '未设置分类'; ?></h2>
+                <p><?php echo isset($m['news_tit']) ? $m['news_tit'] : '无描述信息'; ?></p>
+                <div class="product-price">￥<?php echo isset($m['jiage']) ? $m['jiage'] : '0.00'; ?></div>
                 <button class="product-button">加入购物车</button>
             </div>
         </div>
