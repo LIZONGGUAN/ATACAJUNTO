@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>{$seotitle}</title>
+		<meta name="keywords" content="{$seoseokey}" />
+		<meta name="description" content="{$seoseodsc}" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta name="format-detection" content="telephone=no" />
+		
+		<link href="/static/page/style.css" rel="stylesheet">
+		<link href="/static/page/swiper.min.css" rel="stylesheet">
+		<link href="/static/page/iconfont.css" rel="stylesheet">
+		<script src="/static/page/jquery-1.8.2.min.js"></script>
+		<script src="/static/page/swiper.min.js"></script>
+		
+	</head>
+	<body>
+		<div class="main">
+		
+			<div class="header">
+				<a href="/">
+					<span class="iconfont icon-zhuye"></span>
+				</a>
+				<p>中国迪士尼度假区</p>
+			</div>
+			<div class="header-placeholder"></div>	
+			
+					    <script src="__ROOT__/static/page/layer.js"></script>
+			<link rel="stylesheet" href="__ROOT__/static/page/layer.css">
+
+	<link href="/static/page/calendar-pro.css" rel="stylesheet">
+	<script src="/static/page/calendar-pro.js"></script>
+
+	<style rel="stylesheet">
+		body, .main {
+			background-color: #c1c6ce;
+		}
+		
+		.date-s.active {
+		    /* border: 1px solid #4b9de9; */
+		    background: #ee8437;
+		    color: #fff !important;
+		    border: 1px solid #ee8437;
+		}
+		.date-s.active .date, .date-s.active .price {
+		    color: #fff;
+		}
+	</style>
+	
+	<div action="#" method='post' >
+		<div class="ibox">
+			<div class="ibox-head">
+				<h4>{$news_tit}</h4>
+			</div>
+			<div class="ibox-body">
+				<div class="fl">
+					<p>游玩日期</p>
+				</div>
+				<div class="fr">
+					<div class="date-s tdat">
+						<p class="date"></p>
+						<p class="price">￥</p>
+					</div>
+					<div class="date-s tomorrow">
+						<p class="date"></p>
+						<p class="price">￥</p>
+					</div>
+					<div class="date-s more">
+						<p class="date">更多日期</p>
+						<p class="price">选择日期</p>
+					</div>
+				</div>
+				
+				<input type="hidden" name="order[travel_date]" id="datetime" class="travel_date">
+				<input type='hidden' name='order[product_id]' value="10000002">
+				<input type="hidden" name="order[order_payway]" value="alipay"/>
+			</div>
+			
+			<div class="date-box">
+				<div class="date-head">
+					<span class="iconfont icon-left-arrow"></span>
+					<h4>请选择日期</h4>
+				</div>
+				<div class="calendar-box"></div>
+			</div>
+		</div>
+		
+		<div class="ibox">
+			<div class="ibox-body">
+				{volist name="proname" id="x"}
+								<div class="ticket-t">
+					<div class="fl">
+						<h4>{$x.name}</h4>
+						<p>
+							<span class="tag1">
+								<span class="iconfont icon-jinggao"></span>
+								不可退
+							</span>
+							<span class="tag2">
+								<span class="iconfont icon-correct_circle"></span>
+								入园保障
+							</span>
+						</p>
+						<p>最多可购5份</p>
+					</div>
+					<div class="fr">
+						<div class="price">
+							<span class="price-box pid-{$x.id}">
+								<i class="unit">￥</i>
+								<i><b>0</b></i>
+							</span>
+						</div>
+						<div class="num-box">
+							<div class="num-group">
+								<div class="reduce">
+									<span class="iconfont icon-subtract"></span>
+								</div>
+								<div class="input">
+									<input type="number" max="5" min="0" value="0" name="order[pt][0][buy_num]" class="buy-num" readonly="true"/>
+								</div>
+								<div class="add">
+									<span class="iconfont icon-jiajian02"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<input type="hidden" class="ptid" name="order[pt][0][pt_id]" value="{$pid0}">
+				</div>   <!-- ticket-t -->
+				{/volist}	
+			</div>
+		</div>
+		
+		<div class="ibox" style="margin-bottom: 10px;">
+			<div class="ibox-head">
+				<h4>
+					联系信息
+					<span>需填写<i>1个</i>联系人</span>
+				</h4>
+			</div>
+			<div class="ibox-body form">
+				<div class="input-group">
+					<label>姓名</label>
+					<input type="text" name="order[user_name]" id="user_name"  placeholder="请输入信息" value="" />
+				</div>
+				
+				<div class="input-group">
+					<label>身份证</label>
+					<input type="text" name="order[user_id]" id="user_id" value="" placeholder="请输入信息"/>
+				</div>
+				
+				<div class="input-group">
+					<label>手机号</label>
+					<input type="text" name="order[user_phone]" id="user_phone" value="" placeholder="请输入信息"/>
+				</div>
+				
+				<div class="input-group">
+					<label>备注</label>
+					<input type="text" name="order[order_text]"  placeholder="请输入信息"/>
+				</div>
+			</div>
+		</div>
+		
+		<div class="ibox" style="margin-bottom: 60px; ">
+		
+					<div class="ibox-head">
+						<h4>支付方式</h4>
+					</div>
+					<div class="ibox-body form">
+					
+				<!--	 <div class="input-group">
+							<input type="radio" name="pay"  id="wxpay"   checked="checked" style="height:70%; margin-top:8px;" value="6" />
+							<label  ><img src="/images/wx.jpg">微信支付</label></div>-->
+					
+					
+						<div class="input-group">
+							<input type="radio" checked="checked" name="pay" id="zfbpay" style="height:70%; margin-top:8px;" value="2">
+							<label><img src="/static/page/img/zfb.jpg">支付宝支付</label></div>
+							
+		                   
+							</div>
+		
+				</div>
+		
+		
+		<div class="pay-foot">
+			<div class="fl">
+				<span class="price-box">
+					<i class="unit">总额：￥</i>
+					<i><b class="pricesum">0</b></i>
+				</span>
+			</div>
+			<div class="fr">
+				<button class="btn-pay" type="submit">去支付</button>
+			</div>
+		</div>
+
+		<input type="hidden" class="serialize_orderinfo" name="serialize_orderinfo">
+		
+	</div>
+	
+	
+	<div class="mask"></div>
+	
+	
+	<script type="text/javascript">
+		var pid = "{$Id}";
+		var pricesum='';
+		var orderid=Math.floor(Math.random()*1000000000);
+	
+		Date.prototype.Format = function(fmt)   
+		{ //author: meizz   
+		  var o = {   
+			"M+" : this.getMonth()+1,                 //月份   
+			"d+" : this.getDate(),                    //日   
+			"h+" : this.getHours(),                   //小时   
+			"m+" : this.getMinutes(),                 //分   
+			"s+" : this.getSeconds(),                 //秒   
+			"q+" : Math.floor((this.getMonth()+3)/3), //季度   
+			"S"  : this.getMilliseconds()             //毫秒   
+		  };   
+		  if(/(y+)/.test(fmt))   
+			fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));   
+		  for(var k in o)   
+			if(new RegExp("("+ k +")").test(fmt))   
+		  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));   
+		  return fmt;   
+		} 
+	
+		var today = new Date();
+		var tomorrow = new Date(new Date(today).setDate(today.getDate()+1));
+		var tdat = new Date();
+		
+		$(".tomorrow").attr("date", tomorrow.Format("yyyy-MM-dd"));
+		$(".tdat").attr("date", today.Format("yyyy-MM-dd"));
+		$(".tomorrow .date").html("明天" + tomorrow.Format("MM-dd"));
+		$(".tdat .date").html("今天" + today.Format("MM-dd"));
+	
+		
+		function dateSelect(e) {
+			var data = $('.calendar-box').calendarGetActive();
+			console.log(data);
+			
+			$(".mask").fadeOut();
+			$(".date-box").slideUp();
+			
+			$(".date-s").removeClass("active");
+			$(".date-s.more").addClass("active");
+			$(".travel_date").val(new Date(data.date.replace(/-/g, "/")).Format("yyyy-MM-dd"));
+			
+			$(".date-s.more .date").html(new Date(data.date.replace(/-/g, "/")).Format("MM-dd"));
+			$(".date-s.more .price").html("￥" + data.money);
+			
+			getPrice(pid, new Date(data.date.replace(/-/g, "/")).Format("yyyy-MM-dd"));
+			
+			calc();
+		}
+		
+		$(".mask, .date-head .iconfont").click(function() {
+			$(".mask").fadeOut();
+			$(".date-box").slideUp();
+		});
+		$(".date-s.more").click(function() {
+			$(".mask").show();
+			$(".date-box").slideDown();
+		});
+		
+		$(".date-s.tomorrow, .date-s.tdat").click(function() {
+			$(".date-s").removeClass("active");
+			$(this).addClass("active");
+			$(".date-s.more .date").html("更多日期");
+			
+			$(".travel_date").val($(this).attr("date"));
+			
+			getPrice(pid, $(this).attr("date"));
+			calc();
+		});
+		
+		$(function(){
+			
+			var tcarr=new Array();
+			var buyarr=new Array();
+		
+			$(".btn-pay").click(function(e){
+				
+			
+		
+				
+				var travel_date = $(".travel_date").val();
+			
+				if (travel_date == null || travel_date.length<2) {
+					layer.msg("请选择出行日期");
+					return false;
+				}
+				
+				var user_name = $("#user_name").val();
+				if (user_name == null || user_name.length<2) {
+					layer.msg("请输入姓名");
+					return false;
+				}
+				
+				var user_phone = $("#user_phone").val();
+				if (user_phone ==null || !(/^1\d{10}$/.test(user_phone))) {
+					layer.msg("请输入正确的手机号");
+					return false;
+				}
+				
+				var user_id = $("#user_id").val();
+				if (user_id == null || user_id.length<15) {
+					layer.msg("请输入正确身份证号");
+					return false;
+				}
+				
+				var buy_nums = $("input.buy-num");
+				var flag = true;
+				var buyNumFlag = false;
+				for (var i = 0; i < buy_nums.length; i++) {
+				
+					var input_name = $(buy_nums[i]).attr("name");
+				
+					var num = parseInt($(buy_nums[i]).val());
+					if (num > 0) {
+						flag = false;
+					}
+				}
+				
+				if (flag) {
+					layer.msg("请至少选择一张门票");
+					return false;
+				}
+				$(".serialize_orderinfo").val($("form").serialize());
+				var order_text=$('input[name="order[order_text]"]').val();
+				var pricesum=$(".pricesum").text();
+				
+				$(".ticket-t").each(function(){
+						
+						var tcname=$(this).find('h4').text();
+						
+						
+						var buynum=$(this).find(".buy-num").val();
+						tcarr.push(tcname);
+						buyarr.push(buynum);
+						
+					
+						
+					})
+					
+					
+					arr={tcarr,buyarr};
+				console.log(arr);
+			  
+				
+				$.ajax({
+					type:'POST', // 规定请求的类型（GET 或 POST）
+					url:'/index.php/index/requ/alipay', // 请求的url地址
+					cache:true,// 否在缓存中读取数据的读取
+					dataType:'json', //预期的服务器响应的数据类型 
+					data:{
+						 travel_date:travel_date,
+						 user_name:user_name,
+						 user_phone:user_phone,
+						 user_id:user_id,
+						  pricesum:pricesum,
+						  order_text:order_text,
+						  orderid:orderid,
+						   arr:arr,
+						   name:'{$news_tit}'
+						 
+						 
+					},//规定要发送到服务器的数据
+					
+					success: function(res){ // 当请求成功时运行的函数
+						 console.log(res) ; 
+						// news_slt=null;
+						if(res.code==1){
+							window.location.href="/index.php/index/alipay/runpay?pay_type=1&price="+pricesum+"&orderid="+orderid;
+							
+							// layer.msg('支付成功！', {
+							//                 icon:1,
+							//                 shade: 0.05,
+							//                 time: 800
+							//             },function(){
+							// 				window.location.href="/";
+							// 			});
+						}
+						
+						
+						
+						
+						
+					},
+					error:function(result){ //失败的函数
+					layer.msg('操作失败！', {
+					                icon:2,
+					                shade: 0.05,
+					                time: 800
+					            });
+							
+							
+							
+							
+					}
+					
+				})//ajax-end
+				
+			})
+			
+			
+		})
+		
+		
+	
+		
+		getAllPrice(pid);
+		function getAllPrice(id) {
+			$.ajax({
+				url: "/index.php/index/index/allprice",
+				type: "POST",
+				data:{id:id},
+				dataType:'json',
+				success: function(data) {
+				
+					if (data.success) {
+						var calendar = $('.calendar-box').calendar({
+							ele : '.calendar-box', //依附
+							title : '',
+							data : data.data[0].product_price
+						});
+						
+						for(var i=0 ; i<data.data[0].product_price.length ; i++) {
+							var ndp = data.data[0].product_price[i];
+							
+							if (ndp.date == new Date(tomorrow).Format("yyyy-MM-dd")){
+								$(".tomorrow .price").html("￥" + ndp.data);
+							} else if (ndp.date == new Date(tdat).Format("yyyy-MM-dd")) {
+								$(".tdat .price").html("￥" + ndp.data);
+							}
+						}
+					} else {
+						
+					}
+				},
+				error: function() {
+					
+				}
+			});
+		}
+		
+		getPrice(pid, today.Format("yyyy-MM-dd"));
+		function getPrice(id, date) {
+			$.ajax({
+				url: "/index.php/index/index/price",
+				type: "POST",
+				data:{id:id, date: date},
+				dataType:'json',
+				success: function(data) {
+					if(data.success) {
+						for (var i=0 ; i<data.data.length ; i++) {
+							var temp = data.data[i];
+							$(".pid-"+temp.id).find("i b").html(Math.ceil(temp.product_price));
+						}
+					}
+					calc();
+				},
+				error: function() {
+					
+				}
+			});
+		}
+		
+		function calc() {
+			window.setTimeout(function() {
+				var nums = $(".num-group .buy-num");
+				var total = 0;
+				
+				for (var i=0 ; i<nums.length ; i++) {
+					var input = $(nums[i]);
+					
+					var num = input.val();
+					var price = parseInt(input.parents(".fr").find(".price i b").text());
+					
+					total += num * price;
+				}
+				
+				$(".pay-foot .price-box i b").html(total);
+			}, 100)
+		}
+	</script>
+
+
+
+		</div>
+	<!-- 	<script src="/static/page/public.js"></script> -->
+	
+	<script type="text/javascript">
+		$(".ticket-info .info").click(function() {
+			var ticket = $(this).parent();
+			if (ticket.hasClass("active")) {
+				ticket.removeClass("active");
+			} else {
+				ticket.addClass("active");
+			}
+		});
+		
+		$(".ticket-head .title, .hideinfo .p3, .item .description .head .iconfont").click(function() {
+			var item = $(this).parents(".item");
+			
+			if(item.hasClass("active")) {
+				item.removeClass("active");
+			} else {
+				item.addClass("active");
+			}
+			
+		});
+		
+		$(".num-group .add").click(function() {
+			var input = $(this).parents(".num-group").find("input");
+			
+			var num = parseInt(input.val())+1;
+			
+			if (num>=0 && num<=5) {
+				input.val(num);
+			}
+			
+			calc();
+		});
+		$(".num-group .reduce").click(function() {
+			var input = $(this).parents(".num-group").find("input");
+			
+			var num = parseInt(input.val())-1;
+			
+			if (num>=0 && num<=5) {
+				input.val(num);
+			}
+			
+			calc();
+		});
+	</script>
+	</body>
+</html>

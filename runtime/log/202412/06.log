@@ -1,0 +1,2873 @@
+---------------------------------------------------------------
+[ 2024-12-06T00:39:41+08:00 ] 121.4.105.222 GET atacabusca.shop/
+[运行时间：0.032870s] [吞吐率：30.42req/s] [内存消耗：2,945.22kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip',
+  'referer' => 'http://atacabusca.shop',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 10; LIO-AN00 Build/HUAWEILIO-AN00; wv) MicroMessenger Weixin QQ AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.62 XWEB/2692 MMWEBSDK/200901 Mobile Safari/537.36',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000271s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.009112s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '121.4.105.222' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000317s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000156s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '121.4.105.222' [ RunTime:0.003320s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('121.4.105.222' , 2 , '2024-12' , '访客-浏览网页' , '2024-12-06 00:39:41' , 2 , '普通网友') [ RunTime:0.000212s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '121.4.105.222'  AND `ucookie` IS NULL [ RunTime:0.003107s ]
+---------------------------------------------------------------
+[ 2024-12-06T02:03:34+08:00 ] 170.106.84.136 GET atacabusca.shop/
+[运行时间：0.032487s] [吞吐率：30.78req/s] [内存消耗：2,949.94kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://atacabusca.shop',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'cache-control' => 'no-cache',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000263s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.009027s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '170.106.84.136' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000303s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000159s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '170.106.84.136' [ RunTime:0.003368s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('170.106.84.136' , 3 , '2024-12' , '访客-浏览网页' , '2024-12-06 02:03:34' , 5 , '普通网友') [ RunTime:0.000213s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '170.106.84.136'  AND `ucookie` IS NULL [ RunTime:0.003082s ]
+---------------------------------------------------------------
+[ 2024-12-06T03:39:05+08:00 ] 43.153.122.30 GET www.atacabusca.shop/
+[运行时间：0.094248s] [吞吐率：10.61req/s] [内存消耗：2,947.84kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.atacabusca.shop',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'cache-control' => 'no-cache',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1',
+  'host' => 'www.atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002140s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.012836s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '43.153.122.30' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.001593s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000194s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '43.153.122.30'  AND `ucookie` IS NULL [ RunTime:0.011475s ]
+---------------------------------------------------------------
+[ 2024-12-06T03:44:17+08:00 ] 52.167.144.20 GET atacabusca.shop/
+[运行时间：0.061478s] [吞吐率：16.27req/s] [内存消耗：2,944.98kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'from' => 'bingbot(at)microsoft.com',
+  'user-agent' => 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000287s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.008535s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '52.167.144.20' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.030251s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000139s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '52.167.144.20' [ RunTime:0.003142s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('52.167.144.20' , 1 , '2024-12' , '访客-浏览网页' , '2024-12-06 03:44:17' , 1 , '普通网友') [ RunTime:0.000236s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '52.167.144.20'  AND `ucookie` IS NULL [ RunTime:0.003032s ]
+---------------------------------------------------------------
+[ 2024-12-06T04:23:39+08:00 ] 104.166.80.130 GET atacabusca.shop/
+[运行时间：0.052675s] [吞吐率：18.98req/s] [内存消耗：2,947.38kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'accept-language' => 'en-US,en;q=0.5',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux i686; rv:109.0) Gecko/20100101 Firefox/120.0',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000261s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.009120s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '104.166.80.130' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.020020s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000197s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '104.166.80.130' [ RunTime:0.003314s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('104.166.80.130' , 1 , '2024-12' , '访客-浏览网页' , '2024-12-06 04:23:39' , 1 , '普通网友') [ RunTime:0.000209s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '104.166.80.130'  AND `ucookie` IS NULL [ RunTime:0.003027s ]
+---------------------------------------------------------------
+[ 2024-12-06T05:10:44+08:00 ] 43.163.3.58 GET www.atacabusca.shop/
+[运行时间：0.051922s] [吞吐率：19.26req/s] [内存消耗：2,949.97kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.atacabusca.shop',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'cache-control' => 'no-cache',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1',
+  'host' => 'www.atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000280s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.009104s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '43.163.3.58' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.019665s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000197s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '43.163.3.58' [ RunTime:0.003152s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('43.163.3.58' , 1 , '2024-12' , '访客-浏览网页' , '2024-12-06 05:10:44' , 1 , '普通网友') [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '43.163.3.58'  AND `ucookie` IS NULL [ RunTime:0.003035s ]
+---------------------------------------------------------------
+[ 2024-12-06T05:51:04+08:00 ] 193.56.113.52 GET atacabusca.shop//wp-includes/ID3/license.txt
+[运行时间：0.012164s] [吞吐率：82.21req/s] [内存消耗：1,338.08kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'wp-includes',
+    1 => 'ID3',
+    2 => 'license.txt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T05:51:04+08:00 ] 193.56.113.52 GET atacabusca.shop//feed/
+[运行时间：0.009130s] [吞吐率：109.53req/s] [内存消耗：1,337.87kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'feed',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T05:51:05+08:00 ] 193.56.113.52 GET atacabusca.shop//blog/wp-includes/wlwmanifest.xml
+[运行时间：0.009194s] [吞吐率：108.77req/s] [内存消耗：1,338.15kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T05:51:06+08:00 ] 193.56.113.52 GET atacabusca.shop//web/wp-includes/wlwmanifest.xml
+[运行时间：0.009169s] [吞吐率：109.06req/s] [内存消耗：1,338.14kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'web',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T05:51:07+08:00 ] 193.56.113.52 GET atacabusca.shop//wordpress/wp-includes/wlwmanifest.xml
+[运行时间：0.009160s] [吞吐率：109.17req/s] [内存消耗：1,338.19kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'wordpress',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T05:51:07+08:00 ] 193.56.113.52 GET atacabusca.shop//wp/wp-includes/wlwmanifest.xml
+[运行时间：0.009213s] [吞吐率：108.54req/s] [内存消耗：1,338.14kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'wp',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T05:51:08+08:00 ] 193.56.113.52 GET atacabusca.shop//2020/wp-includes/wlwmanifest.xml
+[运行时间：0.009258s] [吞吐率：108.01req/s] [内存消耗：1,338.15kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '2020',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T05:51:08+08:00 ] 193.56.113.52 GET atacabusca.shop//2019/wp-includes/wlwmanifest.xml
+[运行时间：0.009124s] [吞吐率：109.60req/s] [内存消耗：1,338.15kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '2019',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T05:51:09+08:00 ] 193.56.113.52 GET atacabusca.shop//2021/wp-includes/wlwmanifest.xml
+[运行时间：0.009153s] [吞吐率：109.26req/s] [内存消耗：1,338.15kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '2021',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T05:51:09+08:00 ] 193.56.113.52 GET atacabusca.shop//shop/wp-includes/wlwmanifest.xml
+[运行时间：0.009210s] [吞吐率：108.58req/s] [内存消耗：1,338.15kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'shop',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T05:51:10+08:00 ] 193.56.113.52 GET atacabusca.shop//wp1/wp-includes/wlwmanifest.xml
+[运行时间：0.009128s] [吞吐率：109.55req/s] [内存消耗：1,338.14kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'wp1',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T05:51:10+08:00 ] 193.56.113.52 GET atacabusca.shop//test/wp-includes/wlwmanifest.xml
+[运行时间：0.009136s] [吞吐率：109.46req/s] [内存消耗：1,338.15kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'test',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T05:51:11+08:00 ] 193.56.113.52 GET atacabusca.shop//site/wp-includes/wlwmanifest.xml
+[运行时间：0.009111s] [吞吐率：109.76req/s] [内存消耗：1,338.15kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'site',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T05:51:11+08:00 ] 193.56.113.52 GET atacabusca.shop//cms/wp-includes/wlwmanifest.xml
+[运行时间：0.009145s] [吞吐率：109.35req/s] [内存消耗：1,338.14kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'cms',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T06:55:27+08:00 ] 132.255.133.85 GET atacabusca.shop/
+[运行时间：0.052295s] [吞吐率：19.12req/s] [内存消耗：2,944.08kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Apache-HttpClient/5.1.4 (Java/11.0.18)',
+  'connection' => 'keep-alive',
+  'host' => 'atacabusca.shop',
+  'accept-encoding' => 'gzip, x-gzip, deflate',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000291s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.009186s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '132.255.133.85' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.019825s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000211s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '132.255.133.85' [ RunTime:0.003298s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('132.255.133.85' , 1 , '2024-12' , '访客-浏览网页' , '2024-12-06 06:55:27' , 1 , '普通网友') [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '132.255.133.85'  AND `ucookie` IS NULL [ RunTime:0.003055s ]
+---------------------------------------------------------------
+[ 2024-12-06T06:55:32+08:00 ] 38.154.198.118 GET atacabusca.shop/
+[运行时间：0.073268s] [吞吐率：13.65req/s] [内存消耗：2,944.61kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'host' => 'atacabusca.shop',
+  'accept-encoding' => 'gzip, x-gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000846s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.010872s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '38.154.198.118' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.029593s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000270s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '38.154.198.118' [ RunTime:0.004622s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('38.154.198.118' , 1 , '2024-12' , '访客-浏览网页' , '2024-12-06 06:55:31' , 1 , '普通网友') [ RunTime:0.000229s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '38.154.198.118'  AND `ucookie` IS NULL [ RunTime:0.004025s ]
+---------------------------------------------------------------
+[ 2024-12-06T07:07:03+08:00 ] 157.55.39.55 GET www.atacabusca.shop/sitemaps.xml
+[运行时间：0.009272s] [吞吐率：107.85req/s] [内存消耗：1,335.16kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'sitemaps.xml',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'from' => 'bingbot(at)microsoft.com',
+  'accept-encoding' => 'gzip, deflate, br',
+  'user-agent' => 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36',
+  'accept' => '*/*',
+  'host' => 'www.atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T07:07:03+08:00 ] 157.55.39.55 GET www.atacabusca.shop/sitemap.xml.gz
+[运行时间：0.009299s] [吞吐率：107.54req/s] [内存消耗：1,335.21kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'sitemap.xml.gz',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'from' => 'bingbot(at)microsoft.com',
+  'accept-encoding' => 'gzip, deflate, br',
+  'user-agent' => 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36',
+  'host' => 'www.atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T07:07:03+08:00 ] 157.55.39.55 GET www.atacabusca.shop/sitemap.txt
+[运行时间：0.009290s] [吞吐率：107.64req/s] [内存消耗：1,335.16kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'sitemap.txt',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'from' => 'bingbot(at)microsoft.com',
+  'host' => 'www.atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T07:07:04+08:00 ] 157.55.39.55 GET www.atacabusca.shop/sitemap.xml
+[运行时间：0.009237s] [吞吐率：108.26req/s] [内存消耗：1,335.16kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'sitemap.xml',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'from' => 'bingbot(at)microsoft.com',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'host' => 'www.atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T07:07:04+08:00 ] 157.55.39.55 GET www.atacabusca.shop/atom.xml
+[运行时间：0.013737s] [吞吐率：72.80req/s] [内存消耗：1,335.16kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'atom.xml',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36',
+  'accept' => '*/*',
+  'from' => 'bingbot(at)microsoft.com',
+  'accept-encoding' => 'gzip, deflate, br',
+  'host' => 'www.atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T07:07:06+08:00 ] 52.167.144.198 GET atacabusca.shop/sitemap_index.xml
+[运行时间：0.009373s] [吞吐率：106.69req/s] [内存消耗：1,335.21kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'sitemap_index.xml',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'user-agent' => 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36',
+  'from' => 'bingbot(at)microsoft.com',
+  'accept' => '*/*',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T07:07:07+08:00 ] 52.167.144.204 GET www.atacabusca.shop/sitemap_index.xml
+[运行时间：0.009180s] [吞吐率：108.93req/s] [内存消耗：1,335.23kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'sitemap_index.xml',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36',
+  'from' => 'bingbot(at)microsoft.com',
+  'host' => 'www.atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T07:07:13+08:00 ] 157.55.39.201 GET atacabusca.shop/sitemap.xml.gz
+[运行时间：0.009246s] [吞吐率：108.16req/s] [内存消耗：1,335.19kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'sitemap.xml.gz',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'from' => 'bingbot(at)microsoft.com',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T07:07:13+08:00 ] 157.55.39.201 GET atacabusca.shop/sitemaps.xml
+[运行时间：0.009198s] [吞吐率：108.72req/s] [内存消耗：1,335.14kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'sitemaps.xml',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'from' => 'bingbot(at)microsoft.com',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T07:07:13+08:00 ] 157.55.39.201 GET atacabusca.shop/sitemap.xml
+[运行时间：0.009216s] [吞吐率：108.51req/s] [内存消耗：1,335.14kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'sitemap.xml',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36',
+  'from' => 'bingbot(at)microsoft.com',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T07:07:14+08:00 ] 157.55.39.201 GET atacabusca.shop/atom.xml
+[运行时间：0.009204s] [吞吐率：108.65req/s] [内存消耗：1,335.14kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'atom.xml',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, br',
+  'from' => 'bingbot(at)microsoft.com',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T07:07:14+08:00 ] 157.55.39.201 GET atacabusca.shop/sitemap.txt
+[运行时间：0.013077s] [吞吐率：76.47req/s] [内存消耗：1,335.14kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'sitemap.txt',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'from' => 'bingbot(at)microsoft.com',
+  'user-agent' => 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36',
+  'accept' => '*/*',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T08:00:17+08:00 ] 157.90.104.32 GET atacabusca.shop/contact
+[运行时间：0.014394s] [吞吐率：69.47req/s] [内存消耗：1,333.77kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'contact',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'user-agent' => 'Symfony BrowserKit',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T08:00:23+08:00 ] 157.90.104.32 GET atacabusca.shop/
+[运行时间：0.052028s] [吞吐率：19.22req/s] [内存消耗：2,943.74kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'user-agent' => 'Symfony BrowserKit',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000283s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.009214s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '157.90.104.32' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.019765s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '157.90.104.32' [ RunTime:0.003306s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('157.90.104.32' , 1 , '2024-12' , '访客-浏览网页' , '2024-12-06 08:00:22' , 1 , '普通网友') [ RunTime:0.000214s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '157.90.104.32'  AND `ucookie` IS NULL [ RunTime:0.003031s ]
+---------------------------------------------------------------
+[ 2024-12-06T08:10:20+08:00 ] 43.135.183.82 GET atacabusca.shop/
+[运行时间：0.051319s] [吞吐率：19.49req/s] [内存消耗：2,949.92kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://atacabusca.shop',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'cache-control' => 'no-cache',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000289s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.008629s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '43.135.183.82' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.019719s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000227s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '43.135.183.82' [ RunTime:0.003166s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('43.135.183.82' , 1 , '2024-12' , '访客-浏览网页' , '2024-12-06 08:10:20' , 1 , '普通网友') [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '43.135.183.82'  AND `ucookie` IS NULL [ RunTime:0.003054s ]
+---------------------------------------------------------------
+[ 2024-12-06T09:09:10+08:00 ] 43.131.243.208 GET www.atacabusca.shop/
+[运行时间：0.032225s] [吞吐率：31.03req/s] [内存消耗：2,949.98kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.atacabusca.shop',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'cache-control' => 'no-cache',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1',
+  'host' => 'www.atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000282s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.009151s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '43.131.243.208' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000305s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000158s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '43.131.243.208' [ RunTime:0.003225s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('43.131.243.208' , 2 , '2024-12' , '访客-浏览网页' , '2024-12-06 09:09:10' , 6 , '普通网友') [ RunTime:0.000194s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '43.131.243.208'  AND `ucookie` IS NULL [ RunTime:0.003075s ]
+---------------------------------------------------------------
+[ 2024-12-06T09:36:13+08:00 ] 5.133.192.167 GET atacabusca.shop/
+[运行时间：0.050321s] [吞吐率：19.87req/s] [内存消耗：2,944.63kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-language' => 'en-US',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000376s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.011823s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '5.133.192.167' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.002046s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000200s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '5.133.192.167' [ RunTime:0.005385s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('5.133.192.167' , 3 , '2024-12' , '访客-浏览网页' , '2024-12-06 09:36:13' , 2 , '普通网友') [ RunTime:0.000261s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '5.133.192.167'  AND `ucookie` IS NULL [ RunTime:0.005126s ]
+---------------------------------------------------------------
+[ 2024-12-06T10:09:35+08:00 ] 49.51.233.46 GET www.atacabusca.shop/
+[运行时间：0.051451s] [吞吐率：19.44req/s] [内存消耗：2,949.97kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.atacabusca.shop',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'cache-control' => 'no-cache',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1',
+  'host' => 'www.atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000296s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.009036s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '49.51.233.46' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.019581s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000193s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '49.51.233.46' [ RunTime:0.003143s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('49.51.233.46' , 1 , '2024-12' , '访客-浏览网页' , '2024-12-06 10:09:35' , 1 , '普通网友') [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '49.51.233.46'  AND `ucookie` IS NULL [ RunTime:0.003011s ]
+---------------------------------------------------------------
+[ 2024-12-06T10:15:14+08:00 ] 193.56.113.52 GET atacabusca.shop//wp-includes/ID3/license.txt
+[运行时间：0.009175s] [吞吐率：108.99req/s] [内存消耗：1,338.08kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'wp-includes',
+    1 => 'ID3',
+    2 => 'license.txt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T10:15:14+08:00 ] 193.56.113.52 GET atacabusca.shop//feed/
+[运行时间：0.013388s] [吞吐率：74.69req/s] [内存消耗：1,337.87kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'feed',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T10:15:15+08:00 ] 193.56.113.52 GET atacabusca.shop//blog/wp-includes/wlwmanifest.xml
+[运行时间：0.013391s] [吞吐率：74.68req/s] [内存消耗：1,338.15kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T10:15:16+08:00 ] 193.56.113.52 GET atacabusca.shop//web/wp-includes/wlwmanifest.xml
+[运行时间：0.009131s] [吞吐率：109.52req/s] [内存消耗：1,338.14kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'web',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T10:15:16+08:00 ] 193.56.113.52 GET atacabusca.shop//wordpress/wp-includes/wlwmanifest.xml
+[运行时间：0.013494s] [吞吐率：74.11req/s] [内存消耗：1,338.19kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'wordpress',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T10:15:17+08:00 ] 193.56.113.52 GET atacabusca.shop//wp/wp-includes/wlwmanifest.xml
+[运行时间：0.009410s] [吞吐率：106.27req/s] [内存消耗：1,338.14kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'wp',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T10:15:17+08:00 ] 193.56.113.52 GET atacabusca.shop//2020/wp-includes/wlwmanifest.xml
+[运行时间：0.013400s] [吞吐率：74.63req/s] [内存消耗：1,338.15kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '2020',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T10:15:18+08:00 ] 193.56.113.52 GET atacabusca.shop//2019/wp-includes/wlwmanifest.xml
+[运行时间：0.009134s] [吞吐率：109.48req/s] [内存消耗：1,338.15kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '2019',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T10:15:18+08:00 ] 193.56.113.52 GET atacabusca.shop//2021/wp-includes/wlwmanifest.xml
+[运行时间：0.012468s] [吞吐率：80.21req/s] [内存消耗：1,338.15kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '2021',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T10:15:19+08:00 ] 193.56.113.52 GET atacabusca.shop//shop/wp-includes/wlwmanifest.xml
+[运行时间：0.009132s] [吞吐率：109.50req/s] [内存消耗：1,338.15kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'shop',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T10:15:19+08:00 ] 193.56.113.52 GET atacabusca.shop//wp1/wp-includes/wlwmanifest.xml
+[运行时间：0.013403s] [吞吐率：74.61req/s] [内存消耗：1,338.14kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'wp1',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T10:15:20+08:00 ] 193.56.113.52 GET atacabusca.shop//test/wp-includes/wlwmanifest.xml
+[运行时间：0.009215s] [吞吐率：108.52req/s] [内存消耗：1,338.15kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'test',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T10:15:20+08:00 ] 193.56.113.52 GET atacabusca.shop//site/wp-includes/wlwmanifest.xml
+[运行时间：0.013416s] [吞吐率：74.54req/s] [内存消耗：1,338.15kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'site',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T10:15:21+08:00 ] 193.56.113.52 GET atacabusca.shop//cms/wp-includes/wlwmanifest.xml
+[运行时间：0.009115s] [吞吐率：109.71req/s] [内存消耗：1,338.14kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'cms',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T11:09:04+08:00 ] 34.122.147.229 GET atacabusca.shop/
+[运行时间：0.033470s] [吞吐率：29.88req/s] [内存消耗：2,952.12kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=0, i',
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-ch-ua-platform' => '"Linux"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"HeadlessChrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'sec-fetch-dest' => 'document',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/125.0.6422.60 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000290s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.009153s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '34.122.147.229' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.001266s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000162s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '34.122.147.229' [ RunTime:0.003197s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('34.122.147.229' , 2 , '2024-12' , '访客-浏览网页' , '2024-12-06 11:09:04' , 3 , '普通网友') [ RunTime:0.000214s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '34.122.147.229'  AND `ucookie` IS NULL [ RunTime:0.003067s ]
+---------------------------------------------------------------
+[ 2024-12-06T11:09:07+08:00 ] 34.122.147.229 GET atacabusca.shop/login.php/index/captcha
+[运行时间：0.055142s] [吞吐率：18.14req/s] [内存消耗：11,938.05kb] [文件加载：50]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'captcha',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'i',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://atacabusca.shop/',
+  'sec-fetch-dest' => 'image',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'sec-ch-ua-platform' => '"Linux"',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/125.0.6422.60 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"HeadlessChrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->captcha[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000269s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.009111s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` IS NULL [ RunTime:0.011487s ]
+---------------------------------------------------------------
+[ 2024-12-06T11:09:16+08:00 ] 205.169.39.127 GET atacabusca.shop/
+[运行时间：0.035150s] [吞吐率：28.45req/s] [内存消耗：2,950.05kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'en-US',
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-fetch-dest' => 'document',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'Keep-Alive',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000289s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.008727s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '205.169.39.127' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.003547s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000171s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '205.169.39.127' [ RunTime:0.003225s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('205.169.39.127' , 3 , '2024-12' , '访客-浏览网页' , '2024-12-06 11:09:16' , 2 , '普通网友') [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '205.169.39.127'  AND `ucookie` IS NULL [ RunTime:0.003061s ]
+---------------------------------------------------------------
+[ 2024-12-06T11:09:44+08:00 ] 205.169.39.127 GET atacabusca.shop/
+[运行时间：0.025192s] [吞吐率：39.70req/s] [内存消耗：2,947.68kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'en-US',
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-fetch-dest' => 'document',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000294s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.008628s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '205.169.39.127' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000156s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '205.169.39.127'  AND `ucookie` IS NULL [ RunTime:0.000155s ]
+---------------------------------------------------------------
+[ 2024-12-06T11:09:47+08:00 ] 205.169.39.127 GET atacabusca.shop/login.php/index/captcha
+[运行时间：0.051069s] [吞吐率：19.58req/s] [内存消耗：11,936.80kb] [文件加载：50]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'captcha',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'en-US',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://atacabusca.shop/',
+  'sec-fetch-dest' => 'image',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->captcha[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000290s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.008626s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` IS NULL [ RunTime:0.011888s ]
+---------------------------------------------------------------
+[ 2024-12-06T11:10:39+08:00 ] 205.169.39.43 GET atacabusca.shop/
+[运行时间：0.051473s] [吞吐率：19.43req/s] [内存消耗：2,950.24kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=0, i',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'sec-fetch-dest' => 'document',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.5938.132 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000273s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.008614s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '205.169.39.43' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.019687s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000155s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '205.169.39.43' [ RunTime:0.003171s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('205.169.39.43' , 1 , '2024-12' , '访客-浏览网页' , '2024-12-06 11:10:39' , 1 , '普通网友') [ RunTime:0.000220s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '205.169.39.43'  AND `ucookie` IS NULL [ RunTime:0.003024s ]
+---------------------------------------------------------------
+[ 2024-12-06T11:10:41+08:00 ] 205.169.39.43 GET atacabusca.shop/login.php/index/captcha
+[运行时间：0.073988s] [吞吐率：13.52req/s] [内存消耗：11,937.10kb] [文件加载：50]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'captcha',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=1, i',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://atacabusca.shop/',
+  'sec-fetch-dest' => 'image',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.5938.132 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->captcha[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000346s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.011188s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` IS NULL [ RunTime:0.016699s ]
+---------------------------------------------------------------
+[ 2024-12-06T12:28:41+08:00 ] 170.106.140.110 GET atacabusca.shop/
+[运行时间：0.047906s] [吞吐率：20.87req/s] [内存消耗：2,949.94kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://atacabusca.shop',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'cache-control' => 'no-cache',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000360s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.011760s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '170.106.140.110' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000188s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '170.106.140.110' [ RunTime:0.005628s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('170.106.140.110' , 2 , '2024-12' , '访客-浏览网页' , '2024-12-06 12:28:41' , 2 , '普通网友') [ RunTime:0.000257s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '170.106.140.110'  AND `ucookie` IS NULL [ RunTime:0.005130s ]
+---------------------------------------------------------------
+[ 2024-12-06T12:43:24+08:00 ] 38.154.198.29 GET atacabusca.shop/login.php/index/captcha
+[运行时间：0.051184s] [吞吐率：19.54req/s] [内存消耗：11,932.30kb] [文件加载：50]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'captcha',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'host' => 'atacabusca.shop',
+  'accept-encoding' => 'gzip, x-gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->captcha[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000300s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.008574s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` IS NULL [ RunTime:0.011932s ]
+---------------------------------------------------------------
+[ 2024-12-06T14:06:47+08:00 ] 140.228.21.19 GET atacabusca.shop/
+[运行时间：0.032325s] [吞吐率：30.94req/s] [内存消耗：2,949.81kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'en-US',
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-fetch-dest' => 'document',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/89.0.4389.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000297s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.009039s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '140.228.21.19' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000152s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '140.228.21.19' [ RunTime:0.003308s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('140.228.21.19' , 3 , '2024-12' , '访客-浏览网页' , '2024-12-06 14:06:47' , 2 , '普通网友') [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '140.228.21.19'  AND `ucookie` IS NULL [ RunTime:0.003080s ]
+---------------------------------------------------------------
+[ 2024-12-06T14:14:13+08:00 ] 176.53.221.92 GET atacabusca.shop/
+[运行时间：0.072116s] [吞吐率：13.87req/s] [内存消耗：2,944.38kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000295s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.008719s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '176.53.221.92' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.032942s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '176.53.221.92' [ RunTime:0.005676s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('176.53.221.92' , 1 , '2024-12' , '访客-浏览网页' , '2024-12-06 14:14:13' , 1 , '普通网友') [ RunTime:0.000299s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '176.53.221.92'  AND `ucookie` IS NULL [ RunTime:0.005178s ]
+---------------------------------------------------------------
+[ 2024-12-06T16:31:57+08:00 ] 4.43.184.114 GET atacabusca.shop/
+[运行时间：0.247704s] [吞吐率：4.04req/s] [内存消耗：2,943.95kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50728)',
+  'accept' => '*/*',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001691s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.021274s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '4.43.184.114' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.151812s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.007010s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '4.43.184.114' [ RunTime:0.005425s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('4.43.184.114' , 1 , '2024-12' , '访客-浏览网页' , '2024-12-06 16:31:57' , 1 , '普通网友') [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '4.43.184.114'  AND `ucookie` IS NULL [ RunTime:0.005163s ]
+---------------------------------------------------------------
+[ 2024-12-06T16:44:35+08:00 ] 17.241.227.144 GET atacabusca.shop/
+[运行时间：0.078317s] [吞吐率：12.77req/s] [内存消耗：2,944.92kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15 (Applebot/0.1; +http://www.apple.com/go/applebot)',
+  'host' => 'atacabusca.shop',
+  'accept-encoding' => 'gzip,identity',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000365s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.011157s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '17.241.227.144' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.032941s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '17.241.227.144' [ RunTime:0.005604s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('17.241.227.144' , 1 , '2024-12' , '访客-浏览网页' , '2024-12-06 16:44:35' , 1 , '普通网友') [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '17.241.227.144'  AND `ucookie` IS NULL [ RunTime:0.005107s ]
+---------------------------------------------------------------
+[ 2024-12-06T16:50:36+08:00 ] 45.148.10.172 GET www.atacabusca.shop/.env
+[运行时间：0.011733s] [吞吐率：85.23req/s] [内存消耗：1,334.73kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '.env',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip',
+  'accept-charset' => 'utf-8',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 9; Pixel) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.89 Mobile Safari/537.36',
+  'host' => 'www.atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T16:56:21+08:00 ] 202.173.11.248 GET www.atacabusca.shop/
+[运行时间：0.050969s] [吞吐率：19.62req/s] [内存消耗：2,949.44kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'dnt' => '1',
+  'connection' => 'keep-alive',
+  'referer' => 'https://www.atacabusca.shop/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'host' => 'www.atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000290s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.008584s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '202.173.11.248' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.019452s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000201s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '202.173.11.248' [ RunTime:0.003234s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('202.173.11.248' , 1 , '2024-12' , '访客-浏览网页' , '2024-12-06 16:56:21' , 1 , '普通网友') [ RunTime:0.000205s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '202.173.11.248'  AND `ucookie` IS NULL [ RunTime:0.003067s ]
+---------------------------------------------------------------
+[ 2024-12-06T17:31:36+08:00 ] 43.153.71.132 GET atacabusca.shop/
+[运行时间：0.081978s] [吞吐率：12.20req/s] [内存消耗：2,948.50kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'cache-control' => 'no-cache',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000326s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.012836s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '43.153.71.132' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.032792s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000258s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '43.153.71.132' [ RunTime:0.005377s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('43.153.71.132' , 1 , '2024-12' , '访客-浏览网页' , '2024-12-06 17:31:36' , 1 , '普通网友') [ RunTime:0.000269s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '43.153.71.132'  AND `ucookie` IS NULL [ RunTime:0.005125s ]
+---------------------------------------------------------------
+[ 2024-12-06T18:44:39+08:00 ] 45.148.10.172 GET atacabusca.shop/.env
+[运行时间：0.012831s] [吞吐率：77.94req/s] [内存消耗：1,334.70kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '.env',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip',
+  'accept-charset' => 'utf-8',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 9; Mi MIX 2S) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.111 Mobile Safari/537.36',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T19:15:20+08:00 ] 137.226.113.44 GET www.atacabusca.shop/
+[运行时间：0.033280s] [吞吐率：30.05req/s] [内存消耗：2,943.97kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'user-agent' => 'Mozilla/5.0 researchscan.comsys.rwth-aachen.de',
+  'accept' => '*/*',
+  'host' => 'www.atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000305s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.009099s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '137.226.113.44' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000784s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000163s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '137.226.113.44' [ RunTime:0.003383s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('137.226.113.44' , 2 , '2024-12' , '访客-浏览网页' , '2024-12-06 19:15:20' , 18 , '普通网友') [ RunTime:0.000207s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '137.226.113.44'  AND `ucookie` IS NULL [ RunTime:0.003164s ]
+---------------------------------------------------------------
+[ 2024-12-06T20:03:47+08:00 ] 170.106.82.209 GET www.atacabusca.shop/
+[运行时间：0.051919s] [吞吐率：19.26req/s] [内存消耗：2,949.98kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.atacabusca.shop',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'cache-control' => 'no-cache',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1',
+  'host' => 'www.atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000298s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.009168s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '170.106.82.209' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.019756s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000203s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '170.106.82.209' [ RunTime:0.003362s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('170.106.82.209' , 1 , '2024-12' , '访客-浏览网页' , '2024-12-06 20:03:46' , 1 , '普通网友') [ RunTime:0.000212s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '170.106.82.209'  AND `ucookie` IS NULL [ RunTime:0.003034s ]
+---------------------------------------------------------------
+[ 2024-12-06T20:58:49+08:00 ] 123.207.198.35 GET atacabusca.shop/
+[运行时间：0.051956s] [吞吐率：19.25req/s] [内存消耗：2,945.24kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip',
+  'referer' => 'http://atacabusca.shop',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 10; LIO-AN00 Build/HUAWEILIO-AN00; wv) MicroMessenger Weixin QQ AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.62 XWEB/2692 MMWEBSDK/200901 Mobile Safari/537.36',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000273s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.009016s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '123.207.198.35' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.020039s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000193s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '123.207.198.35' [ RunTime:0.003364s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('123.207.198.35' , 1 , '2024-12' , '访客-浏览网页' , '2024-12-06 20:58:49' , 1 , '普通网友') [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '123.207.198.35'  AND `ucookie` IS NULL [ RunTime:0.003060s ]
+---------------------------------------------------------------
+[ 2024-12-06T21:03:25+08:00 ] 34.32.136.105 GET atacabusca.shop/
+[运行时间：0.079401s] [吞吐率：12.59req/s] [内存消耗：2,944.27kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip',
+  'accept-charset' => 'utf-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.2; rv:126.0) Gecko/20100101 Firefox/126.0',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000369s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.011921s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '34.32.136.105' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.032713s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '34.32.136.105' [ RunTime:0.005376s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('34.32.136.105' , 1 , '2024-12' , '访客-浏览网页' , '2024-12-06 21:03:25' , 1 , '普通网友') [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '34.32.136.105'  AND `ucookie` IS NULL [ RunTime:0.005092s ]
+---------------------------------------------------------------
+[ 2024-12-06T21:37:28+08:00 ] 43.163.8.36 GET www.atacabusca.shop/
+[运行时间：0.032419s] [吞吐率：30.85req/s] [内存消耗：2,949.97kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.atacabusca.shop',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'cache-control' => 'no-cache',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1',
+  'host' => 'www.atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000265s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.009035s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '43.163.8.36' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000156s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '43.163.8.36' [ RunTime:0.003280s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('43.163.8.36' , 2 , '2024-12' , '访客-浏览网页' , '2024-12-06 21:37:28' , 9 , '普通网友') [ RunTime:0.000220s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '43.163.8.36'  AND `ucookie` IS NULL [ RunTime:0.003088s ]
+---------------------------------------------------------------
+[ 2024-12-06T22:52:25+08:00 ] 45.144.227.72 GET atacabusca.shop//wp-includes/ID3/license.txt
+[运行时间：0.009223s] [吞吐率：108.42req/s] [内存消耗：1,338.08kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'wp-includes',
+    1 => 'ID3',
+    2 => 'license.txt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T22:52:25+08:00 ] 45.144.227.72 GET atacabusca.shop//feed/
+[运行时间：0.013478s] [吞吐率：74.19req/s] [内存消耗：1,337.87kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'feed',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T22:52:26+08:00 ] 45.144.227.72 GET atacabusca.shop//blog/wp-includes/wlwmanifest.xml
+[运行时间：0.009125s] [吞吐率：109.59req/s] [内存消耗：1,338.15kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T22:52:26+08:00 ] 45.144.227.72 GET atacabusca.shop//web/wp-includes/wlwmanifest.xml
+[运行时间：0.009287s] [吞吐率：107.68req/s] [内存消耗：1,338.14kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'web',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T22:52:26+08:00 ] 45.144.227.72 GET atacabusca.shop//wordpress/wp-includes/wlwmanifest.xml
+[运行时间：0.009195s] [吞吐率：108.75req/s] [内存消耗：1,338.19kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'wordpress',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T22:52:26+08:00 ] 45.144.227.72 GET atacabusca.shop//wp/wp-includes/wlwmanifest.xml
+[运行时间：0.013588s] [吞吐率：73.59req/s] [内存消耗：1,338.14kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'wp',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T22:52:27+08:00 ] 45.144.227.72 GET atacabusca.shop//2020/wp-includes/wlwmanifest.xml
+[运行时间：0.009222s] [吞吐率：108.44req/s] [内存消耗：1,338.15kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '2020',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T22:52:27+08:00 ] 45.144.227.72 GET atacabusca.shop//2019/wp-includes/wlwmanifest.xml
+[运行时间：0.009157s] [吞吐率：109.21req/s] [内存消耗：1,338.15kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '2019',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T22:52:27+08:00 ] 45.144.227.72 GET atacabusca.shop//2021/wp-includes/wlwmanifest.xml
+[运行时间：0.009110s] [吞吐率：109.77req/s] [内存消耗：1,338.15kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '2021',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T22:52:27+08:00 ] 45.144.227.72 GET atacabusca.shop//shop/wp-includes/wlwmanifest.xml
+[运行时间：0.013339s] [吞吐率：74.97req/s] [内存消耗：1,338.15kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'shop',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T22:52:28+08:00 ] 45.144.227.72 GET atacabusca.shop//wp1/wp-includes/wlwmanifest.xml
+[运行时间：0.009248s] [吞吐率：108.13req/s] [内存消耗：1,338.14kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'wp1',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T22:52:28+08:00 ] 45.144.227.72 GET atacabusca.shop//test/wp-includes/wlwmanifest.xml
+[运行时间：0.009105s] [吞吐率：109.83req/s] [内存消耗：1,338.15kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'test',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T22:52:28+08:00 ] 45.144.227.72 GET atacabusca.shop//site/wp-includes/wlwmanifest.xml
+[运行时间：0.009130s] [吞吐率：109.53req/s] [内存消耗：1,338.15kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'site',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T22:52:28+08:00 ] 45.144.227.72 GET atacabusca.shop//cms/wp-includes/wlwmanifest.xml
+[运行时间：0.013317s] [吞吐率：75.09req/s] [内存消耗：1,338.14kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'cms',
+    1 => 'wp-includes',
+    2 => 'wlwmanifest.xml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.5',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'keep-alive' => '300',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-12-06T23:10:12+08:00 ] 43.133.72.69 GET www.atacabusca.shop/
+[运行时间：0.032703s] [吞吐率：30.58req/s] [内存消耗：2,949.97kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.atacabusca.shop',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'cache-control' => 'no-cache',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1',
+  'host' => 'www.atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000294s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.009113s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '43.133.72.69' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000510s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000167s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '43.133.72.69' [ RunTime:0.003255s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('43.133.72.69' , 3 , '2024-12' , '访客-浏览网页' , '2024-12-06 23:10:12' , 7 , '普通网友') [ RunTime:0.000205s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '43.133.72.69'  AND `ucookie` IS NULL [ RunTime:0.003118s ]
+---------------------------------------------------------------
+[ 2024-12-06T23:12:59+08:00 ] 110.166.71.39 GET atacabusca.shop/
+[运行时间：0.032876s] [吞吐率：30.42req/s] [内存消耗：2,949.92kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://atacabusca.shop',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'cache-control' => 'no-cache',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1',
+  'host' => 'atacabusca.shop',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000301s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.008550s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '110.166.71.39' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.001018s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000162s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '110.166.71.39' [ RunTime:0.003383s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('110.166.71.39' , 4 , '2024-12' , '访客-浏览网页' , '2024-12-06 23:12:59' , 10 , '普通网友') [ RunTime:0.000210s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '110.166.71.39'  AND `ucookie` IS NULL [ RunTime:0.003154s ]

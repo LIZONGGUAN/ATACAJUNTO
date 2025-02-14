@@ -1,0 +1,576 @@
+---------------------------------------------------------------
+[ 2024-07-31T04:00:39+08:00 ] 142.214.185.14 GET aosuper.com/
+[运行时间：1.587538s] [吞吐率：0.63req/s] [内存消耗：2,944.70kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002310s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.032044s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '142.214.185.14' ORDER BY `Id` DESC LIMIT 1 [ RunTime:1.194525s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000561s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '142.214.185.14' [ RunTime:0.006985s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('142.214.185.14' , 1 , '2024-07' , '访客-浏览网页' , '2024-07-31 04:00:38' , 1 , '普通网友') [ RunTime:0.000519s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '142.214.185.14'  AND `ucookie` IS NULL [ RunTime:0.006474s ]
+---------------------------------------------------------------
+[ 2024-07-31T05:14:34+08:00 ] 3.144.103.148 GET aosuper.com/
+[运行时间：1.708890s] [吞吐率：0.59req/s] [内存消耗：2,946.89kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'XTCsid=8171f1df1295f76d00bee332269dcd99; CFTOKEN=186326cc3c6133c%2D36F05D32%2D163E%2DC407%2D91C15383A731721B; CFID=356763793',
+  'accept-encoding' => 'gzip, br, zstd, deflate',
+  'referer' => 'http://aosuper.com/',
+  'user-agent' => 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0; +claudebot@anthropic.com)',
+  'accept' => '*/*',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000728s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.003088s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '3.144.103.148' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.967941s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000495s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '3.144.103.148' [ RunTime:0.007150s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('3.144.103.148' , 1 , '2024-07' , '访客-浏览网页' , '2024-07-31 05:14:33' , 1 , '普通网友') [ RunTime:0.000462s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '3.144.103.148'  AND `ucookie` IS NULL [ RunTime:0.006477s ]
+---------------------------------------------------------------
+[ 2024-07-31T05:44:15+08:00 ] 35.171.144.152 GET aosuper.com/
+[运行时间：0.119455s] [吞吐率：8.37req/s] [内存消耗：2,944.06kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 \\(Windows NT 10.0\\; Win64\\; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/100.0.4896.60 Safari/537.36',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000709s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.002667s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '35.171.144.152' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000837s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '35.171.144.152' [ RunTime:0.007197s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('35.171.144.152' , 2 , '2024-07' , '访客-浏览网页' , '2024-07-31 05:44:15' , 11 , '普通网友') [ RunTime:0.000565s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '35.171.144.152'  AND `ucookie` IS NULL [ RunTime:0.007172s ]
+---------------------------------------------------------------
+[ 2024-07-31T05:44:16+08:00 ] 35.171.144.152 GET www.aosuper.com/
+[运行时间：0.042817s] [吞吐率：23.36req/s] [内存消耗：2,941.91kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 \\(Windows NT 10.0\\; Win64\\; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/100.0.4896.60 Safari/537.36',
+  'host' => 'www.aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000703s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.002853s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '35.171.144.152' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000459s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '35.171.144.152'  AND `ucookie` IS NULL [ RunTime:0.007041s ]
+---------------------------------------------------------------
+[ 2024-07-31T05:44:17+08:00 ] 35.171.144.152 GET aosuper.com/
+[运行时间：0.053586s] [吞吐率：18.66req/s] [内存消耗：2,941.91kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 \\(Windows NT 10.0\\; Win64\\; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/100.0.4896.60 Safari/537.36',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000682s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.004704s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '35.171.144.152' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000435s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '35.171.144.152'  AND `ucookie` IS NULL [ RunTime:0.006476s ]
+---------------------------------------------------------------
+[ 2024-07-31T08:55:28+08:00 ] 42.83.147.56 GET aosuper.com/
+[运行时间：0.073647s] [吞吐率：13.58req/s] [内存消耗：2,944.63kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'text/html; charset=utf-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)Chrome/74.0.3729.169 Safari/537.36',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000605s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.010650s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '42.83.147.56' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.002243s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '42.83.147.56' [ RunTime:0.007171s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('42.83.147.56' , 3 , '2024-07' , '访客-浏览网页' , '2024-07-31 08:55:28' , 27 , '潜在用户') [ RunTime:0.000501s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '42.83.147.56'  AND `ucookie` IS NULL [ RunTime:0.006241s ]
+---------------------------------------------------------------
+[ 2024-07-31T09:07:26+08:00 ] 35.171.144.152 GET aosuper.com/
+[运行时间：0.040601s] [吞吐率：24.63req/s] [内存消耗：2,941.91kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 \\(Windows NT 10.0\\; Win64\\; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/100.0.4896.60 Safari/537.36',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000737s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.002838s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '35.171.144.152' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000444s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '35.171.144.152'  AND `ucookie` IS NULL [ RunTime:0.006895s ]
+---------------------------------------------------------------
+[ 2024-07-31T09:07:27+08:00 ] 54.88.179.33 GET www.aosuper.com/
+[运行时间：0.053795s] [吞吐率：18.59req/s] [内存消耗：2,944.05kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 \\(Windows NT 10.0\\; Win64\\; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/100.0.4896.60 Safari/537.36',
+  'host' => 'www.aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000724s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.002691s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '54.88.179.33' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.001009s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000357s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '54.88.179.33' [ RunTime:0.010120s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('54.88.179.33' , 4 , '2024-07' , '访客-浏览网页' , '2024-07-31 09:07:27' , 12 , '普通网友') [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '54.88.179.33'  AND `ucookie` IS NULL [ RunTime:0.006677s ]
+---------------------------------------------------------------
+[ 2024-07-31T09:07:28+08:00 ] 35.171.144.152 GET aosuper.com/
+[运行时间：0.042706s] [吞吐率：23.42req/s] [内存消耗：2,941.91kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 \\(Windows NT 10.0\\; Win64\\; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/100.0.4896.60 Safari/537.36',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000886s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.002838s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '35.171.144.152' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000655s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000639s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '35.171.144.152'  AND `ucookie` IS NULL [ RunTime:0.006608s ]
+---------------------------------------------------------------
+[ 2024-07-31T13:05:04+08:00 ] 3.1.195.92 GET aosuper.com/
+[运行时间：2.306928s] [吞吐率：0.43req/s] [内存消耗：2,891.33kb] [文件加载：51]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip',
+  'accept-charset' => 'utf-8',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 12; Pixel 4a) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.61 Mobile Safari/537.36',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000704s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.072388s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '3.1.195.92' ORDER BY `Id` DESC LIMIT 1 [ RunTime:1.462051s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000684s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '3.1.195.92' [ RunTime:0.007602s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('3.1.195.92' , 1 , '2024-07' , '访客-浏览网页' , '2024-07-31 13:05:02' , 1 , '普通网友') [ RunTime:0.000782s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '3.1.195.92'  AND `ucookie` IS NULL [ RunTime:0.007085s ]
+---------------------------------------------------------------
+[ 2024-07-31T15:43:20+08:00 ] 102.129.152.243 GET aosuper.com/
+[运行时间：4.056362s] [吞吐率：0.25req/s] [内存消耗：2,950.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-ch-ua-platform' => '"Linux"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="122", "Not(A:Brand";v="24", "HeadlessChrome";v="122"',
+  'sec-fetch-dest' => 'document',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/122.0.6261.94 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.037778s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.049616s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '102.129.152.243' ORDER BY `Id` DESC LIMIT 1 [ RunTime:2.539955s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000600s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '102.129.152.243' [ RunTime:0.006762s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('102.129.152.243' , 1 , '2024-07' , '访客-浏览网页' , '2024-07-31 15:43:17' , 1 , '普通网友') [ RunTime:0.000492s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '102.129.152.243'  AND `ucookie` IS NULL [ RunTime:0.006650s ]
+---------------------------------------------------------------
+[ 2024-07-31T18:18:47+08:00 ] 159.65.24.22 GET aosuper.com/
+[运行时间：0.904786s] [吞吐率：1.11req/s] [内存消耗：2,946.56kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip,deflate',
+  'accept-language' => 'en-US,en;q=0.8',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000574s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.186026s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '159.65.24.22' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.073329s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000593s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '159.65.24.22' [ RunTime:0.092122s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('159.65.24.22' , 2 , '2024-07' , '访客-浏览网页' , '2024-07-31 18:18:46' , 5 , '普通网友') [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '159.65.24.22'  AND `ucookie` IS NULL [ RunTime:0.006490s ]
+---------------------------------------------------------------
+[ 2024-07-31T20:04:18+08:00 ] 137.226.113.44 GET www.aosuper.com/
+[运行时间：0.963338s] [吞吐率：1.04req/s] [内存消耗：2,943.88kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'user-agent' => 'Mozilla/5.0 researchscan.comsys.rwth-aachen.de',
+  'accept' => '*/*',
+  'host' => 'www.aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000665s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.080725s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '137.226.113.44' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.034215s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000498s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '137.226.113.44' [ RunTime:0.047934s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('137.226.113.44' , 3 , '2024-07' , '访客-浏览网页' , '2024-07-31 20:04:17' , 14 , '普通网友') [ RunTime:0.000661s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '137.226.113.44'  AND `ucookie` IS NULL [ RunTime:0.007368s ]
+---------------------------------------------------------------
+[ 2024-07-31T20:29:24+08:00 ] 54.88.179.33 GET www.aosuper.com/
+[运行时间：0.040472s] [吞吐率：24.71req/s] [内存消耗：2,941.91kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 \\(Windows NT 10.0\\; Win64\\; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/100.0.4896.60 Safari/537.36',
+  'host' => 'www.aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000735s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.002797s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '54.88.179.33' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000283s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '54.88.179.33'  AND `ucookie` IS NULL [ RunTime:0.006349s ]
+---------------------------------------------------------------
+[ 2024-07-31T20:29:25+08:00 ] 54.88.179.33 GET www.aosuper.com/
+[运行时间：0.040305s] [吞吐率：24.81req/s] [内存消耗：2,941.91kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 \\(Windows NT 10.0\\; Win64\\; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/100.0.4896.60 Safari/537.36',
+  'host' => 'www.aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000749s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.003264s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '54.88.179.33' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000428s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000322s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '54.88.179.33'  AND `ucookie` IS NULL [ RunTime:0.006555s ]
+---------------------------------------------------------------
+[ 2024-07-31T22:11:30+08:00 ] 43.134.89.111 GET aosuper.com/
+[运行时间：1.071133s] [吞吐率：0.93req/s] [内存消耗：2,949.92kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://aosuper.com',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'cache-control' => 'no-cache',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001591s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.039586s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '43.134.89.111' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.019355s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000561s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '43.134.89.111' [ RunTime:0.049363s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('43.134.89.111' , 4 , '2024-07' , '访客-浏览网页' , '2024-07-31 22:11:29' , 7 , '普通网友') [ RunTime:0.000590s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '43.134.89.111'  AND `ucookie` IS NULL [ RunTime:0.006418s ]

@@ -1,0 +1,1110 @@
+<style type="text/css">
+	.news {
+		width: 100%;
+		margin-top: 30px;
+		height: auto;
+		min-height: 1750px;
+		border: 1px solid gainsboro;
+	}
+
+	#news_class {
+		width: 80%;
+	}
+
+	#news_class>span {
+		color: #606266;
+		font-size: 14px;
+		width: 100px;
+		display: inline-block;
+		text-align: center;
+		min-width: 100px;
+	}
+
+	#news_class>select {
+		width: 80%;
+		display: inline-block;
+		border: 1px solid #dcdfe6;
+		height: 40px;
+		padding-left: 10px;
+		margin-left: -3px;
+		margin-bottom: 20px;
+	}
+
+	#news_title,
+	#pics {
+		width: 80%;
+	}
+
+	#pics {
+		margin-top: 20px;
+		min-height: 50px;
+		height: auto;
+	}
+
+	#news_title>span,
+	#pics>span {
+		color: #606266;
+		font-size: 14px;
+		width: 100px;
+		display: inline-block;
+		text-align: center;
+		min-width: 100px;
+	}
+
+	#news_title>input {
+		width: 80%;
+		display: inline-block;
+		border: 1px solid #dcdfe6;
+		height: 30px;
+		padding-left: 10px;
+	}
+
+	#news_jianjie {
+		width: 80%;
+		margin-top: 50px;
+	}
+
+	#news_jianjie>span {
+		color: #606266;
+		font-size: 14px;
+		width: 20%;
+		;
+		width: 100px;
+		display: inline-block;
+		text-align: center;
+		min-width: 100px;
+	}
+
+	#news_jianjie>textarea,
+	#bianhao {
+		width: 80%;
+		display: inline-block;
+		border: 1px solid #dcdfe6;
+		height: 100px;
+		padding-left: 10px;
+		margin-top: -20px;
+	}
+
+	#news_slt {
+		width: 80%;
+		margin: 30px 0px;
+		min-height: 100px;
+		max-height: 250px;
+		cursor: pointer;
+	}
+
+	#news_slt>span {
+		float: left;
+		color: #606266;
+		font-size: 14px;
+		width: 20%;
+		;
+		width: 100px;
+		display: inline-block;
+		text-align: center;
+		min-width: 100px;
+	}
+
+	#zx_img {
+		opacity: 0;
+		width: 100px;
+		height: 100px;
+		;
+		margin-top: -100px;
+		z-index: 999;
+		position: absolute;
+	}
+
+	#img_preview,
+	#slide-pc {
+		/* margin-left: 100px;margin-top: -20px; */
+		border: 1px solid #dcdfe6
+	}
+
+
+	/* #edui1140_iframeholder{height: 100%!important;} */
+	#news_sub {
+		width: 80%;
+		text-align: right;
+		margin-top: 150px;
+		height: 150px;
+		margin-bottom: 0px;
+	}
+
+	#news_submit {
+		border: 0;
+		width: 100px;
+		height: 40px;
+		color: white;
+		background-color: rgba(0, 150, 136, 1);
+		border-radius: 8px;
+		cursor: pointer;
+		margin-right: 10%;
+		float: right;
+	}
+
+	#news_time,
+	#news_view,
+	#news_sort {
+		width: 80%;
+		margin-top: 30px;
+	}
+
+	#news_time>span,
+	#news_view>span,
+	#news_sort>span {
+		color: #606266;
+		font-size: 14px;
+		;
+		width: 100px;
+		display: inline-block;
+		text-align: center;
+		min-width: 100px;
+	}
+
+	#news_time>input,
+	#news_view>input,
+	#news_sort>input {
+		width: 80%;
+		display: inline-block;
+		border: 1px solid #dcdfe6;
+		height: 30px;
+		padding-left: 10px;
+	}
+
+	select {
+		cursor: pointer;
+	}
+
+	div>i {
+		cursor: pointer;
+	}
+
+	.layui-form-checkbox>span {
+		background-color: white;
+		color: #0a0a0a;
+		border: 1px solid rgb(210, 210, 210);
+	}
+
+	.layui-form-checkbox>i {
+		height: 30px;
+	}
+
+	.layui-form-checked>span {
+		background-color: #5FB878 !important
+	}
+
+
+	#slide-pc-priview .item_img img {
+		width: 200px !important;
+		height: 200px !important;
+	}
+
+	.pic-more li {
+		width: 200px !important;
+	}
+
+	#slide-pc-priview li .toleft {
+
+		top: 100px !important;
+
+	}
+
+	#slide-pc-priview li .toright {
+
+		top: 100px !important;
+
+	}
+</style>
+
+<div class="news layui-form">
+	<div class="headertip">
+		<li>{$languageObj['信息发布']['name_' . $language]}</li>
+	</div>
+	<li class="layui-btn layui-btn-primary fanhui" style="margin:0px 0px 20px 100px ">{$languageObj['返回上一页']['name_' . $language]}</li>
+	 <script type="text/javascript" charset="utf-8">
+	     $(".fanhui").click(function(){
+	        window.history.back(-1);
+	     })
+	 </script>
+	<div id="news_class">
+		<span>{$languageObj['产品大类']['name_' . $language]}：</span>
+		<select name="" id="newsclass">
+
+
+		</select>
+		<script type="text/javascript" charset="utf-8">
+			$(document).ready(function () {
+				$.post("/login.php/newsad/newsclass?formname=productc", function (str) {
+					let htmlclass = '';
+					console.log(str);
+					str.forEach(x => {
+
+
+						htmlclass += `<option  value='${x.name}'>${x.name}</option>`;
+
+					});
+					$("#newsclass").html(htmlclass);
+
+				});
+
+			})
+
+		</script>
+	</div>
+	<!--
+<div id="news_class">
+<span>二级分类:</span>	
+ <select name="" id="newsclass2">
+					
+</select>
+
+</div>
+
+
+<script type="text/javascript">
+
+	$.post("/login.php/newsad/newspage?form=productc&class=语文",function(str) {
+				console.log(str);
+				let htmlclass=''
+				str.forEach(x=>{
+				
+				htmlclass +=`<option value ="${x.name}" class="语文">${x.name}</option>`;
+				});
+			$("#newsclass2").html(htmlclass);
+			console.log(htmlclass);
+			});
+
+	$("#newsclass").click(function(){
+		
+		val=$(this).val();
+		console.log(val);
+		$.post("/login.php/newsad/newspage?form=productc&class="+val,function(str) {
+				console.log(str);
+				let htmlclass=''
+				str.forEach(x=>{
+				
+				
+				htmlclass +=`<option value ="${x.name}" class="'+val+'">${x.name}</option>`;
+				});
+			$("#newsclass2").html(htmlclass);
+			console.log(htmlclass);
+			});
+	
+	})  //一级分类点击 
+	
+	$("#newsclass2").click(function(){
+		
+		val=$(this).val();
+		console.log(val);
+		$.post("/login.php/newsad/newspage?form=productc&class="+val,function(str) {
+				console.log(str);
+				let htmlclass=''
+				str.forEach(x=>{
+				
+				
+				htmlclass +=`<option value ="${x.name}" class="'+val+'">${x.name}</option>`;
+				});
+			$("#newsclass3").html(htmlclass);
+			console.log(htmlclass);
+			});
+	
+	})  //2级分类点击 
+	
+	
+</script> 
+
+<div id="news_class">
+<span>三级分类:</span>	
+ <select name="" id="newsclass3">
+					
+</select>
+
+</div>
+
+<script type="text/javascript">
+
+
+</script> -->
+	<style>
+		.layui-form-checkbox {
+			margin-top: 5px;
+		}
+
+		.classbk {
+			border: 1px dotted gray;
+			padding: 5px;
+			margin-top: 10px
+		}
+	</style>
+
+
+
+	<div id="news_class" style="width: 100%;">
+
+		<div class="layui-form" style="display: flex;
+    flex-wrap: wrap;display: none;padding-left: 12px;">
+
+
+		</div>
+		<button class="openclass layui-btn layui-bg-cyan" style="margin: 10px;">{$languageObj['展开分类列表']['name_' . $language]}</button>
+	</div>
+	<script>
+		var oepnclass = false;
+		$(document).ready(function () {
+
+			$(".openclass").click(function () {
+				if (oepnclass == false) {
+					$(".layui-form").show(800);
+					$(this).text(`{$languageObj['隐藏分类列表']['name_' . $language]}`);
+					oepnclass = true;
+				} else {
+					$(".layui-form").hide();
+					$(this).text(`{$languageObj['展开分类列表']['name_' . $language]}`);
+					oepnclass = false;
+				}
+
+			})
+
+			$.post("/login.php/newsad/newsTree?formname=productc", function (str) {
+				let oneclass = '';
+				let twoclass = '';
+				let threeclass = '';
+				let formdiv = '';
+				let funum = 0;
+				let fuid = 'one';
+				// 		console.log(str.data);
+
+
+
+				str.data.forEach(x => {
+					//  console.log(x.name);
+					if (x.level == 0) {
+						// funum=1;
+						if (fuid == 'one') {
+							oneclass = `{$languageObj['一级分类']['name_' . $language]}：<input type="checkbox" class="first" name="${x.name}" title="${x.name}" >`;
+							fuid = x.Id;
+						} else {
+
+							formdiv += '<div class="classbk" >' + oneclass + `<br><br>{$languageObj['二级分类']['name_' . $language]}：` + twoclass + `<br><br>{$languageObj['三级分类']['name_' . $language]}：` + threeclass + '</div>';
+							oneclass = '';
+							twoclass = '';
+							threeclass = '';
+
+
+							oneclass = `{$languageObj['一级分类']['name_' . $language]}：<input type="checkbox" class="first" name="${x.name}" title="${x.name}" >`;
+						}
+
+
+						funum++;
+
+					};
+					//   console.log(fuid)
+					if (x.level == 1) {
+						//   console.log(x.name)
+						twoclass += `<input type="checkbox" class="second" lay-filter="second" name="${x.name}" title="${x.name}" >`;
+					}
+
+					if (x.level == 2) {
+						//   console.log(x.name)
+						threeclass += `<input type="checkbox" class="third" lay-filter="third" disabled name="${x.name}" title="${x.name}" >`;
+					}
+
+
+				});
+
+				layui.use(['form'], function () {
+					var form = layui.form,
+						$ = layui.$;
+
+					form.on('checkbox(second)', function (data) {
+						if (data.elem.checked) {
+							$(data.elem).parents(".classbk").find(".first").next(".layui-form-checkbox").addClass("layui-form-checked");
+							$(data.elem).parents(".classbk").find(".third").next(".layui-form-checkbox").removeClass("layui-checkbox-disbaled");
+							$(data.elem).parents(".classbk").find(".third").next(".layui-form-checkbox").removeClass("layui-disabled");
+							$(data.elem).parents(".classbk").find(".third").removeAttr("disabled");
+						} else {
+							let flag = $(data.elem).parents(".classbk").find(".second").next(".layui-form-checkbox").hasClass("layui-form-checked");
+							if (!flag) {
+								$(data.elem).parents(".classbk").find(".first").next(".layui-form-checkbox").removeClass("layui-form-checked");
+								$(data.elem).parents(".classbk").find(".third").next(".layui-form-checkbox").removeClass("layui-form-checked");
+								$(data.elem).parents(".classbk").find(".third").next(".layui-form-checkbox").addClass("layui-checkbox-disbaled");
+								$(data.elem).parents(".classbk").find(".third").next(".layui-form-checkbox").addClass("layui-disabled");
+								$(data.elem).parents(".classbk").find(".third").attr("disabled", "");
+							}
+						}
+					});
+				});
+
+
+
+
+				$("#news_class .layui-form").html(formdiv);
+
+				layui.use('form', function () {
+					var form = layui.form;
+					form.render(); //更新全部
+					//各种基于事件的操作，下面会有进一步介绍
+				});
+			});
+		})
+
+
+
+
+	</script>
+
+
+	<div id="news_title">
+		<span>{$languageObj['产品标题']['name_' . $language]}：</span>
+		<input type="text" lay-verify="required" name="news_title" id="news_tit" value="" placeholder="" />
+	</div>
+	<div id="news_slt"><span>{$languageObj['缩略图']['name_' . $language]}：</span>
+		<div style="float: left;"><img id="img_preview" src="/static/img/admin/news_slt.jpg"
+				style="max-width: 300px;max-height: 120px"></div>
+	</div>
+	<!-- <div id="news_jianjie"><span>考试科目：</span><textarea rows="10" cols="50" id="news_jj"></textarea></div>-->
+	<style>
+		.layui-upload-img {
+			width: 90px;
+			height: 90px;
+			margin: 0;
+		}
+
+		.pic-more {
+			width: 100%;
+			margin: 10px 0px 0px 0px;
+		}
+
+		.pic-more li {
+			width: 90px;
+			float: left;
+			margin-right: 5px;
+		}
+
+		.pic-more li .layui-input {
+			display: initial;
+		}
+
+		.pic-more li a {
+			position: absolute;
+			top: 0;
+			display: block;
+		}
+
+		.pic-more li a i {
+			font-size: 24px;
+			background-color: #008800;
+		}
+
+		#slide-pc-priview .item_img img {
+			width: 90px;
+			height: 90px;
+		}
+
+		#slide-pc-priview li {
+			position: relative;
+		}
+
+		#slide-pc-priview li .operate {
+			color: #000;
+			display: none;
+		}
+
+		#slide-pc-priview li .toleft {
+			position: absolute;
+			top: 40px;
+			left: 1px;
+			cursor: pointer;
+		}
+
+		#slide-pc-priview li .toright {
+			position: absolute;
+			top: 40px;
+			right: 1px;
+			cursor: pointer;
+		}
+
+		#slide-pc-priview li .close {
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			cursor: pointer;
+		}
+
+		#slide-pc-priview li:hover .operate {
+			display: block;
+		}
+
+		.pic-more>span {
+			float: left;
+			color: #606266;
+			font-size: 14px;
+			width: 20%;
+			width: 100px;
+			display: inline-block;
+			text-align: center;
+			min-width: 100px;
+		}
+	</style>
+	<div class="layui-form-item" id="pics">
+		<span style="float: left;">{$languageObj['相册图集']['name_' . $language]}：</span> <button type="button" class="layui-btn layui-btn-primary "
+			id="slide-pc">{$languageObj['选择多图']['name_' . $language]}</button>
+		<div class="layui-input-block" style="width: 100%;margin-left: 0px;">
+			<div class="layui-upload">
+
+				<div class="pic-more">
+					<span>&nbsp;</span>
+					<ul class="pic-more-upload-list" id="slide-pc-priview">
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		// 多图上传
+		layui.use('upload', function () {
+			var $ = layui.jquery;
+			var upload = layui.upload;
+			upload.render({
+				elem: '#slide-pc',
+				url: '/login.php/admin/basicicoapi',// 多图上传
+				size: 900,
+				exts: 'jpg|png|jpeg|gif|bmp|webp',
+				multiple: true,
+				before: function (obj) {
+					layer.msg('loading...', {
+						icon: 16,
+						shade: 0.01,
+						time: 0
+					})
+				},
+				done: function (res) {
+					layer.close(layer.msg());//关闭上传提示窗口
+					if (res.status == 0) {
+						return layer.msg(res.message);
+					}
+					//$('#slide-pc-priview').append('<input type="hidden" name="pc_src[]" value="' + res.filepath + '" />');
+					$('#slide-pc-priview').append('<li class="item_img"><div class="operate"><i class="toleft layui-icon"></i><i class="toright layui-icon"></i><i  class="close layui-icon"></i></div><img src="' + res.filepath + '" class="img" ><input type="hidden" name="pc_src[]" value="' + res.filepath + '" /></li>');
+				}
+			});
+		});
+		//点击多图上传的X,删除当前的图片    
+		$("body").on("click", ".close", function () {
+			$(this).closest("li").remove();
+		});
+
+
+		//多图上传点击<>左右移动图片
+		$("body").on("click", ".pic-more ul li .toleft", function () {
+			var li_index = $(this).closest("li").index();
+			if (li_index >= 1) {
+				$(this).closest("li").insertBefore($(this).closest("ul").find("li").eq(Number(li_index) - 1));
+			}
+		});
+		$("body").on("click", ".pic-more ul li .toright", function () {
+			var li_index = $(this).closest("li").index();
+			$(this).closest("li").insertAfter($(this).closest("ul").find("li").eq(Number(li_index) + 1));
+		});
+
+	// 多图上传
+	</script>
+	<!-- <div id="news_jianjie"><span>产品简介：</span>
+<textarea rows="10" cols="50" id="news_jj">
+
+</textarea></div> -->
+	<style type="text/css">
+		.taocan {
+			width: 80%;
+		}
+
+		.product {
+			width: 100%;
+			margin: 20px 0px;
+		}
+
+		.tcdiv {
+			height: 40px;
+			line-height: 40px;
+			margin-top: 20px;
+			min-width: 1400px;
+			display: flex
+		}
+
+		.tcdiv>span,
+		.zwf {
+			color: #606266;
+			font-size: 14px;
+			width: 100px;
+			display: inline-block;
+			text-align: center;
+			min-width: 100px;
+		}
+
+		.tcdiv input {
+			margin-right: 10px;
+			padding-left: 10px;
+		}
+
+		.addpro {}
+
+		.close {
+			cursor: pointer;
+		}
+
+		.danger {
+			border-color: red !important;
+		}
+	</style>
+	<div class="taocan">
+		<div class="product guige">
+
+		</div>
+		<div class="zwf"></div> <button class="layui-btn addpro2" type="button">{$languageObj['添加规格']['name_' . $language]}</button>
+		<input id="fsmb" type="text" style="opacity: 0;">
+	</div>
+	<script type="text/javascript">
+		//点击多图上传的X,删除当前的图片
+		$("body").on("click", ".close", function () {
+			$(this).closest("div").remove();
+		});
+
+
+		$(".addpro2").click(function () {
+			$('.guige').append(`<div class="tcdiv guigediv"><span>{$languageObj['规格']['name_' . $language]}：</span><i class="layui-icon-up layui-icon guige-up"></i> &nbsp;<i class="guige-dow layui-icon-down layui-icon"></i> &nbsp;<input style="width:40%" type="text" class="layui-input" name="proname" id=""  placeholder="规格的名称（不能为空）"  value="" /><input  class="layui-input" style="width:60%" type="text" name="videosrc" id="" value="" placeholder="" /><i   class="close layui-icon"></i></div>`);
+		})
+
+		//规格点击<>上下移动图片
+		$("body").on("click", ".guige-up", function () {
+			var li_index = $(this).closest("div").index();
+
+			if (li_index >= 1) {
+				$(this).closest("div").insertBefore($(".guigediv").eq(Number(li_index) - 1));
+			}
+		});
+		$("body").on("click", ".guige-dow", function () {
+
+			var li_index = $(this).closest("div").index();
+			console.log(li_index)
+			$(this).closest("div").insertAfter($(".guigediv").eq(Number(li_index) + 1));
+		});
+	</script>
+
+	<div class="taocan">
+		<div class="product yanse">
+
+		</div>
+		<div class="zwf"></div> <button class="layui-btn addpro3" type="button">{$languageObj['添加颜色']['name_' . $language]}</button>
+		<input id="fsmb" type="text" style="opacity: 0;">
+	</div>
+	<script type="text/javascript">
+
+		$(".addpro3").click(function () {
+			$('.yanse').append(`<div class="tcdiv yanse-div"><span>{$languageObj['颜色']['name_' . $language]}：</span><i class="layui-icon-up layui-icon yanse-up"></i> &nbsp;<i class="yanse-dow layui-icon-down layui-icon"></i> &nbsp;<input style="width:40%" type="text" class="layui-input" name="proname" id=""  placeholder=""  value="" /><i   class="close layui-icon"></i></div>`);
+		})
+
+		//规格点击<>上下移动图片
+		$("body").on("click", ".yanse-up", function () {
+			var li_index = $(this).closest("div").index();
+
+			if (li_index >= 1) {
+				$(this).closest("div").insertBefore($(".yanse-div").eq(Number(li_index) - 1));
+			}
+		});
+		$("body").on("click", ".yanse-dow", function () {
+
+			var li_index = $(this).closest("div").index();
+			console.log(li_index)
+			$(this).closest("div").insertAfter($(".yanse-div").eq(Number(li_index) + 1));
+		});
+
+	</script>
+
+	<div class="taocan">
+		<div class="product xinghao">
+
+		</div>
+		<div class="zwf"></div> <button class="layui-btn addpro4" type="button">{$languageObj['添加型号']['name_' . $language]}</button>
+		<div class="zwf"></div> <button class="layui-btn layui-bg-red edixh" type="button">{$languageObj['批量修改型号价格']['name_' . $language]}</button><input placeholder="批量价格" type="text" class="edixhnum layui-input" style="width:100px;display: inline-block;margin-left: 10px;" value="">
+		<input id="fsmb" type="text" style="opacity: 0;">
+	</div>
+	<script type="text/javascript">
+     $(".edixh").click(function(){
+			var edixhnum=$(".edixhnum").val();
+			if(!edixhnum){
+				layer.msg(`{$languageObj['请输入要批量的价格']['name_' . $language]}`);
+				return false;
+			}
+			$(".xinghao-div>input:nth-of-type(2)").each(function(){
+			
+				$(this).val(edixhnum);
+				 layer.msg(`{$languageObj['修改成功']['name_' . $language]}`);
+				
+			})
+			
+		})//批量修改型号价格
+		$(".addpro4").click(function () {
+			$('.xinghao').append(`<div class="tcdiv xinghao-div"><span>{$languageObj['型号']['name_' . $language]}：</span><i class="layui-icon-up layui-icon xinghao-up"></i> &nbsp;<i class="xinghao-dow layui-icon-down layui-icon"></i> &nbsp;<input style="width:40%" type="text" class="layui-input" name="proname" id=""  placeholder="型号的名称（不能为空）"  value="" /><input  class="layui-input" style="width:60%" type="text" name="videosrc" id="" value="" placeholder="" /><i   class="close layui-icon"></i></div>`);
+		});
+
+		//规格点击<>上下移动图片
+		$("body").on("click", ".xinghao-up", function () {
+			var li_index = $(this).closest("div").index();
+
+			if (li_index >= 1) {
+				$(this).closest("div").insertBefore($(".xinghao-div").eq(Number(li_index) - 1));
+			}
+		});
+		$("body").on("click", ".xinghao-dow", function () {
+
+			var li_index = $(this).closest("div").index();
+			console.log(li_index)
+			$(this).closest("div").insertAfter($(".xinghao-div").eq(Number(li_index) + 1));
+		});
+	</script>
+	<div id="news_view"><span>{$languageObj['产品价格']['name_' . $language]}:</span><input type="text" class="layui-input" id="jiage"></div>
+
+	<div id="news_time"><span>{$languageObj['发布时间']['name_' . $language]}:</span><input type="text" class="layui-input" id="newstime"></div>
+
+	<script>
+		var newstime = '';
+		layui.use('laydate', function () {
+			var laydate = layui.laydate;
+
+			//执行一个laydate实例
+			laydate.render({
+				elem: '#newstime' //指定元素
+				, done: function (value, date, endDate) {
+
+					newstime = value;
+				}
+			});
+		});
+	</script>
+	<div id="news_xq" style="    width: 100%;
+    margin-top: 30px;"><span style="color: #606266;
+    font-size: 14px;
+   
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+
+    min-width: 100px;
+    float: left;">{$languageObj['产品介绍']['name_' . $language]}:</span>
+		<script id="editor" style=" 
+    height: 600px;
+    margin-bottom: 15px;
+    display: inline-block;
+    width: 90%;" type="text/plain" style=""></script>
+	</div>
+
+
+
+	<div id="news_sub"><button type="submit" id="news_submit" lay-submit lay-filter="submit">{$languageObj['提交保存']['name_' . $language]}</button></div>
+</div>
+
+<script type="text/javascript">
+	var news_slt = "";
+	$(function () {
+
+		UE.delEditor('editor');
+
+		var ue = UE.getEditor('editor', {
+			scaleEnabled: true,//设置不自动调整高度
+			autoFloatEnabled: false, //取消悬浮
+		});
+
+
+	});
+
+	layui.use(['form', 'layedit', 'laydate'], function () {
+		var form = layui.form,
+			layer = layui.layer;
+
+		form.on('submit(submit)', function (data) {
+			console.log(data.field);
+			return false;
+		});
+
+	})
+
+	// 利用layui来上传图片
+	layui.use('upload', function () {
+		var upload = layui.upload;
+
+		//执行实例
+		var uploadInst = upload.render({
+			elem: '#img_preview' //绑定元素
+			, url: '/login.php/admin/basicicoapi' //缩略图上传
+			, exts: 'jpg|png|jpeg|gif|bmp|webp'
+			, multiple: true
+			, number: 5
+			, drag: true
+			, data: {
+
+			}
+			, before: function (obj) {
+				//预读本地文件示例，不支持ie8
+				layer.msg('loading...', {
+					icon: 16,
+					shade: 0.05,
+					time: 500
+				});
+				;
+			}
+			, done: function (res) {
+				//上传完毕回调
+				$('#img_preview').attr('src', res.filepath);
+				//  console.log(res.filepath); //图片文件的路径
+				news_slt = res.filepath;//赋值给photo 传给ajax丢数据
+
+			}
+			, error: function (res) {
+				//请求异常回调
+
+				console.log(res);
+			}
+		});
+	});
+
+
+	// 利用layui来上传图片
+	$(function () {
+
+		$("input").bind('input propertychange change', function () {
+			if ($(this).val() != '') {
+				$(this).removeClass("danger");
+			}
+		})
+
+		$("#news_submit").click(function () {
+			var datafl = new Array();
+			$(".layui-form input[type='checkbox']:checked").each(function () {
+				checked = $(this).attr('title');
+				datafl.push(checked);
+			});
+			console.log(datafl)
+			var newsclass = $("#newsclass").val();
+			var newssort = $("#newssort").val();
+			var news_tit = $("#news_tit").val();
+			var news_jj = $("#news_jj").val();
+			var news_view = $("#view").val();
+
+			var ejclass = $("#newsclass2").val();
+			var sjclass = $("#newsclass3").val();
+			//新增
+			var jiage = $("#jiage").val();
+			var bianhao = $("#bianhao").val();
+			var daqu = $("#daqu").val();
+			var fuwuqi = $("#fuwuqi").val();
+			var leixing = $("#leixing").val();
+			var dengji = $("#dengji").val();
+			var xingbie = $("#xingbie").val();
+			var menpai = $("#menpai").val();
+			var shenshou = $("#shenshou").val();
+			var yijia = $(".product .tcdiv:last-of-type()").find('input[name="proname"]').val();
+
+			var editor = UE.getEditor('editor').getContent();
+
+			var ifpay = $("#vip").val();
+
+
+
+
+			//新增
+			//获取多图src
+			var si = 0;//多图的数目
+			var srcimg = new Array();//创建JS数组
+			$("#slide-pc-priview img").each(function () {
+				src = $(this).attr("src");
+				srcimg[si] = src;
+				si++;
+
+			})  //多图链接一条记录存储，前端用逗号分割循环输出。
+
+			srcimg = JSON.stringify(srcimg)
+			//获取产品目录src
+			// var si=0;//多图的数目
+			// var srcimg=new Array();//创建JS数组
+			// $(".pic-more-upload-list input:nth-of-type(1)").each(function(){
+			// 	src=$(this).val();
+			// 	srcimg[si]=src;
+			// 	si++;
+
+			// })  //多图链接一条记录存储，前端用逗号分割循环输出。	
+
+			// var sn=0;//多图的数目
+			// var srcimg2=new Array();//创建JS数组
+			// $(".pic-more-upload-list input:nth-of-type(2)").each(function(){
+			// 	src2=$(this).val();
+			// 	srcimg2[sn]=src2;
+			// 	sn++;
+
+			// })  //多图链接一条记录存储，前端用逗号分割循环输出。	
+
+			// var srcimg3=new Array();//创建JS数组
+			// srcimg3=[srcimg,srcimg2];
+			//   videores=JSON.stringify(srcimg3);
+			//   console.log(videores)
+
+
+			var numpro = 0;
+			var numi = 0;
+			var json = {};
+			var array = new Array();
+			$(".guige input").each(function () {
+
+				if (numpro < 2) {
+					proval = $(this).val();
+					json[numpro] = proval;
+					if (numpro == 1) {
+						array[numi] = JSON.stringify(json);
+						numi++;
+						numpro = 0;
+					} else {
+						numpro++;
+					}
+
+				}
+			});
+			//以上是规格封装数据过程
+
+			var yansenumpro = 0;
+			var yansenumi = 0;
+			var yansejson = {};
+			var yansearray = new Array();
+			$(".yanse input").each(function () {
+
+				yanseproval = $(this).val();
+				yansejson[yansenumpro] = yanseproval;
+
+				// yansenumi++;	
+				yansenumpro++;
+			});
+			yansearray = JSON.stringify(yansejson);
+			//以上是颜色封装数据过程
+
+			var xinghaonumpro = 0;
+			var xinghaonumi = 0;
+			var xinghaojson = {};
+			var xinghaoarray = new Array();
+			$(".xinghao input").each(function () {
+
+				if (xinghaonumpro < 2) {
+					xinghaoproval = $(this).val();
+					xinghaojson[xinghaonumpro] = xinghaoproval;
+					if (xinghaonumpro == 1) {
+						xinghaoarray[xinghaonumi] = JSON.stringify(xinghaojson);
+						xinghaonumi++;
+						xinghaonumpro = 0;
+					} else {
+						xinghaonumpro++;
+					}
+
+				}
+			});
+			//以上是型号封装数据过程
+
+
+
+			if (!newsclass) {
+				layer.msg(`{$languageObj['请选择分类']['name_' . $language]}`);
+				return false;
+			};
+
+			if (!news_tit) {
+				layer.msg(`{$languageObj['请填写产品标题！']['name_' . $language]}`);
+				$("#news_tit").addClass("danger");
+				return false;
+			}
+			if ( !news_slt) {
+				layer.msg(`{$languageObj['请上传缩略图']['name_' . $language]}`);
+				return false;
+			}
+			if ( !jiage) {
+				layer.msg(`{$languageObj['请填写产品价格！']['name_' . $language]}`);
+				$("#jiage").addClass("danger");
+				return false;
+			}
+			if ( !editor) {
+				layer.msg(`{$languageObj['请填写产品介绍！']['name_' . $language]}`);
+				return false;
+			}
+
+			$.ajax({
+				type: 'POST', // 规定请求的类型（GET 或 POST）
+				url: '/login.php/newsad/upnews?formname=product', // 请求的url地址
+				cache: true,// 否在缓存中读取数据的读取
+				dataType: 'json', //预期的服务器响应的数据类型 
+				data: {
+					news_tit: news_tit,
+					news_jj: news_jj,
+					ifpay: ifpay,
+					news_slt: news_slt,
+					newsclass: newsclass,
+					newstime: newstime,
+					news_view: news_view,
+					newssort: newssort,
+
+					srcimg: srcimg,
+					jiage: jiage,//新增字段
+					bianhao: bianhao,
+					daqu: daqu,
+					fuwuqi: fuwuqi,
+					taocan: array,
+					dengji: dengji,
+					xingbie: xingbie,
+					menpai: menpai,
+					shenshou: shenshou,
+					yijia: yijia,//新增字段
+					editor: editor,
+					yanse: yansearray,
+					xinghao: xinghaoarray,
+					ejclass: datafl,
+					sjclass: datafl
+
+				},//规定要发送到服务器的数据
+
+				success: function (res) { // 当请求成功时运行的函数
+					console.log(res);
+					// news_slt=null;
+					if (res.code == 1) {
+						layer.msg(`{$languageObj['产品保存中...']['name_' . $language]}`, {
+							icon: 16,
+							shade: 0.05,
+							time: 1000
+						}, function () {
+							window.location.href = "/login.php/admin/loadright?page=product";
+						});
+
+					} else {
+
+						layer.msg(`{$languageObj['保存失败']['name_' . $language]}`, {
+							icon: 2,
+							shade: 0.05,
+							time: 800
+						});
+					}
+
+
+
+
+
+				},
+				error: function (result) { //失败的函数
+					alert('接口请求失败！');
+					console.log(result);
+
+
+				}
+
+			})
+
+
+		})
+
+	})
+
+</script>

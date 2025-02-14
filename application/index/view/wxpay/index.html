@@ -1,0 +1,79 @@
+   <html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="__ROOT__/static/layui/layui.all.js"></script>
+    <link rel="stylesheet" href="__ROOT__/static/layui/css/layui.css">
+       <script src="/static/JS/jquery.min.js"></script>
+       	<script src="/static/JS/jquery.cookie.min.js"></script>
+    <title>微信安全支付</title>
+  	
+	<style>
+	     body,html{margin:0;}
+		.box{display: flex;width: 100%;flex-wrap: wrap;text-align: center;}
+		body{background-color: rgb(240, 240, 240);}
+		.div-1{line-height:30px;}
+		.div-1,.div-2,button{width: 100%;}
+		.div-2{display: flex;line-height: 40px;margin-top: 30px;border-top: 1px solid gainsboro;border-bottom: 1px solid gainsboro ;}
+		.div-2>div{width: 50%;}
+		.div-2-1{text-align: left;}
+		.div-2-2{text-align: right;}
+		button{margin:30px auto;border: 0;}
+	</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="div-1">
+				<p>{$tit}</p> 
+				<b style="font-size: 30px;">{$money}</b>
+			</div>
+			
+			<div class="div-2" style="background-color: rgb(247,247,247);height: 40px;">
+				<div class="div-2-1">&nbsp;&nbsp;&nbsp;收款方</div>
+				<div class="div-2-2">淄博慧心益脑科技&nbsp;&nbsp;&nbsp;</div>
+			</div>
+			<button onclick="callpay()" style="background-color: rgb(0, 176, 20);color: white;border-radius:7px ;height:45px;width: 90%;">
+				立即支付
+			</button>
+			
+		</div>
+    <script type="text/javascript">
+    // $("div").text($.cookie('think_orderid'));
+        //调用微信JS api 支付
+        function jsApiCall()
+        {
+            WeixinJSBridge.invoke(
+                'getBrandWCPayRequest',
+                <?php echo $res; ?>,
+                function(res){
+                        //alert(res.err_code+res.err_desc+res.err_msg); 
+                   
+					if(res.err_msg=='get_brand_wcpay_request:ok'){
+				 layer.msg('支付成功！');
+				 setTimeout(function(){
+				     window.history.go(-1);	
+				 },1500);				 
+					
+					};
+                    //alert(res.err_code+res.err_desc+res.err_msg);
+                }
+            );
+        }
+
+        function callpay()
+        {
+            if (typeof WeixinJSBridge == "undefined"){
+                if( document.addEventListener ){
+                    document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+                }else if (document.attachEvent){
+                    document.attachEvent('WeixinJSBridgeReady', jsApiCall); 
+                    document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+                }
+            }else{
+                jsApiCall();
+            }
+        }
+    </script>
+
+</body>
+</html>

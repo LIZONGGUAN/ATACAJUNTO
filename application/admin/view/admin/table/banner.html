@@ -1,0 +1,487 @@
+
+<style type="text/css">
+	.banner{width:97%;; border: 1px solid #ddd;min-height: 400px;height: auto;}
+/* 	.layui-table-body{overflow: hidden;} */
+   .layui-table-view .layui-table[lay-size=sm] tbody .layui-table-cell{line-height: 90px!important;height: 90px!important;  text-align:center!important;} /* layui内容区域设置 */
+	.layui-table-view .layui-table[lay-size=sm] thead .layui-table-cell{height:30px;line-height: 30px!important;background-color:white;  text-align:center!important;}  /* layui头部区域设置 */
+	
+	  .layui-table thead tr, .layui-table-click, .layui-table-header, .layui-table-mend, .layui-table-patch, .layui-table-tool, .layui-table-total{background-color:white;} /* layui头部背景 */
+	  .layui-table img{max-width: 95%!important;}
+</style>
+
+
+<div class="banner">
+	
+<script type="text/html" id="ID-table-demo-templet-switch">
+  <!-- 这里的 checked 的状态值判断仅作为演示 -->
+  <input type="checkbox" name="status" value="{{ d.Id }}" title="热|" lay-skin="switch" lay-filter="demo-templet-status" {{ d.status == "checked" ? "checked" : "" }} >
+</script>
+
+<div class="layui-tab  layui-tab-brief">
+  <ul class="layui-tab-title">
+    <li class="{$class1}" id="bannerman">{$languageObj['图文管理']['name_' . $language]}</li>
+    <li id="banneradd" class="{$class2}">{$languageObj['新增图文']['name_' . $language]}</li>
+   
+  </ul>
+  <div class="layui-tab-content ">
+    <div class="layui-tab-item {$show1}" id="bannerman2">
+		<div id="banner"  lay-filter="currentTableFilter">
+			
+		</div>
+	</div>
+    <div class="layui-tab-item {$show2}" id="banneradd2">
+		<form class="layui-form" action="">
+			<div class="layui-form-item layui-form-text">
+			  <label class="layui-form-label">{$languageObj['内容一']['name_' . $language]}</label>
+			  <input type="hidden" name="{$editcon}" id="hidden" value="" />
+			  <input type="hidden" name="{$id}" id="hidid" value="" />
+			  <div class="layui-input-block">
+			    <textarea name="desc" placeholder="{$languageObj['请输入内容']['name_' . $language]}" id="textone" class="layui-textarea">{$textone}</textarea>
+			  </div>
+			</div>
+			<div class="layui-form-item layui-form-text">
+			  <label class="layui-form-label">{$languageObj['内容二']['name_' . $language]}</label>
+			  <div class="layui-input-block">
+			    <textarea name="desc" placeholder="{$languageObj['请输入内容']['name_' . $language]}" id="texttwo" class="layui-textarea">{$texttwo}</textarea>
+			  </div>
+			</div>
+			
+		  <div class="layui-form-item">
+		    <label class="layui-form-label">{$languageObj['按钮内容']['name_' . $language]}</label>
+		    <div class="layui-input-block">
+		      <input type="text" name="title" id="btnname"  placeholder="{$languageObj['请输入']['name_' . $language]}" autocomplete="off" class="layui-input" value="{$button}">
+		    </div>
+		  </div>
+		  <div class="layui-form-item">
+		    <label class="layui-form-label">{$languageObj['跳转地址']['name_' . $language]}</label>
+		    <div class="layui-input-block">
+		      <input type="text"  id="btnurl" name="title"  placeholder="{$languageObj['请输入']['name_' . $language]}" autocomplete="off" class="layui-input" value="{$url}">
+		    </div>
+		  </div>
+		 <div class="layui-form-item">
+		   <label class="layui-form-label">{$languageObj['上传图片']['name_' . $language]}</label>
+		   <div class="layui-input-block">
+		   <button type="button" class="layui-btn layui-btn-primary" id="uploadico"  lay-verify="required">{$languageObj['上传图片']['name_' . $language]}</button>
+		   </div>
+		 </div>
+		 <div class="layui-form-item">
+	
+		<label class="layui-form-label"></label>
+		<div class="layui-input-block" style="border: 1px solid #ddd ;max-width:80%;height:auto;min-height: 150px;">
+		<img width="100%" height="100%" id="photo" src="{$imgurl}" >
+		</div>
+		 </div>
+		
+	
+		</form>
+		<div class="layui-form-item">
+		  <div class="layui-input-block">
+		    <button class="layui-btn" id="submitbtn">{$languageObj['立即提交']['name_' . $language]}</button>
+		   
+		  </div>
+		</div>
+	</div>  <!-- item2 -->
+  
+  </div>
+</div>
+</div> <!-- banner -->
+<script type="text/javascript">
+
+$(function(){
+	$("#banneradd").click(function(){
+		$("#photo").hide();
+		$("#photo").attr("src",'');
+		$("#btnurl").attr("value",'');
+		$("#btnname").attr("value",'');
+		$("#texttwo").text('');
+		$("#textone").text('');
+		$("#hidden").attr("name",'');
+		
+	})
+	
+})
+
+	$(document).ready(function(){
+		var phsrc=$("#photo").attr("src");
+		if(phsrc==''){
+			$("#photo").hide();
+		}
+	})
+	
+	var  photo;
+	layui.use('upload', function(){
+	  var upload = layui.upload;
+	   
+	  //执行实例
+	  var uploadInst = upload.render({
+	    elem: '#uploadico' //绑定元素
+	    ,url: '/login.php/admin/basicicoapi' //上传接口
+		,exts: 'jpg|png|jpeg'
+		,multiple:true
+		,drag:true
+		,data:{
+			
+		}
+	    ,before:function(obj){
+			//预读本地文件示例，不支持ie8
+			       $("#photo").hide();
+				  layer.confirm('幻灯片：600*256  ', {icon: 3, title:'尺寸提示'}, function(){
+					layer.msg('图片上传中...', {
+					                icon:16,
+					                shade: 0.05,
+					                time: 500
+					            },function(){
+									      
+									  $("#photo").show(500);
+								});});
+								}
+		,done: function(res){
+	      //上传完毕回调
+		 
+		  $('#photo').attr('src', res.filepath);
+		  // console.log(res.filepath); 图片文件的路径
+		       photo=res.filepath;//赋值给photo 传给ajax丢数据
+	    }
+	    ,error: function(res){
+	      //请求异常回调
+	
+		  console.log(res);
+	    }
+	  });
+	});
+	//upload
+	
+	//ajax
+	
+	$(function(){
+		$("#submitbtn").click(function(){
+		
+		var textone=$("#textone").val();
+			var texttwo=$("#texttwo").val();
+			var btnname=$("#btnname").val();
+			var btnurl=$("#btnurl").val();
+			  photourl=$("#photo").attr("src");
+			  hidden=$("#hidden").attr("name");
+			  hidid=$("#hidid").attr("name");
+		
+		     
+		      
+			if(photourl){
+			photo=photourl;
+				$.ajax({
+					type:'POST', // 规定请求的类型（GET 或 POST）
+					url:'/login.php/admin/bannerapi', // 请求的url地址
+					cache:true,// 否在缓存中读取数据的读取
+					dataType:'json', //预期的服务器响应的数据类型 
+					data:{
+						 imgurl:photo,
+						 textone:textone,
+						texttwo:texttwo,
+						button:btnname,
+						 url:btnurl,
+						 upload:"upload",
+						 editcon:hidden,
+						 id:hidid,
+						 who:'{$who}'
+						
+					},//规定要发送到服务器的数据
+					
+					success: function(res){ // 当请求成功时运行的函数
+						if(hidden=='editcon'){
+							layer.msg(`{$languageObj['修改成功']['name_' . $language]}`, {
+							                icon:1,
+							                shade: 0.05,
+							                time: 800
+							            },function(){
+											
+			window.location.href="/login.php/admin/loadright?page=banner&bannerwho={$who}";
+										});
+							
+						}else{
+							if(res.code==1){
+								layer.msg('success', {
+								                icon:1,
+								                shade: 0.05,
+								                time: 800
+								            },function(){
+							window.location.href="/login.php/admin/loadright?page=banner&bannerwho={$who}";
+											});
+							}
+						}
+					
+						
+						
+						
+						
+					},
+					error:function(result){ //失败的函数
+					layer.msg('fail', {
+					                icon:2,
+					                shade: 0.05,
+					                time: 800
+					            });
+							
+							
+							
+							
+					}
+					
+				})//ajax-end
+			}else{
+				
+				layer.msg(`{$languageObj['请上传图片']['name_' . $language]}`, {
+				                icon:2,
+				                shade: 0.05,
+				                time: 800
+				            });
+			};//if	
+			
+		
+			
+		});
+		
+		
+			
+		});
+	
+	
+</script>
+
+
+ 
+ <script type="text/javascript">
+    let tdname;
+	let tdtel;
+	let tdcon;
+ layui.use('table', function(){
+ 	
+ 	var table = layui.table;
+	var form = layui.form;
+	
+    table.render({
+      elem: '#banner'
+      ,height:'full-120'
+	  
+ 	 ,method:'post'
+      ,url: '/login.php/admin/bannerapi?select=select&who={$who}' //数据接口
+	 ,page:  { //支持传入 laypage 组件的所有参数（某些参数除外，如：jump/elem） - 详见文档
+       layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'] ,//自定义分页布局
+ 	  limit:30
+ 	  ,limits : [30,60,90]
+       ,curr:1 //设定初始在第 1 页
+       ,groups: 2 //只显示 1 个连续页码
+       ,first: false //不显示首页
+       ,last: false //不显示尾页
+ 	  
+       
+     },success: function(res){
+		console.log(res);
+			 
+		 
+	 }
+ 	
+ 	,request: {
+ 	            pageName: 'page',//页码的参数名称，默认：page
+				
+ 		 } 
+	
+ 	 ,size:'sm'
+      ,cols: [[ //表头
+        {field: 'Id', title: 'ID',  width:100,fixed: 'left'}
+        ,{field: 'imgurl', width:300,title: `{$languageObj['缩略图']['name_' . $language]}`,templet: function(d) { return '<div  style="cursor: pointer" onclick="show_img(this)" ><img src="'+d.imgurl+'" ' + 'alt="" width="95%" height="95px"  ></a></div>'; }}
+		  ,{field: 'sort', width:100,title: `{$languageObj['排序']['name_' . $language]}`,edit:true}
+		 , {field:'status',title: `{$languageObj['状态']['name_' . $language]}`, width:85, templet: '#ID-table-demo-templet-switch'}
+        ,{field: 'wealth', title: `{$languageObj['操作']['name_' . $language]}`,width:349,  toolbar: '#bardemo'}
+      ]]
+    });
+     //监听单元格编辑
+     table.on('edit(currentTableFilter)', function(obj){ //注：edit是固定事件名，test是table原始容器的属性 lay-filter="对应的值"
+        console.log(obj.value); //得到修改后的值
+        console.log(obj.field); //当前编辑的字段名
+       // console.log(obj.data); //所在行的所有相关数据  
+          tdfield=obj.field;
+		  console.log(obj.field)
+		
+     	$.post('/login.php/admin/banner_tapi?id='+obj.data.Id+'&data='+obj.value,function(s){
+			if(s.code==1){
+													layer.msg(`{$languageObj['修改成功']['name_' . $language]}`, {
+													                icon:1,
+													                shade: 0.05,
+													                time: 800
+													            },function(){
+																	//window.location.reload();
+																});
+													   return false;
+			}else{
+									layer.msg(`{$languageObj['修改失败']['name_' . $language]}`, {
+									                icon:2,
+									                shade: 0.05,
+									                time: 800
+									            });
+									   return false;
+			}
+			
+		})
+     	
+     	
+     });
+	 
+	   // 状态 - 开关操作
+	   form.on('switch(demo-templet-status)', function(obj){
+	     var id = this.value;
+	     var name = this.name;
+		
+		$.post('/login.php/admin/banner_open?trid='+id,function(s){
+			if(s.code==1){
+													layer.msg(`{$languageObj['修改成功']['name_' . $language]}`, {
+													                icon:1,
+													                shade: 0.05,
+													                time: 800
+													            },function(){
+																	//window.location.reload();
+																});
+													   return false;
+			}else{
+									layer.msg(`{$languageObj['修改失败']['name_' . $language]}`, {
+									                icon:2,
+									                shade: 0.05,
+									                time: 800
+									            });
+									   return false;
+			}
+		})
+	    
+	   });
+	   
+	   
+    //监听工具条
+    table.on('tool(currentTableFilter)', function(obj){ 
+      var data = obj.data; //获得当前行数据
+ 	 var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+ 	  
+      var tr = obj.tr; //获得当前行 tr 的 DOM 对象（如果有的话）
+ 	 
+ 	 var trid=$($(tr).find('td')[0]).text();
+      
+	 
+	  
+      if(layEvent === 'edit'){ //编辑
+	 
+	  window.location.href='/login.php/admin/bannerapi?id='+trid+'&edit=edit&who={$who}';
+ 
+      }else if(layEvent === 'add'){
+	       $("#photo").hide();
+	       $("#photo").attr("src",'');
+	       $("#btnurl").attr("value",'');
+	       $("#btnname").attr("value",'');
+	       $("#texttwo").text('');
+	       $("#textone").text('');
+	       $("#hidden").attr("name",'');
+		  $("#bannerman").attr("class","");
+		  $("#banneradd").attr("class","layui-this");
+		  $("#bannerman2").attr("class","layui-tab-item");
+		  $("#banneradd2").attr("class","layui-tab-item layui-show");
+	  } else if(layEvent === 'del'){ //删除
+        layer.confirm(`{$languageObj['确定删除这条数据吗？']['name_' . $language]}`, function(index){
+ 	    
+ 	     obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
+          layer.close(index);  //关闭指令
+       
+	 
+ 		 $.ajax({
+ 		 	type:'post', // 规定请求的类型（GET 或 POST）
+ 		 	url:'/login.php/admin/bannerapi', // 请求的url地址
+ 		 	cache:false,// 否在缓存中读取数据的读取
+ 		 	dataType:'json', //预期的服务器响应的数据类型 
+ 		 	data:{
+ 		 		id:trid,
+				del:"del"
+ 		 	},//规定要发送到服务器的数据
+		success:function(res){
+		if(res.code==1){
+			layer.msg('success', {
+			                icon:1,
+			                shade: 0.05,
+			                time: 1000
+			            },function(){
+							layer.closeAll();  //关闭所有弹层
+							 $(".layui-layer-shade").remove(); //移除遮罩
+					
+						});
+			
+		}else{
+			layer.msg('fail', {
+			                icon:2,
+			                shade: 0.05,
+			                time: 1000
+			            },function(){
+							layer.closeAll();  //关闭所有弹层
+							 $(".layui-layer-shade").remove(); //移除遮罩
+					
+						});
+		}
+		
+		
+		},
+		error:function(result){ //失败的函数
+		console.log(result);
+		layer.msg('fail', {
+		                icon:2,
+		                shade: 0.05,
+		                time: 800
+		            },function(){
+						 layer.closeAll();  //关闭所有弹层
+					
+			
+					});
+				
+				
+				
+				
+		}
+ 		  }) //ajax
+ 		 
+        });
+      } else if(layEvent === 'LAYTABLE_TIPS'){
+        layer.alert('Hi，头部工具栏扩展的右侧图标。');
+      }
+    });   //end工具栏
+  
+
+	});
+	
+
+ 
+ </script>
+ <script type="text/javascript">
+ 	function show_img(t) {
+ 		var t = $(t).find("img");
+ 		//页面层
+ 		layer.open({
+ 			type: 1,
+ 			title: '幻灯片',
+ 			skin: 'layui-layer-rim', //加上边框
+ 			area: ['95%', '90%'], //宽高 t.width() t.height()
+ 			shadeClose: true, //开启遮罩关闭
+ 			end: function (index, layero) {
+ 				return false;
+ 			},
+ 			content: '<div style="text-align:center;cur"><img width="100%" style="max-height:100%" src="' + $(t).attr('src') + '" /></div>'
+ 		});
+ 	}
+ </script>
+ <script  type="text/html" id="bardemo">
+   
+    <button type="button" lay-event="add" class="layui-btn layui-btn-primary layui-btn-sm">
+      <i class="layui-icon">&#xe654;</i>
+    </button>
+	   <button lay-event="edit" type="button" class="layui-btn layui-btn-primary layui-btn-sm">
+	     <i class="layui-icon">&#xe642;</i>
+	   </button>
+	   <button lay-event="del" type="button" class="layui-btn layui-btn-primary layui-btn-sm">
+	     <i class="layui-icon">&#xe640;</i>
+	   </button>
+
+ <!--  注意：属性 lay-event="" 是模板的关键所在，值可随意定义。 -->
+ </script>
+ 

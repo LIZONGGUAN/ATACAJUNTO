@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	
+    <link rel="stylesheet" href="/static/page/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/static/page/css/style.css">
+    <link rel="stylesheet" href="/static/page/font/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/page/layui/css/layui.css">
+    <link rel="stylesheet" href="/static/page/css/media.css">
+    <script src="/static/page/js/jquery-1.10.2.min.js"></script>
+    <script src="/static/page/js/swiper-bundle.min.js"></script>
+    <script src="/static/page/layui/layui.js"></script>
+</head>
+<style>
+    @media screen and (max-width:640px) {
+        body header{
+            display: none;
+        }
+        body .page-img {
+            display: none;
+        }
+    }
+    header{
+        display: block;
+    }
+    .page-img {
+        display: block;
+    }
+</style>
+<body class="body-bg">
+ 
+
+    <div class="kong kong1"></div>
+    <div class="main">
+        <ul class="cart-title display cart-bg">
+            <li class="cart-li1">
+                <label for="checkAll">
+                    <input type="checkbox" id="checkAll" />{$languageObj['全选']['name_' . $language]}
+                </label>
+            </li>
+            <li class="cart-li2">{$languageObj['商品名称']['name_' . $language]}</li>
+            <li class="cart-li3">{$languageObj['单价']['name_' . $language]}</li>
+            <li class="cart-li4">{$languageObj['数量']['name_' . $language]}</li>
+            <li class="cart-li5">{$languageObj['小计']['name_' . $language]}</li>
+            <li class="cart-li6">{$languageObj['备注']['name_' . $language]}</li>
+            <li class="cart-li7">{$languageObj['操作']['name_' . $language]}</li>
+        </ul>
+        <ul class="cart-content cart-bg">
+			{volist name='pro' id='m' key='n'}
+            <li class="cart-lis" data-choice="{$n}">
+                <div class="cart-dis display">
+                    <div class="cart-li1 cart-div display">
+                        <input type="checkbox">
+                        <img src="{$m.1}" alt="">
+                    </div>
+                    <table>
+						{volist name='m.2' id='v'}
+                        <tr class="cart-tr">
+                            <td class="cart-li2 cart-name">
+                               <p> {$m.0}</p>
+                                <span>{$v.0}</span>
+                            </td>
+                            <td class="cart-li3 cart-price">
+                                R$<span>{$v.1}</span>
+                            </td>
+                            <td class="cart-li4">
+                                <div class="cart-quantity">
+                                    <button>-</button>
+                                    <p>{$v.2}</p>
+                                    <button>+</button>
+                                </div>
+                            </td>
+                            <td class="cart-li5 cart-price">R$<span>{$v.2*$v.1}</span></td>
+                            <td class="cart-li6 cart-textarea"><textarea></textarea></td>
+                            <td class="cart-li7 cart-button"><i class="fa fa-times" aria-hidden="true"></i></td>
+                        </tr>
+						 
+                         {/volist}
+                    </table>
+                </div>
+                <div class="total">
+                    <p>{$languageObj['共计']['name_' . $language]}：<span>R$<i>5.58</i></span></p>
+                </div>
+            </li>
+			  {/volist}
+      
+		</ul>
+        <div class="cart-bg" style="margin-top: 20px;">
+            <div class="display total-footer">
+                <p>{$languageObj['合计']['name_' . $language]}：<i>R$</i> <span id="total">0</span></p>
+                <button>{$languageObj['提交订单']['name_' . $language]}</button>
+            </div>
+        </div>
+    </div>
+    <div class="kong"></div>
+
+    <!-- 提交订单 -->
+    <div class="order">
+        <div class="order-info">
+            <ul class="order-ul1">
+                <li class="order-li1 display">
+                    <div>
+                        <p>{$languageObj['客户名称']['name_' . $language]}：</p><span>{$memberda.0.name}</span>
+                    </div>
+                    <div>
+                        <p>{$languageObj['订单号码']['name_' . $language]}：</p><span>{$memberda.0.trade}</span>
+                    </div>
+                    <div>
+                        <p>{$languageObj['下单时间']['name_' . $language]}：</p><span id="time">{$memberda.0.trdate}</span>
+                    </div>
+                </li>
+                <li class="order-li1 display">
+                    <div>
+                        <p>{$languageObj['电话']['name_' . $language]}：</p><span>{$memberda.0.phone}</span>
+                    </div>
+                 <!--   <div>
+                        <p>跟单员：</p><span>xxxxxxxxx</span>
+                    </div> -->
+                </li>
+                <li class="order-li1 display">
+                    <div>
+                        <!--<p>客户地址：</p>-->
+                        <span>{$memberda.0.shouhuo}
+                        </span>
+                    </div>
+                </li>
+               <!-- <li class="order-li1 display">
+                    <div>
+                        <p>发货途径：</p><span>xxxxxxxxx</span>
+                    </div>
+                </li> -->
+                <li class="order-li1 display">
+                    <div>
+                        <p>{$languageObj['备注']['name_' . $language]}：</p><textarea class="beizhu">{$memberda.0.beizhu}</textarea>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="order-product">
+            <div class="order-product-div">
+
+            </div>
+            <div class="order-button display">
+                <div class="order-button-text">
+                    {$languageObj['总计']['name_' . $language]}：R$<span class="priceall">0</span>
+                </div>
+                <button id="cancel">{$languageObj['取消']['name_' . $language]}</button>
+                <button id="determine">{$languageObj['确认提交']['name_' . $language]}</button>
+            </div>
+        </div>
+    </div>
+<script>
+// 确认提交订单
+$('#determine').click(function(){
+//     console.log(edigwcdata);
+//   return false;
+    $.ajax({
+    	type:'POST', // 规定请求的类型（GET 或 POST）
+    	url:'/index.php/index/requ/payorder', // 请求的url地址
+    	cache:true,// 否在缓存中读取数据的读取
+    	dataType:'json', //预期的服务器响应的数据类型 
+    	data:{
+    	    orderid:'{$orderid}',
+    		buyarr:edigwcdata,
+    		order:'{$out_trade_no}',
+			user_name:'{$member.0.name}',
+			user_id:'{$member.0.Id}',
+			price:$(".priceall").text(),
+			beizhu:$(".beizhu").val(),
+			sign:`{$languageObj['修改订单']['name_' . $language]}`
+			
+    	},//规定要发送到服务器的数据
+    	
+    	success: function(res){ // 当请求成功时运行的函数
+    		if(res.code==1){
+    			
+    		 layer.msg(`{$languageObj['订单已修改！请等待客户确认！']['name_' . $language]}`); 
+    		 setTimeout(function(){
+    			 window.location.href='/login.php/admin/loadright?page=order';
+    		 },1500)
+    		}
+    		
+    		
+    	}
+    	
+    })//ajax-end
+})
+</script>
+
+ 
+
+<style>
+    .layui-layer-page{
+        height: 80%!important;
+        overflow-y: auto;
+    }
+    
+</style>
+    <script src="/static/page/js/scr1.js"></script>
+</body>
+
+</html>

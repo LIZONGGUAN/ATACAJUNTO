@@ -1,0 +1,257 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"/www/wwwroot/tb.youanfutang.cn/public/../application/index/view/index/my.html";i:1714449159;}*/ ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=0,user-scalable=no">
+  <meta name="viewport" content="width=device-width,initial-scale=0.1">
+
+  <title><?php echo $seotitle; ?> -Sobre nós</title>
+  <meta name="Keywords" content="<?php echo $seoseokey; ?>"/>
+  <meta name="description" content="<?php echo $seoseodsc; ?>">
+  <?php echo $seoseoheader; ?>
+  
+  <link rel="stylesheet" href="/static/page/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/static/page/css/style.css">
+  <link rel="stylesheet" href="/static/page/font/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/static/page/layui/css/layui.css">
+  <!--<link rel="stylesheet" href="/static/page/css/media.css">-->
+  <script src="/static/page/js/jquery-1.10.2.min.js"></script>
+  <script src="/static/page/js/swiper-bundle.min.js"></script>
+  <script src="/static/page/layui/layui.js"></script>
+</head>
+<style>
+  @media screen and (max-width:640px) {
+      body header{
+          display: none;
+      }
+      body .page-img {
+          display: none;
+      }
+  }
+  header{
+      display: block;
+  }
+  .page-img {
+      display: block;
+  }
+</style>
+<body>
+  <header>
+    <div class="main display jc-between">
+      <a class="logo" href="?p=index">
+        <img src="<?php echo $seo['weblogo']; ?>" alt="">
+      </a>
+      <div class="seach">
+        <div>
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <input type="text" placeholder="Introduz a procura de palavras chave">
+        </div>
+        <button class="selpro">pesquisa</button>
+      </div>
+      <div></div>
+	  <script>
+	  	$(".selpro").click(function(){
+	  		window.location.href='?p=product&sel='+$(".seach input").val();
+	  	})
+	  </script>
+    </div>
+    <ul class="nav-ul main display display-center">
+            <li class="nav-li">
+                <a href="?p=index">HOME</a>
+            </li>
+            <li class="nav-li">
+                <a href="?p=product" class="nav-active">TODOS PRODUTOS</a>
+            </li>
+            <li class="nav-li">
+                <a href="?p=cart">CARRINHO</a>
+            </li>
+            <li class="nav-li">
+                <a href="?p=my">SOBR NÓS</a>
+            </li>
+    </ul>
+  </header>
+  <div class="page-img">
+    <!--<img src="/static/page/image/product.jpg" alt="">-->
+  </div>
+  <div class="kong kong1"></div>
+  <!-- 移动端我的 -->
+  <div class="media-my">
+    <div class="mediaMy-tx">
+      <img src="/static/page/image/portrait.png" alt="">
+      <p>Bem-vindos</p>
+    </div>
+    <div class="shortcut-list">
+      <a class="shortcut-item" href="">
+          <span>0</span>
+          <span>PEDIDO ENVIADO AO LOJA</span>
+      </a>
+      <a class="shortcut-item" href="">
+          <span>0</span>
+          <span>PEDIDO SEPARANDO</span>
+      </a>
+      <a class="shortcut-item" href="">
+          <span>0</span>
+          <span>SUA COMFIRMAÇÃO</span>
+      </a>
+      <a class="shortcut-item" href="">
+          <span>0</span>
+          <span>COMFIRMAÇÃO DA LOJA</span>
+      </a>
+      <a class="shortcut-item" href="">
+          <span>0</span>
+          <span>PEDIDO COMPLETOS</span>
+      </a>
+  </div>
+  </div>
+
+
+  <div class="main ">
+    <h1 class="my-name">Sobre nós</h1>
+    <div class="kong"></div>
+    <div class="my_list">
+        <div class="my_item display">
+          <div class="my_left">
+            <img src="/static/page/image/my-img1.jpg" alt="">
+          </div>
+          <div class="my_right display">
+              <div class="my-text">
+                <p>
+                  &#12288;&#12288;Zhuhai CM Computer Mall Co., Ltd. foi criada em 1997, integrando pesquisa e desenvolvimento, montagem e vendas
+Uma empresa profissional de marketing informático que integra serviços, com décadas de acumulação e crescimento, contando com
+Liderando o caminho na criação de uma empresa chinesa de vendas de shopping de computador com produtos e tecnologia requintada, tornando-se uma empresa de vendas de computadores de alto nível na China
+Líderes de nível.<br>
+                  <br>
+                  &#12288;&#12288;CM Computer Mall tem uma grande empresa de marketing de produtos de computador e uma grande empresa limitada de serviços de tecnologia de computador, com
+Processos avançados de montagem e manutenção na indústria, com uma capacidade anual de montagem e produção de mais de 5 milhões de unidades. Atualmente, os canais de vendas
+O Dao abrange mais de 30 províncias, cidades e regiões autônomas em todo o país, com mais de 2000 lojas especializadas e mais de 50 países em todo o mundo
+Lar e região.
+                </p>
+              </div>
+          </div>
+        </div>
+        <div class="my_item display">
+        
+          <div class="my_right display">
+              <div class="my-text">
+                <p>
+                  &#12288;&#12288;CM Computer Product Mall é atualmente uma das principais bases de vendas de produtos de computador na China
+Um distribuidor conjunto de computadores de renome global com uma área empresarial e empresarial "International Computer Marketing Ecological Theme Park"
+Base de testes KPM de computador auto- construída A empresa foi premiada com os títulos de "Excelente Empresa Privada na Província de Guangdong" e "Guangming Nova Área"
+Títulos honorários como "Sede Empresarial". CM Computer Product Mall tem mais de 200 tecnologias internacionais e nacionais patenteadas
+Shu ganhou repetidamente o International Motorcycle Technology Invention Gold Award.
+                </p>
+              </div>
+          </div>
+          <div class="my_left display my-img">
+            <img src="/static/page/image/my-img2.png" alt="">
+            <img src="/static/page/image/my-img3.png" alt="">
+          </div>
+        </div>
+    </div>
+  </div>
+
+<style>
+	.footer-top{background-color:rgba(0,0,0,0);}
+</style>
+  <div class="kong"></div>
+  <footer>
+    <div class="footer-top">
+      <div class="main">
+         <ul class="footer-ul footerUl-bg display">
+                    <li class="display">
+                        <img src="/static/page/image/hao.png" alt="">
+                        <h4>Garantia de qualidade e serviço atencioso</h4>
+                    </li>
+                    <li class="display">
+                        <img src="/static/page/image/gou.png" alt="">
+                        <h4>Variedade rica e compras convenientes</h4>
+                    </li>
+                    <li class="display">
+                        <img src="/static/page/image/song.png" alt="">
+                        <h4>Materiais rápidos e entrega ultra rápida</h4>
+                    </li>
+                    <li class="display">
+                        <img src="/static/page/image/phone.png" alt="">
+                        <h4>Serviço pós-venda atencioso, respostas profissionais</h4>
+                    </li>
+                </ul>
+      <!--  <ul class="display footer-ul footer-item2">
+          <li>
+            <p>购物指南</p>
+            <a href="">购物流程</a>
+            <a href="">会员介绍</a>
+            <a href="">订购流程</a>
+            <a href="">订购流程</a>
+          </li>
+          <li>
+            <p>购物指南</p>
+            <a href="">购物流程</a>
+            <a href="">会员介绍</a>
+            <a href="">订购流程</a>
+            <a href="">订购流程</a>
+          </li>
+          <li>
+            <p>购物指南</p>
+            <a href="">购物流程</a>
+            <a href="">会员介绍</a>
+            <a href="">订购流程</a>
+            <a href="">订购流程</a>
+          </li>
+          <li>
+            <p>购物指南</p>
+            <a href="">购物流程</a>
+            <a href="">会员介绍</a>
+            <a href="">订购流程</a>
+            <a href="">订购流程</a>
+          </li>
+        </ul>
+    -->
+	  </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="main">
+        <a href="">
+          Copyright @ 2018-2022 Company name All rights reserved.
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+
+  
+    <!-- 移动端底部导航 -->
+     <div class="media-footer">
+        <ul class="display">
+            <li>
+                <a href="?p=index" style="color: #ff5212;">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <p>Página inicial</p>
+                </a>
+            </li>
+            <li>
+                <a href="?p=classification">
+                    <i class="fa fa-th-large" aria-hidden="true"></i>
+                    <p>classificação</p>
+                </a>
+            </li>
+            <li>
+                <a href="?p=cart">
+                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                    <p>carrinho de compras</p>
+                </a>
+            </li>
+            <li>
+                <a href="?p=my">
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                    <p>O meu</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+  <script src="/static/page/js/scr.js"></script>
+</body>
+</html>

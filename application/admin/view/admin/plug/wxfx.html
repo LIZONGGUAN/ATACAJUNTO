@@ -1,0 +1,222 @@
+	<style type="text/css">
+	.wxfx{padding:0px 20px;}
+			.wxfx p{color: #999!important;}
+			.layui-input{display: inline-block;margin-top:5px;}
+	</style>
+	<div class="headertip"><li>微信转发图文</li></div>
+		<div class="wxfx">
+		<b style="font-size: 16px;margin: 10px auto;margin:10px auto;
+    display: block">使用说明</b>
+			<p>1.请先进入微信公众平台<a href="https://mp.weixin.qq.com/" target="_blank">申请微信公众号</a>。</p>
+			<p>2.如需使用高级功能，请按照微信公众平台提示，进行公众号认证，<a href="https://jingyan.baidu.com/article/3c48dd34ae6b22e10ae35842.html" target="_blank">查看认证教程</a>。</p>
+			<p>3.请将申请好的公众号信息，按照提示填入对应选项，进行验证。</p>
+			<p>4.验证成功之后，即可配置微网站的其他功能。</p>
+			<p>注：此功能需网站进行ICP备案及付费配置才可以使用。案例：<span style="height: 30px;line-height: 30px;" class="layui-btn anli">点击查看</span></p>
+			
+			<script>
+				$(".anli").click(function(){
+					layer.open({
+						type:1,
+						area:['600px','700px'],
+						title:'微信营销分享案例',
+						content:$(".wxfxanli-con")
+					})
+				})
+			</script>
+			<b style="font-size: 16px;margin: 10px auto;margin:10px auto;
+			display: block">微信分享配置</b>
+			<p><span style="display: inline-block;width: 90px;">帐号类型：</span><input style="width:80px;text-align: center;background-color: rgb(16, 146, 234); color: rgb(255, 255, 255); border: 1px solid rgb(255, 255, 255);height:30px;line-height: 38px;" type="text" disabled="" name="" id="" value="服务号" /></p>
+	
+				<p><span style="display: inline-block;width: 110px;">APPID：</span><input style="width:300px;height: 35px;margin-left:10px;" type="text" name="appid" id="" value="{$appid}" class="layui-input"/><span>&nbsp;&nbsp;&nbsp;*从微信公众平台管理后获取，服务号或认证通过的订阅号才需要填</span></p>
+					<p><span  style="display: inline-block;width: 110px;">APPSECRET：</span><input style="width:300px;height: 35px;margin-left:10px;" type="text" name="miyao" id="" value="{$miyao}" class="layui-input"/><span>&nbsp;&nbsp;&nbsp;*从微信公众平台管理后获取，服务号或认证通过的订阅号才需要填</span></p>
+					<b style="font-size: 16px;margin: 10px auto;margin:10px auto;
+					display: block">朋友圈分享信息</b>
+					<p><span style="display: inline-block;width: 110px;">分享标题：</span><input style="width:300px;height: 35px;margin-left:10px;" type="text" name="fxtit" id="" value="{$fxtit}" class="layui-input" /><span>&nbsp;&nbsp;&nbsp;*转发朋友圈显示该内容的标题</span></p>
+						<p><span style="display: inline-block;width: 110px;">分享描述：</span><input style="width:300px;height: 35px;margin-left:10px;" type="text" name="fxms" id="" value="{$fxms}" class="layui-input"/><span>&nbsp;&nbsp;&nbsp;*转发朋友圈显示该内容的描述</span></p>
+				<!-- 分享图片 -->
+			<div style="margin-top: 10px;">
+				<span style="display: inline-block;width: 110px;color: #999">分享图片：</span>	
+				    <img src="/static/img/admin/news_slt.jpg" id="uploadico"style="cursor: pointer;width:100px;height:100px;object-fit: cover;    margin-left: 5px;">
+			</div>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					if('{$photo}'){
+							$("#uploadico").attr('src','{$photo}');
+					};
+					
+				})
+			</script>
+		<!-- 分享图片 -->
+		<b style="font-size: 16px;margin: 10px auto;margin:10px auto;
+					display: block">微信分享信息</b>
+					<p><span style="display: inline-block;width: 110px;">分享标题：</span><input style="width:300px;height: 35px;margin-left:10px;" type="text" name="wxtit" id="" value="{$wxtit}" class="layui-input"/><span>&nbsp;&nbsp;&nbsp;*分享微信显示该内容的标题</span></p>
+						<p><span style="display: inline-block;width: 110px;">分享描述：</span><input style="width:300px;height: 35px;margin-left:10px;" type="text" name="wxms" id="" value="{$wxms}" class="layui-input"/><span>&nbsp;&nbsp;&nbsp;*分享微信显示该内容的描述</span></p>
+				<!-- 分享图片 -->
+			<div style="margin-top: 10px;">
+				<span style="display: inline-block;width: 110px;color: #999;">分享图片：</span>	
+				    <img src="/static/img/admin/news_slt.jpg" id="uploadwx"style="cursor: pointer;width:100px;height:100px;object-fit: cover;    margin-left: 5px;" class="">
+			</div>
+			
+			<script type="text/javascript">
+				$(document).ready(function(){
+					if('{$photowx}'){
+							$("#uploadwx").attr('src','{$photowx}');
+					};
+					
+				})
+			</script>
+		<!-- 分享图片 -->
+<button id="submit" style="margin-left: 80%;margin-bottom: 15px;" type="button" class="layui-btn layui-btn-primary">提交保存</button>
+		</div>  <!-- wxfx -->
+
+<script type="text/javascript">
+	var  photo;
+	layui.use('upload', function(){
+	  var upload = layui.upload;
+	   
+	  //执行实例
+	  var uploadInst = upload.render({
+	    elem: '#uploadico' //绑定元素
+	    ,url: '/login.php/admin/basicicoapi' //上传接口
+		,exts: 'jpg|png|jpeg'
+		,multiple:true
+		,drag:true
+		,data:{
+			
+		}
+	    ,before:function(obj){
+			//预读本地文件示例，不支持ie8
+			 layer.msg('图片上传中...', {
+			                 icon:16,
+			                 shade: 0.05,
+			                 time: 500
+			             })
+			 }
+		,done: function(res){
+	      //上传完毕回调
+		 $('#uploadico').attr('src', res.filepath);
+		  // console.log(res.filepath); 图片文件的路径
+		       photo=res.filepath;//赋值给photo 传给ajax丢数据
+	    }
+	    ,error: function(res){
+	      //请求异常回调
+	
+		  console.log(res);
+	    }
+	  });
+	}); //图片API
+	
+	var  photowx;
+	layui.use('upload', function(){
+	  var upload = layui.upload;
+	   
+	  //执行实例
+	  var uploadInst = upload.render({
+	    elem: '#uploadwx' //绑定元素
+	    ,url: '/login.php/admin/basicicoapi' //上传接口
+		,exts: 'jpg|png|jpeg'
+		,multiple:true
+		,drag:true
+		,data:{
+			
+		}
+	    ,before:function(obj){
+			//预读本地文件示例，不支持ie8
+			 layer.msg('图片上传中...', {
+			                 icon:16,
+			                 shade: 0.05,
+			                 time: 500
+			             })
+			 }
+		,done: function(res){
+	      //上传完毕回调
+		 $('#uploadwx').attr('src', res.filepath);
+		  // console.log(res.filepath); 图片文件的路径
+		        photowx=res.filepath;//赋值给photo 传给ajax丢数据
+	    }
+	    ,error: function(res){
+	      //请求异常回调
+	
+		  console.log(res);
+	    }
+	  });
+	}); //图片API
+
+$("#submit").click(function(){
+	var appid=$("input[name='appid']").val();
+	var miyao=$("input[name='miyao']").val();
+	var fxtit=$("input[name='fxtit']").val();
+	var fxms=$("input[name='fxms']").val();
+	var wxtit=$("input[name='wxtit']").val();
+	var wxms=$("input[name='wxms']").val();
+   var uploadico=$("#uploadico").attr('src');
+   var uploadwx=$("#uploadwx").attr('src');
+	if(!appid||!miyao||!fxtit||!fxms||!wxtit||!wxms){
+		layer.msg('务必填写完整信息噢！');
+		return false;
+	}
+	
+	$.ajax({
+		type:'POST', // 规定请求的类型（GET 或 POST）
+		url:'/login.php/admin/wechatfx', // 请求的url地址
+		cache:true,// 否在缓存中读取数据的读取
+		dataType:'json', //预期的服务器响应的数据类型 
+		data:{
+			appid:appid,
+			miyao:miyao,
+			fxtit:fxtit,
+			fxms:fxms,
+			wxtit:wxtit,
+			wxms:wxms,
+			photo:photo,
+			photowx:photowx,
+			photo:uploadico,
+			photowx:uploadwx
+			
+			 
+			 
+			
+		},//规定要发送到服务器的数据
+		
+		success: function(res){ // 当请求成功时运行的函数
+			
+			// news_slt=null;
+			
+			if(res.code===0){
+				 console.log(res) ; 
+				layer.msg('请确认内容有修改！', {
+				                icon:2,
+				                shade: 0.05,
+				                time: 800
+				            });
+					
+			}
+			
+			if(res.code===1){
+				 console.log(res) ; 
+			layer.msg('保存成功！', {
+			                icon:1,
+			                shade: 0.05,
+			                time: 800
+			            });
+				
+			}
+			
+		
+		},
+		error:function(res){ //失败的函数
+		console.log(res);
+		layer.msg('数据接收失败！', {
+		                icon:2,
+		                shade: 0.05,
+		                time: 800
+		            });
+				
+				
+				
+				
+		}
+		
+	})//ajax-end	
+})
+</script>	

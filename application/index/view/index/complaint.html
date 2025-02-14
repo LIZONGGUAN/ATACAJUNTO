@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=0,user-scalable=no">
+  <meta name="viewport" content="width=device-width,initial-scale=0.1">
+   
+	<title>{$seotitle} - reclamar</title>
+	<meta name="Keywords" content="{$seoseokey}"/>
+	<meta name="description" content="{$seoseodsc}">
+	{$seoseoheader}
+	
+    <link rel="stylesheet" href="/static/page/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/static/page/css/style.css">
+    <link rel="stylesheet" href="/static/page/font/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/page/layui/css/layui.css">
+    <!--<link rel="stylesheet" href="/static/page/css/media.css">-->
+    <script src="/static/page/js/jquery-1.10.2.min.js"></script>
+    <script src="/static/page/js/swiper-bundle.min.js"></script>
+    <script src="/static/page/layui/layui.js"></script>
+</head>
+<body>
+    <header>
+        <div class="main display display-space">
+             <a class="logo" href="?p=index">
+                 <img src="{$seo.weblogo}" alt="">
+             </a>
+             <div class="complaint complaint1 ">
+                <a href="?p=index">HOME</a>
+            </div>
+            <div class="complaint complaint2">
+                <a href="?p=cart">Carrinho</a>
+            </div>
+        </div>
+     </header>
+
+     <div class="main main-complaint">
+        <div class="comp-cont display">
+            <div class="comp-left">
+                <textarea class="comp-textarea"></textarea>
+            </div>
+            <div class="comp-right">
+                <p><i class="fa fa-star" aria-hidden="true"></i>nome</p>
+                <input type="text" class="comp-uname">
+                <p><i class="fa fa-star" aria-hidden="true"></i>Celular / WhatsApp</p>
+                <input type="text" class="comp-phone">  
+                <p><i class="fa fa-star" aria-hidden="true"></i>E-mail</p>
+                <input type="text" class="comp-emit">
+                <p><i></i>Código de  Pedido</p>
+                <input type="text" value="" name="order">
+                <div class="comp-right-button display">
+                   <!-- <button id="anonymous">匿名</button> -->
+                    <button id="send">Enviar</button>
+                </div>
+            </div>
+        </div>
+     </div>
+<script>
+	
+	
+	// 投诉
+	$('#send').click(function(){
+	    var compUname = $('.comp-uname').val()
+	    var compPhone = $('.comp-phone').val()
+	    var compEmit = $('.comp-emit').val()
+	    var compTextarea = $('.comp-textarea').val();
+	    if(compTextarea == ''){
+	        layer.msg('A pergunta não pode estar vazia！'); 
+	        return false;
+	    }
+	    if(compUname == ''){
+	        layer.msg('O nome não pode estar vazio！'); 
+	        return false;
+	    }
+	    if(compPhone == ''){
+	        layer.msg('O telefone não pode estar vazio！'); 
+	        return false;
+	    }
+	    if(compEmit == ''){
+	        layer.msg('O e- mail não pode estar vazio！'); 
+	        return false;
+	    }
+	   var content='O meu e-mail：'+$(".comp-emit").val()+' ; O meu número de encomenda：'+$("input[name='order']").val()+' ; A minha opinião：'+$(".comp-textarea").val();
+	   	
+	   $.post('/index.php/index/requ/forminfo?name='+$(".comp-uname").val()+'&tel='+$(".comp-phone").val()+'&content='+content,function(s){
+	   	
+	   	if(s.code==1){
+	   		layer.msg('Enviado com sucesso！',function(){
+				window.location.reload();
+			})
+	   		
+	   	}else{
+	   		layer.msg('A submissão falhou！')
+	   		
+	   	}
+	   	
+	   })
+	})
+	// 匿名
+	$('#anonymous').click(function(){
+	    var compTextarea = $('.comp-textarea').val();
+	    if(compTextarea == ''){
+	        layer.msg('A pergunta não pode estar vazia！'); 
+	        return false;
+	    }
+	    console.log(compTextarea);
+	    layer.msg('Enviado！')
+	})
+	
+	
+
+	
+</script>
+<style>
+	.footer-top{background-color:rgba(0,0,0,0);}
+</style>
+     <footer>
+        <div class="footer-top">
+            <div class="main">
+                 <ul class="footer-ul footerUl-bg display">
+                    <li class="display">
+                        <img src="/static/page/image/hao.png" alt="">
+                        <h4>Garantia de qualidade e serviço atencioso</h4>
+                    </li>
+                    <li class="display">
+                        <img src="/static/page/image/gou.png" alt="">
+                        <h4>Variedade rica e compras convenientes</h4>
+                    </li>
+                    <li class="display">
+                        <img src="/static/page/image/song.png" alt="">
+                        <h4>Materiais rápidos e entrega ultra rápida</h4>
+                    </li>
+                    <li class="display">
+                        <img src="/static/page/image/phone.png" alt="">
+                        <h4>Serviço pós-venda atencioso, respostas profissionais</h4>
+                    </li>
+                </ul>
+           <!--     <ul class="display footer-ul footer-item2">
+                    <li>
+                        <p>购物指南</p>
+                        <a href="">购物流程</a>
+                        <a href="">会员介绍</a>
+                        <a href="">订购流程</a>
+                        <a href="">订购流程</a>
+                    </li>
+                    <li>
+                        <p>购物指南</p>
+                        <a href="">购物流程</a>
+                        <a href="">会员介绍</a>
+                        <a href="">订购流程</a>
+                        <a href="">订购流程</a>
+                    </li>
+                    <li>
+                        <p>购物指南</p>
+                        <a href="">购物流程</a>
+                        <a href="">会员介绍</a>
+                        <a href="">订购流程</a>
+                        <a href="">订购流程</a>
+                    </li> 
+                    <li>
+                        <p>购物指南</p>
+                        <a href="">购物流程</a>
+                        <a href="">会员介绍</a>
+                        <a href="">订购流程</a>
+                        <a href="">订购流程</a>
+                    </li>
+                </ul>
+            -->
+			</div>
+        </div>
+        <div class="footer-bottom">
+            <div class="main">
+                <a href="">
+                    Copyright @ 2018-2022 Company name All rights reserved.
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="/static/page/js/scr.js"></script>
+</body>
+</html>

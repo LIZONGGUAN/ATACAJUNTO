@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=0,user-scalable=no">
+  <meta name="viewport" content="width=device-width,initial-scale=0.1">
+   
+	<title>Login no centro comercial</title>
+
+	
+    <link rel="stylesheet" href="/static/page/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/static/page/css/style.css">
+    <link rel="stylesheet" href="/static/page/font/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/page/layui/css/layui.css">
+    <!--<link rel="stylesheet" href="/static/page/css/media.css">-->
+    <script src="/static/page/js/jquery-1.10.2.min.js"></script>
+    <script src="/static/page/js/swiper-bundle.min.js"></script>
+    <script src="/static/page/layui/layui.js"></script>
+</head>
+    <!-- 一进入页面就需要登录注册操作 -->
+    <div class="loginRegistration">
+        <div class="lagin-box1">
+            <input class="login-input" type="text" id="account" placeholder="Introduza o número da sua conta">
+            <input class="login-input" type="text" id="password" placeholder="Introduza a senha">
+            <input class="login-input" type="text" id="uname" placeholder="Nome do destinatário" style="display: none;">
+            <input class="login-input" type="text" id="phone" placeholder="Número de telefone do destinatário" style="display: none;">
+            <input class="login-input" type="text" id="picking" placeholder="Endereço de recolha" style="display: none;">
+            <div class="box2-tx" style="display: none;">
+                <label for="box2-btn" id="lab-btn" class="uploadico">Pode optar por enviar avatares</label>
+             
+            </div>
+
+            <button class="login-btn" id="login-dl">Login</button>
+        </div>
+    </div>
+<script>
+	
+var  photo;
+layui.use('upload', function(){
+  var upload = layui.upload;
+   
+  //执行实例
+  var uploadInst = upload.render({
+    elem: '.uploadico' //绑定元素
+    ,url: '/index.php/index/requ/basicicoapi' ,//上传接口
+	//,url: '/login.php/admin/aliossupfile' ,//上传接口
+	exts: 'jpg|png|jpeg'
+	,multiple:true
+	,drag:true
+	,data:{
+		
+	}
+    ,before:function(obj){
+		//预读本地文件示例，不支持ie8
+		     
+		layer.msg('图片上传中...', {
+		                icon:16,
+		                shade: 0.05,
+		                time: 500
+		            });		
+							}
+	,done: function(res){
+      //上传完毕回调
+	 $('#photo').attr('src', res.filepath);
+	  // console.log(res.filepath); 图片文件的路径
+	       photo=res.filepath;//赋值给photo 传给ajax丢数据
+		   $(".uploadico").text('可选择上传头像(已上传)')
+    }
+    ,error: function(res){
+      //请求异常回调
+
+	  console.log(res);
+    }
+  });
+});
+</script>
+   <script>
+		var onelogin=false;
+     
+
+
+
+        $(function () {
+            layui.use('layer', function () {
+                var layer = layui.layer;
+                layer.open({
+                    type: 1,
+                    title: '登录',
+                    content: $('.loginRegistration')
+                });
+            });
+        })
+
+        // 头像上传
+        $('#box2-btn').on("change", function (e) {
+            var fileMsg = e.currentTarget.files;
+            var fileName = fileMsg.length;
+            if (fileName != 0) {
+                var reader = new FileReader();
+                reader.readAsDataURL(fileMsg[0]);
+                reader.onload = function () {
+                    $("label").hide()
+                    var imgSrc = this.result;
+                    upImg = imgSrc;
+                    var img = '<img src="' + imgSrc + '" alt="">'
+                    $('.box2-tx').append(img);
+                }
+                $('input[type="file"]').val(null)
+            } else {
+                return false;
+            }
+        })
+        // 登录
+        $('#login-dl').click(function () {
+            var account = $('#account').val();
+            var password = $('#password').val();
+            var uname = $('#uname').val();
+            var phone = $('#phone').val();
+            var picking = $('#picking').val()
+            var loginImg = $('.box2-tx').children()
+			
+            if (account == '') {
+                layer.msg('账号不能为空！');
+                return false;
+            }
+            if (password == '') {
+                layer.msg('密码不能为空！');
+                return false;
+            }
+            if (onelogin==true&&uname == '') {
+                layer.msg('收货人姓名不能为空！');
+                return false;
+            }
+            if (onelogin==true&&phone == '') {
+                layer.msg('收货人电话不能为空！');
+                return false;
+            }
+            if (onelogin==true&&picking == '') {
+                layer.msg('取货地址不能为空！');
+                return false;
+            }
+			
+			if (onelogin==true&&photo ==null) {
+			    layer.msg('头像不能为空！');
+			    return false;
+			}
+            
+            if(loginImg.length == 3){
+                console.log(loginImg);
+            }
+            console.log(account,password,uname,phone,picking);
+          
+				$.ajax({
+														type:'POST', // 规定请求的类型（GET 或 POST）
+														url:'/index.php/index/requ/memberlogin', // 请求的url地址
+														cache:true,// 否在缓存中读取数据的读取
+														dataType:'json', //预期的服务器响应的数据类型 
+														data:{
+															 user:account,
+															 pwd:password,
+															 resign:'登陆',
+															 name:uname,
+															 phone:phone,
+															 picking:picking,
+															 img:photo
+															
+														},//规定要发送到服务器的数据
+														
+														success: function(res){ // 当请求成功时运行的函数
+														
+															if(res.code==1){
+																layer.msg('登陆成功！', {
+																                icon:1,
+																                shade: 0.05,
+																                time: 800
+																            },function(){
+																	
+														window.location.href='/index.php?p=center';			
+																	});
+																
+															}else if(res.code==3){
+																layer.msg('密码错误！', {
+																                icon:2,
+																                shade: 0.05,
+																                time: 800
+																            });
+															}else if(res.code==10){
+																layer.msg('第一次登录请填写收货地址和头像', {
+																                icon:2,
+																                shade: 0.05,
+																                time: 800
+																            },function(){
+																				onelogin=true;
+																				$('#uname').show();
+																				 $('#phone').show();
+																				$('#picking').show();
+																				 $('.box2-tx').show();		
+																																				
+																			});
+																	
+															}else{
+																layer.msg('账号异常,请联系网站管理员！', {
+																                icon:2,
+																                shade: 0.05,
+																                time: 800
+																            });
+															}
+														
+															
+															
+															
+															
+														},
+														error:function(result){ //失败的函数
+														layer.msg('服务器故障！', {
+														                icon:2,
+														                shade: 0.05,
+														                time: 800
+														            });
+																
+																
+																
+																
+														}
+														
+													})//ajax-end
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<style type="text/css">
+    body{border: 1px solid rgba(0,0,0,0);}
+	.news{width: 100%;;min-height:950px;height: auto;border: 1px solid gainsboro;}
+#news_tit{margin:10px 0px 10px 35px;height:50px}
+#news_tit>span{color: #606266;font-size: 14px;width:100px;display: inline-block;text-align: center;min-width: 100px;}
+	#news_tit>input{width:20% ;display: inline-block;border:1px solid #dcdfe6;height:30px;padding-left: 10px;}
+	#news_xq{width: 80%;margin-top: 10px;height:620px}
+	#news_xq>span{color: #606266;font-size: 14px;width: 20%;;width:10%;display: inline-block;text-align: center;margin-top: 20px;}
+	#editor{margin-left:10%;margin-top:-15px;height:600px;margin-bottom: 15px;}
+	/* #edui1140_iframeholder{height: 100%!important;} */
+	#news_sub{width: 80%;text-align:right;margin-top: 150px;height: 150px;margin-bottom: 0px;}
+	#news_submit{border: 0;width:100px;height:40px;color: white;background-color: rgba(0,150,136,1);border-radius:8px;cursor:pointer;}
+	#news_time,#news_view,#news_sort{width: 80%;margin-top: 30px;}
+	#news_time>span,#news_view>span,#news_sort>span{color: #606266;font-size: 14px;;width:10%;display: inline-block;text-align: center;}
+	#news_time>input,#news_view>input,#news_sort>input{width: 80% ;display: inline-block;border:1px solid #dcdfe6;height:30px;padding-left: 10px;}
+</style>
+<div class="news">
+	<div class="headertip">
+	   <li>网站页面</li>	
+	</div>
+<div id="news_tit"><span>公告标题：</span><input name="tit" type="text" class="layui-input" value="{$danyecon.0.tit}"></div>
+<div id="news_xq"><script id="editor" type="text/plain" style="">{$danyecon.0.content}</script></div>
+<div id="news_sub"><button type="button" id="news_submit" >提交保存</button></div>
+</div>
+
+<script type="text/javascript">
+	var news_slt="";
+	
+	$(function() {
+
+	UE.delEditor('editor');
+
+	var ue = UE.getEditor('editor', {
+	   scaleEnabled:true,//设置不自动调整高度
+	    autoFloatEnabled:false, //取消悬浮
+	});
+				
+				}); 
+	
+	
+		$(function(){
+			
+			$("#news_submit").click(function(){
+			
+			var tit=$('input[name="tit"]').val();
+				var editor=UE.getEditor('editor').getContent();
+				$.ajax({
+					type:'POST', // 规定请求的类型（GET 或 POST）
+					url:'/login.php/admin/danyeapi', // 请求的url地址
+					cache:true,// 否在缓存中读取数据的读取
+					dataType:'json', //预期的服务器响应的数据类型 
+					data:{
+						 editor:editor,
+						 num:'{$num}',
+						 tit:tit,
+						 class:'公告'
+						 
+						 
+					},//规定要发送到服务器的数据
+					
+					success: function(res){ // 当请求成功时运行的函数
+						// console.log(result) ; 
+						// news_slt=null;
+						if(res.code==1){
+							layer.msg('保存成功！', {
+								icon: 1,
+								shade: 0.05,
+								time: 1000
+							});
+						}else{
+							layer.msg('保存失败！', {
+								icon: 2,
+								shade: 0.05,
+								time: 1000
+							});
+						};
+					
+						
+						
+						
+					},
+					error:function(res){ //失败的函数
+						console.log(res);
+						
+							layer.msg('链接服务器失败！请检查内容是否重复！', {
+								icon: 2,
+								shade: 0.05,
+								time: 1000
+							}
+							);
+							
+							
+					}
+					
+				})
+				
+				
+			})
+			
+		})
+	
+</script>

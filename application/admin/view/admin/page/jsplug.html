@@ -1,0 +1,168 @@
+<style type="text/css">
+  .plug {
+    width: 100%;
+    height: auto;
+    min-height: 750px;
+    border: 1px solid gainsboro;
+  }
+  #plug_div1 {
+  }
+  #plug_div1 > span:nth-of-type(1),
+  #plug_div2 > span:nth-of-type(1) {
+    width: 110px;
+    display: inline-block;
+    text-align: right;
+  }
+  .plug textarea {
+    width: 570px;
+    height: 100px;
+    max-width: 570px;
+  }
+  .plug_tips {
+    margin-left: 130px;
+    width: 570px;
+    color: #999 /*tips文字灰色*/;
+    line-height: 40px;
+    font-size: 10px;
+  }
+  #plug_div1 > span:nth-of-type(1),
+  #plug_div2 > span:nth-of-type(1) {
+    width: 110px;
+    display: inline-block;
+    text-align: right;
+  }
+
+  .headertip li {
+    width: auto;
+  }
+</style>
+<div class="plug">
+  <div class="headertip">
+    <li>{$languageObj['JavaScript插件']['name_' . $language]}</li>
+  </div>
+  <div id="plug_div1">
+    <span>{$languageObj['在线客服代码']['name_' . $language]}：</span
+    ><span></span><textarea id="kefu" name="" rows="" cols="">{$jsone}</textarea
+    ><br />
+		{if $language == 'zh'}
+    <span class="plug_tips"
+      >* 网站自定义JS代码，在这里您可以填写一些爱番番、商务通、QQ推广 等
+      客服代码在网站。</span
+    >
+		{/if}
+		<span>&nbsp;</span>
+  </div>
+  <div id="plug_div2">
+    <span>{$languageObj['数据统计代码']['name_' . $language]}：</span
+    ><span></span
+    ><textarea id="total" name="" rows="" cols="">{$jstwo}</textarea><br />
+		{if $language == 'zh'}
+    <span class="plug_tips"
+      >* 网站自定义JS代码，在这里您可以填写一些CNZZ、51la、百度统计 等
+      第三方统计代码在网站。</span
+    >
+		{/if}
+		<span>&nbsp;</span>
+  </div>
+  <!-- 	<div id="plug_div2"><span>首页视频：</span><button data="{$url}" id="uploadico" type="button" class="layui-btn">视频上传</button></div> -->
+
+  <script>
+    if ('{$url}') {
+      $('#uploadico').text('视频上传(已上传)')
+    }
+    var video
+    var ifurl
+    layui.use('upload', function () {
+      var upload = layui.upload
+
+      //执行实例
+      var uploadInst = upload.render({
+        elem: '#uploadico', //绑定元素
+        url: '/login.php/admin/basicicoapi', //上传接口
+        exts: 'mp4|rmvb|m4v',
+        multiple: true,
+        drag: true,
+        size: 50000,
+        data: {},
+        before: function (obj) {
+          //预读本地文件示例，不支持ie8
+          $('#uploadico').text('视频上传')
+          layer.confirm(
+            '视频不能超过50MB',
+            { icon: 3, title: '上传前提示' },
+            function () {
+              layer.msg('上传中...', {
+                icon: 16,
+                shade: 0.05,
+                time: 500
+              })
+            }
+          )
+        },
+        done: function (res) {
+          //上传完毕回调
+          layer.msg('视频上传成功！')
+          $('#uploadico').attr('data', res.filepath)
+          $('#uploadico').text('视频上传(已上传)')
+          // console.log(res.filepath); 图片文件的路径
+          video = res.filepath //赋值给photo 传给ajax丢数据
+          ifurl = 'ifurl'
+        },
+        error: function (res) {
+          //请求异常回调
+
+          console.log(res)
+        }
+      })
+    })
+  </script>
+  <button
+    id="submit"
+    style="margin-left: 50%; margin-bottom: 15px"
+    type="button"
+    class="layui-btn layui-btn-primary"
+  >
+	{$languageObj['提交保存']['name_' . $language]}
+  </button>
+</div>
+
+<script type="text/javascript">
+  $('#submit').click(function () {
+    kefu = $('#kefu').val()
+    total = $('#total').val()
+    video = $('#uploadico').attr('data')
+
+    $.ajax({
+      type: 'POST', // 规定请求的类型（GET 或 POST）
+      url: '/login.php/admin/jsplug', // 请求的url地址
+      cache: true, // 否在缓存中读取数据的读取
+      dataType: 'json', //预期的服务器响应的数据类型
+      data: {
+        total: total,
+        kefu: kefu,
+        url: video,
+        ifurl: ifurl
+      }, //规定要发送到服务器的数据
+
+      success: function (result) {
+        // 当请求成功时运行的函数
+        console.log(result)
+        // news_slt=null;
+        layer.msg('保存成功！', {
+          icon: 1,
+          shade: 0.05,
+          time: 800
+        })
+      },
+      error: function (result) {
+        //失败的函数
+        console.log(result)
+        layer.msg('内容重复！', {
+          icon: 2,
+          shade: 0.05,
+          time: 800
+        })
+      }
+    }) //ajax-end
+  })
+</script>

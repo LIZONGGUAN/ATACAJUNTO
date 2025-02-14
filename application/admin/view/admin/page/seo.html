@@ -1,0 +1,280 @@
+
+		<style type="text/css">
+	#tixing{background: #f5f5f5;
+    color: #333;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #ddd;
+    width: 95%;
+	padding: 0 0 0 10px;
+	margin:15px 0px 0px 15px
+	}
+    #tixing>span{color: #000000;font-weight: bold;}
+	input{padding-left: 5px;}
+	.layui-tab-content{min-height: 750px;}
+		</style>
+<div id="seobox" style="width: 100%; border: 1px solid #ddd;height:auto;">
+	
+	
+<div class="layui-tab  layui-tab-brief" lay-allowClose="true">
+  <ul class="layui-tab-title">
+    <li class="layui-this">{$languageObj['推广关键词设置']['name_' . $language]}</li>
+   <li>{$languageObj['搜索引擎提交']['name_' . $language]}</li>
+  </ul>
+  <div class="layui-tab-content" style="padding: 0;">
+    <div class="layui-tab-item layui-show">	
+		{if $language == 'zh'}
+		<p id="tixing" >
+			<span>提醒：</span>做好SEO关键字优化，获取海量流量和精准用户，增加企业市场获得更多订单、提升企业品牌知名度和行业影响力，为企业插上互联网的翅膀。</p>
+		{/if}
+<style type="text/css">
+	#jbxx_p1,#jbxx_p2{font-weight: bold;
+    padding: 15px;color: #333;}
+     #jbxx{}
+   #jbxx input{
+   	width: 570px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 5px;}
+    #jbxx>span,#jbxx_span0{height:50px;display: inline-block;padding-left:60px;}
+#jbxx_span1>span:nth-of-type(1),#jbxx_span2>span:nth-of-type(1),#jbxx_span3>span:nth-of-type(1),#xzlm>span:nth-of-type(1),#seokey_div2>span:nth-of-type(1),#seokey_div3>span:nth-of-type(1),#seokey_div4>span:nth-of-type(1),#seokey_div5>span:nth-of-type(1){width: 110px;display: inline-block;text-align: right;}
+   #jbxx_span3>span:nth-of-type(3){
+   	width:200px!important;
+   	height:50px;
+   	color: white;
+    background: #009688;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(221, 221, 221);
+    border-image: initial;
+   line-height: 50px;text-align: center;cursor: pointer;display: inline-block;}
+   
+   #seokey_div1{margin-left: 60px;}
+   
+   #seokey_div2>input{width: 570px;
+    height: 34px;
+    line-height: 34px;padding: 0 5px;margin-top: 15px;}
+  .seokey_tips{margin-left:130px;width: 570px;color:#999/*tips文字灰色*/;line-height:40px;font-size: 10px;}
+  .tips_im{color:rgb(0, 102, 204)/*文字蓝色*/;}
+  .seo_zwf{width:20px;;display: inline-block;}
+ #seokey textarea{width: 570px;
+    height:100px;}
+ #xzlm select{width: 583px;
+    height:45px;cursor: pointer;}
+   #seo_submit{width:120px;height: 40px;color: white;background-color: #1E9FFF;cursor: pointer;border: 0;margin-top: 20px;margin-bottom:10px;display: inline-block;margin-left: 80%;} 
+</style>
+<form action="" method="post"><!-- form-->
+	 <div id="jbxx"  style="width: 95%; border: 1px solid #ddd;height:auto;	padding: 0 0 0 10px;
+	margin:15px 0px 0px 15px">
+	 		<p id="jbxx_p1">{$languageObj['网站基本信息']['name_' . $language]}</p>
+			
+			<div  style="width:100px;height:auto;border-radius:5px;margin-left:430px;margin-top: 30px;">
+					<img src="{$weblogo}" width="100%" style="border-radius:5px;"   id="uploadlogo_img" >
+				</div>
+				<br>
+			<button type="button"  class="layui-btn layui-btn-danger layui-btn-radius " id="uploadlogo" style="width: 270px;text-align: center;margin:0px auto 10px 355px;">
+			  <i class="layui-icon">&#xe64a;</i>{$languageObj['上传网站logo']['name_' . $language]}
+			</button> <br>
+	 		<span id="jbxx_span1"><span>{$languageObj['网站名称']['name_' . $language]}：</span><span class="seo_zwf"></span><input type="text" name="" id="" value="{$seowebname}" /></span>
+	 		<br />
+	 		<span id="jbxx_span2"><span>{$languageObj['网站域名']['name_' . $language]}：</span><span class="seo_zwf"></span><input type="text" name="" id="" value="{$seowebdomain}" /></span>
+	 	<!-- 	<br />
+	 		<span id="jbxx_span3"><span>网站地图：</span><span class="seo_zwf"> </span><span>生成站点地图</span>
+	 		</span> -->
+	 </div>
+	 
+	 
+	 <div id="seokey"  style="width: 95%; border: 1px solid #ddd;height:auto;padding: 0 0 0 10px;
+	margin:15px 0px 0px 15px">
+	 	<p id="jbxx_p2">{$languageObj['网站SEO关键字设置']['name_' . $language]}</p>
+	 	<div id="seokey_div1">
+	 <div id="xzlm">
+	 <span>{$languageObj['选择栏目']['name_' . $language]}：</span><span class="seo_zwf"></span>
+	 <select name="">
+	 		<option value="">{$languageObj['全局']['name_' . $language]}</option>
+	 	<!-- 	<option value="">栏目2</option>
+	 		<option value="">栏目3</option> -->
+	 	</select>
+	 </div>
+	 	
+	 	<div id="seokey_div2"><span>{$languageObj['SEO标题']['name_' . $language]}：</span><span class="seo_zwf"></span>
+	 		<input type="text"   name="" id="seotitle" value="{$seoseotitle}"/><br />
+			 {if $language == 'zh'}
+	 		<span class="seokey_tips">* 浏览器标题用于告诉搜索引擎这个网页的主要内容是什么，搜索引擎在判断一个网页内容权重时，标题是主要参考信息之一。浏览器标题一般是这样填写的：<span class="tips_im">网站名称_地域+服务介绍/产品介绍，</span>一般不超过80个字符。</span>
+			{/if}
+		</div>
+		<br />
+	 	<div id="seokey_div3"><span>{$languageObj['SEO关键字']['name_' . $language]}：</span> <span class="seo_zwf"></span><textarea id="seokey1" name="" rows="" cols="">{$seoseokey}</textarea>
+	 		<br />
+			 {if $language == 'zh'}
+	 		<span class="seokey_tips">* 对于新建网站，关键词从<span class="tips_im">地域+公司名称</span>以及<span class="tips_im">地域+网站业务</span>这两方入手，会更有利于快速提升排名。如珠海建站公司、广东自助建站、中国建站等。少于精：网站关键词的数量并非越多就有利，一般控制在3-5个为合适，多个关键词间用逗号隔开。一般不超过80个字符。</span>
+			 {/if}
+		</div>
+	 	<div id="seokey_div4"><span>{$languageObj['SEO描述']['name_' . $language]}：</span> <span class="seo_zwf"></span><textarea id="seodsc" name="" rows="" cols="">{$seoseodsc}</textarea>
+	 		<br />
+			 {if $language == 'zh'}
+	 		<span class="seokey_tips">* 网站描述是指在百度输入关键词后，在搜索结果下面的一段描述，好的描述可以帮助用户更方便地从搜索结果中判断你的网页内容是否符合要求。一般不超过200个字符。</span>
+			 {/if}
+		</div>
+	 	<div id="seokey_div5"><span>Header HTML：</span><span class="seo_zwf"></span><textarea id="seoheader" name="" rows="" cols="">{$seoseoheader}</textarea><br />
+			{if $language == 'zh'}
+			<span class="seokey_tips">* 头部自定义HTML代码（价格），在这里您可以填写一些HTML代码在头部。</span>
+			{/if}
+	 	</div>
+	 
+	 	
+	 </div></div></form> <!-- form -->
+	 	<input class="layui-btn layui-btn-primary"  type="submit" name="" id="seo_submit" value="{$languageObj['保存设置']['name_' . $language]}" />
+		
+		<script type="text/javascript">
+		var  uploadlogo;
+		layui.use('upload', function(){
+		  var upload = layui.upload;
+		   
+		  //执行实例
+		  var uploadInst = upload.render({
+		    elem: '#uploadlogo' //绑定元素
+		    ,url: '/login.php/admin/basicicoapi' //上传接口
+			,exts: 'jpg|png|jpeg'
+			,multiple:true
+			,drag:true
+			,data:{
+				
+			}
+		    ,before:function(obj){
+				//预读本地文件示例，不支持ie8
+				layer.msg("请上传尺寸：352*314 的网站logo！");
+				setTimeout(function(){
+					layer.msg('图片上传中...', {
+					                icon:16,
+					                shade: 0.05,
+					                time: 800
+					            })
+				},1000);
+				
+				 }
+			,done: function(res){
+		      //上传完毕回调
+			  setTimeout(function(){
+				   $('#uploadlogo_img').attr('src', res.filepath);
+			  },2000)
+			
+			  // console.log(res.filepath); 图片文件的路径
+			        uploadlogo=res.filepath;//赋值给photo 传给ajax丢数据
+		    }
+		    ,error: function(res){
+		      //请求异常回调
+		
+			  console.log(res);
+		    }
+		  });
+		}); //图片API
+			$("#seo_submit").click(function(){
+				
+				$jbxx_span1=$("#jbxx_span1>input").val();
+				$jbxx_span2=$("#jbxx_span2>input").val();
+				$seotitle=$("#seotitle").val();
+				$seokey=$("#seokey1").val();
+				$seodsc=$("#seodsc").val();
+				$seoheader=$("#seoheader").val();
+				
+				if(!uploadlogo){
+					
+					uploadlogo=$("#uploadlogo_img").attr("src");
+					
+				}
+		
+		 
+			$.ajax({
+				type:'POST', // 规定请求的类型（GET 或 POST）
+				url:'/login.php/admin/seoinfo', // 请求的url地址
+				cache:true,// 否在缓存中读取数据的读取
+				dataType:'json', //预期的服务器响应的数据类型 
+				data:{
+					 jbxx_span1:$jbxx_span1,
+					 jbxx_span2:$jbxx_span2,
+					 seotitle:$seotitle,
+					 seokey:$seokey,
+					 seodsc:$seodsc,
+					 seoheader:$seoheader,
+					 weblogo:uploadlogo
+					 
+					 
+					
+				},//规定要发送到服务器的数据
+				
+				success: function(result){ // 当请求成功时运行的函数
+					// console.log(result) ; 
+					// news_slt=null;
+					layer.msg('保存成功！', {
+					                icon:1,
+					                shade: 0.05,
+					                time: 800
+					            });
+					
+					
+					
+					
+				},
+				error:function(result){ //失败的函数
+				layer.msg('内容重复！', {
+				                icon:2,
+				                shade: 0.05,
+				                time: 800
+				            });
+						
+						
+						
+						
+				}
+				
+			})//ajax-end	
+				
+			});//submit
+			
+			
+		
+		</script>	
+  </div> <!--内容1结束-->
+  <style type="text/css">
+  	#layui-tab-item2{;}
+  	#layui-tab-item2>p:nth-of-type(1){width: 100%;height:100px;;text-align: center;font-size: 30px;line-height: 100px;}
+  	.seo_sosuo{box-shadow: 0 0 10px rgba(0,0,0,.1);margin-left:6%;padding:10px;height:400px;font-size: 10px;}
+  	.seo_sosuo>img{width: 50%;display: block;margin:15px auto;}
+  	.seo_sosuo>a{color: white;width:80%;height: 45px;background-color:#1E9FFF;display: block;margin:0 auto ;text-align: center;line-height:45px;font-size:16px;}
+  	.seo_sosuo>span{text-align: center;;display: block;color:#999/*tips文字灰色*/;height: 80px;line-height: 30px;margin-top: 10px;}
+  	
+  </style>
+    <div class="layui-tab-item" id="layui-tab-item2">
+    	<p>免费将网站提交至各大搜索引擎</p> 
+    	<div class="layui-row ">
+   
+    	<div class="seo_sosuo layui-col-md3 " >
+    		<img src="../../../static/img/admin/sosuo/submit_baidu.png"/>
+    		<a target="_blank" href="https://ziyuan.baidu.com/linksubmit/url?sitename=">手动提交</a>
+    		<span>手工将网站链接实时推送百度收录，但不保证网站一定被百度收录！</span>
+    	</div>
+    
+    	<div class="seo_sosuo layui-col-md3" >
+    		<img src="../../../static/img/admin/sosuo/submit_360.png"/>
+    		<a target="_blank" href="http://info.so.com/site_submit.html">手动提交</a>
+    		<span>手工将网站链接实时推送360收录，但不保证网站一定被360收录！</span>
+    	</div>
+    
+    	<div class="seo_sosuo layui-col-md3">
+    		<img src="../../../../static/img/admin/sosuo/submit_google.png"/>
+    		<a target="_blank" href="https://www.google.com/webmasters/tools/submit-url">手动提交</a>
+    		<span>快速将网站链接实时推送给谷歌收录，但不保证网站一定被谷歌收录！<span style="color: red;">（谷歌提交需能够访问：http://www.google.com）</span></span>
+    	</div>
+    	</div>
+    </div> <!--内容2结束-->
+ 
+  </div>
+</div>
+ 
+</div>	<!-- seobox -->
+
+
+		
+		
+

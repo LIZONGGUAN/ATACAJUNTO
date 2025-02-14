@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{$seotitle}</title>
+		<meta name="Keywords" content="{$seoseokey}" />
+		<meta name="description" content="{$seoseodsc}" />
+		<link rel="stylesheet" type="text/css" href="/static/page/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="/static/page/media/style_m.css" />
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="/static/page/css/zhiwei.css" />
+		<link rel="stylesheet" href="/static/page/media/zhiwei_m.css" />
+	</head>
+	<body>
+		<style type="text/css">
+			
+		</style>
+		<div class="top">
+			<div class="top_main">
+				<img class="logo" src="{$seologo}" />
+				<div class="top_nav">
+					<div id="nav-index"><a  href="/">首页</a></div>
+					<div id="nav-xkzx"><a href="/index.php?p=xkzx">选课中心</a></div>
+					<div id="nav-sbbd"><a href="/index.php?p=sbbd">升本必读</a></div>
+					<div id="nav-about"><a href="/index.php?p=about">关于精通</a></div>
+					<div id="nav-news"><a href="/index.php?p=news">新闻中心</a></div>
+					<div id="nav-join"><a href="/index.php?p=join_us">加入我们</a></div>
+					<div class="login"><a href="/index.php?p=center">{$mentxt}</a></div>
+				</div>
+				<div class="top_c">
+					<img class="open" src="/static/page/img/topc1.png" />
+					<img class="close" src="/static/page/img/topc2.png" style="display: none;" />
+				</div>
+			</div>
+		</div>
+		<div class="mobile_con">
+			<a href="/">
+				<div>首页</div>
+			</a>
+			<a href="/index.php?p=xkzx">
+				<div>选课中心</div>
+			</a>
+			<a href="/index.php?p=sbbd">
+				<div>升本必读</div>
+			</a>
+			<a href="/index.php?p=about">
+				<div>关于精通</div>
+			</a>
+			<a href="/index.php?p=news">
+				<div>新闻中心</div>
+			</a>
+			<a href="/index.php?p=join_us">
+				<div>加入我们</div>
+			</a>
+			<a href="/index.php?p=center">
+				<div>个人中心</div>
+			</a>
+		</div>
+		<div style="margin:150px auto 50px;" class="zw_main">
+			<div class="zw_time">{$newstime}</div>
+			<div class="zw_df">
+				<div class="zw_before zw_name">{$news_tit}</div>
+				<div class="zw_money">{$yijia}</div>
+			</div>
+			<div class="zw_df">
+				<div class="zw_type">全职</div>
+				<div class="zw_dizhi">{$daqu}</div>
+			</div>
+			<div class="zwms">
+				<div class="zwms_top" style="margin-top: 20px;">
+					<div class="zwms_title">职位描述</div>
+					<div class="zwms_line"></div>
+				</div>
+				<div class="zwms_main">
+					{$news_editor}
+				</div>
+				
+				<div class="zwms_top">
+					<div class="zwms_title">职位信息</div>
+					<div class="zwms_line"></div>
+				</div>
+				<div class="zwxx_main">
+					<div class="zwxx_left">
+						<div class="zwxx_title">工作经验</div>
+						<div class="zwxx_content">{$leixing}</div>
+					</div>
+					<div class="zwxx_right">
+						<div class="zwxx_title">需求人数</div>
+						<div class="zwxx_content">{$jiage}</div>
+					</div>
+				</div>
+				<div class="zwms_top">
+					<div class="zwms_title">公司信息</div>
+					<div class="zwms_line"></div>
+				</div>
+				<div class="gsxx">
+					<div class="gsxx_left">
+						<img src="/static/page/img/wushijie.png" />
+					</div>
+					<div class="gsxx_right">
+						{$news_jj}
+					</div>
+				</div>
+				<div class="zwms_top">
+					<div class="zwms_title">简历投递</div>
+					<div class="zwms_line"></div>
+				</div>
+				<div class="zwms_main">
+					<div class="zwms_text">简历投递:{$bianhao}</div>
+					<div class="zwms_text">联系电话:{$menpai}</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="foot">
+			<div class="foot_link">友情链接：精通教育 浙江专升本</div>
+			<div class="foot_nav">
+				<div><a href="/">首页</a></div>
+				<div class="foot_line"></div>
+				<div><a href="/index.php?p=xkzx">选课中心</a></div>
+				<div class="foot_line"></div>
+				<div><a href="/index.php?p=sbbd">升本必读</a></div>
+				<div class="foot_line"></div>
+				<div><a href="/index.php?p=about">关于精通</a></div>
+				<div class="foot_line"></div>
+				<div><a href="/index.php?p=news">新闻中心</a></div>
+				<div class="foot_line"></div>
+				<div><a href="/index.php?p=join_us">加入我们</a></div>
+			</div>
+			{$footer}
+			
+		</div>
+	</body>
+</html>

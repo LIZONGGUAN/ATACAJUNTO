@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/static/layui/css/layui.css">
+    <link rel="stylesheet" href="/static/layui/admin/layuimini/css/layuimini.css?v=2.0.4.2" media="all">
+    <link rel="stylesheet" href="/static/layui/admin/layuimini/css/themes/default.css" media="all">
+    <link rel="stylesheet" href="/static/layui/admin/layuimini/lib/font-awesome-4.7.0/css/font-awesome.min.css" media="all">
+    <link rel="stylesheet" href="/static/layui/admin/layuimini/css/public.css" media="all">
+
+    <script src="/static/page/js/jquery-1.10.2.min.js"></script>
+    <script src="/static/page/layui/layui.js"></script>
+  </head>
+  <body>
+    <div class="layuimini-container">
+      <div class="layuimini-main">
+        <div class="layui-card">
+          <div class="layui-form layui-card-header layuiadmin-card-header-auto" style="height: auto; padding-bottom: 10px;">
+            <div class="layui-inline">
+              <label class="layui-form-label">所属板块</label>
+              <div class="layui-input-inline">
+                <select name="screen_category">
+                  <option value="">全部</option>
+                  <option value="公共使用">公共使用</option>
+                  <option value="网站管理">网站管理</option>
+                  <option value="轮播管理">轮播管理</option>
+                  <option value="产品管理">产品管理</option>
+                  <option value="订单系统">订单系统</option>
+                  <option value="回收站">回收站</option>
+                  <option value="网站数据">网站数据</option>
+                  <option value="系统设置">系统设置</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="layui-inline">
+              <label class="layui-form-label">关键词</label>
+              <div class="layui-input-inline">
+                <input type="text" name="screen_keyword" placeholder="请输入关键词" class="layui-input" />
+              </div>
+            </div>
+      
+            <div class="layui-inline">
+              <button class="layui-btn layui-btn-normal layuiadmin-btn-list" id="search">
+                <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+              </button>
+            </div>
+
+            <div class="layui-inline">
+              <button class="layui-btn layui-btn-normal layuiadmin-btn-list" id="add">
+                添加
+              </button>
+            </div>
+          </div>
+        
+          <div class="layui-card-body">
+            <table class="layui-hide" id="language_table" lay-filter="language_table"></table>
+        
+            <script type="text/html" id="language_btn">
+              <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit">编辑</a>
+              <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+            </script>
+          </div>
+        </div>
+        
+        <script>
+          layui.use(['element', 'form', 'table', 'upload', 'laydate',], function () {
+            var $ = layui.jquery
+            var table = layui.table
+            var form = layui.form
+            var upload = layui.upload
+            var laydate = layui.laydate;
+            form.render();
+        
+            // 表格分页
+            var TABLE = table.render({
+              elem: '#language_table',
+              url: '/login.php/language/getList',
+              cellMinWidth: 50,
+              method: 'post',
+              where: {
+                'category': $("[name='screen_category']").val(),
+                'keyword': $("[name='screen_keyword']").val(),
+              },
+              parseData: function (res) {
+                if (res.code === '0000') {
+                  return { code: 0, count: res.count, data: res.list }
+                } else {
+                  return { code: 201, msg: '暂无数据~', data: [] }
+                }
+              },
+              cols: [
+                [
+                  { field: 'id', title: 'ID', align: 'center', width: 75, hide: true },
+                  { field: 'category', title: '所属板块', align: 'center', width: 160 },
+                  // { field: 'label', title: '字段标识', align: 'center', width: 160 },
+                  { field: 'name_zh', title: '中文', align: 'center' },
+                  { field: 'name_pt', title: '葡萄牙语', align: 'center' },
+                  {
+                    fixed: 'right',
+                    title: '操作',
+                    toolbar: '#language_btn',
+                    align: 'center',
+                    width: 130
+                  }
+                ]
+              ],
+              page: {
+                curr: 1,
+                limit: 30,
+                limits: [30, 50, 100],
+                layout: ['limit', 'count', 'prev', 'page', 'next', 'skip']
+              }
+            })
+        
+            // 监听表格操作事件
+            table.on('tool(language_table)', function (obj) {
+              var data = obj.data
+        
+              // 删除
+              if (obj.event === 'del') {
+                layer.msg('删除该配置数据可能导致出错，若要删除请联系开发人员')
+
+                // layer.confirm(
+                //   '确定删除该数据吗？',
+                //   { btn: ['确定', '取消'] },
+                //   function () {
+                //     var loading = layer.load(2)
+                //     $.post('/login.php/language/delete', { id: data.id }, function (
+                //       res
+                //     ) {
+                //       layer.close(loading)
+                //       if (res.code === '0000') {
+                //         layer.msg(res.msg, { icon: 1, time: 1000, shade: 0.4 })
+                //         table.reload('language_table', {
+                //           where: {
+                //             'category': $("[name='screen_category']").val(),
+                //             'keyword': $("[name='screen_keyword']").val(),
+                //           }
+                //         })
+                //       } else {
+                //         layer.msg(res.msg, { icon: 2 })
+                //       }
+                //     })
+                //   }
+                // )
+              } else if (obj.event === 'edit') {
+                layer.open({
+                  type: 1,
+                  title: '修改信息',
+                  skin: 'layui-layer-rim',
+                  area: ['600px', '600px'],
+                  content: `<div class="layui-card-body" style="padding: 30px 30px 0 15px;">
+                    <div class="layui-form">
+                      <div class="layui-form-item">
+                        <label class="layui-form-label" style="text-align: left;">所属板块</label>
+                        <div class="layui-input-block">
+                          <select name="category">
+                            <option value="公共使用">公共使用</option>
+                            <option value="网站管理">网站管理</option>
+                            <option value="轮播管理">轮播管理</option>
+                            <option value="产品管理">产品管理</option>
+                            <option value="订单系统">订单系统</option>
+                            <option value="回收站">回收站</option>
+                            <option value="网站数据">网站数据</option>
+                            <option value="系统设置">系统设置</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="layui-form-item">
+                        <label class="layui-form-label" style="text-align: left;">中文</label>
+                        <div class="layui-input-block">
+                          <input type="text" name="name_zh" value="${data.name_zh}" readonly class="layui-input">
+                        </div>
+                      </div>
+                      <div class="layui-form-item">
+                        <label class="layui-form-label" style="text-align: left;">葡萄牙语</label>
+                        <div class="layui-input-block">
+                          <input type="text" name="name_pt" value="${data.name_pt}" class="layui-input">
+                        </div>
+                      </div>
+                    </div>
+                  </div>`,
+                  btn: ['保存', '取消'],
+                  btn1: function (index, value) {
+                    var params = {
+                      'id': data.id,
+                      'category': $(value).find("[name='category']").val(),
+                      'name_zh': $(value).find("[name='name_zh']").val(),
+                      'name_pt': $(value).find("[name='name_pt']").val(),
+                    };
+                    if (params.name_zh === '') {
+                      return layer.msg('请输入中文名称')
+                    }
+                    
+                    var loading = layer.load(2);
+                    $.ajax({
+                      url: '/login.php/language/update',
+                      data: params,
+                      dataType: 'json',
+                      type: 'post',
+                      success: function (res) {
+                        layer.close(loading);
+                        if (res.code === '0000') {
+                          table.reload('language_table', {
+                            where: {
+                              'category': $("[name='screen_category']").val(),
+                              'keyword': $("[name='screen_keyword']").val(),
+                            }
+                          })
+                          layer.close(index);
+                        } else {
+                          layer.msg(res.msg, { icon: 2 });
+                        }
+                      }
+                    });
+                  },
+                  btn2: function (index) {
+                    layer.close(index);
+                  }
+                });
+        
+                $("[name='category']").val(data.category)
+                form.render()
+              }
+            })
+        
+            // 查询
+            $('#search').click(function () {
+              table.reload('language_table', {
+                where: {
+                  'category': $("[name='screen_category']").val(),
+                  'keyword': $("[name='screen_keyword']").val(),
+                },
+                page: { curr: 1 }
+              })
+            })
+            
+            $("#add").click(function() {
+              layer.open({
+                type: 1,
+                title: '添加信息',
+                skin: 'layui-layer-rim',
+                area: ['600px', '600px'],
+                content: `<div class="layui-card-body" style="padding: 30px 30px 0 15px;">
+                  <div class="layui-form">
+                    <div class="layui-form-item">
+                      <label class="layui-form-label" style="text-align: left;">所属板块</label>
+                      <div class="layui-input-block">
+                        <select name="category">
+                          <option value="公共使用">公共使用</option>
+                          <option value="网站管理">网站管理</option>
+                          <option value="轮播管理">轮播管理</option>
+                          <option value="产品管理">产品管理</option>
+                          <option value="订单系统">订单系统</option>
+                          <option value="回收站">回收站</option>
+                          <option value="网站数据">网站数据</option>
+                          <option value="系统设置">系统设置</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label" style="text-align: left;">中文</label>
+                      <div class="layui-input-block">
+                        <input type="text" name="name_zh" value="" class="layui-input">
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label" style="text-align: left;">葡萄牙语</label>
+                      <div class="layui-input-block">
+                        <input type="text" name="name_pt" value="" class="layui-input">
+                      </div>
+                    </div>
+                  </div>
+                </div>`,
+                btn: ['保存', '取消'],
+                btn1: function (index, value) {
+                  var params = {
+                    'category': $(value).find("[name='category']").val(),
+                    'label': $(value).find("[name='label']").val(),
+                    'name_zh': $(value).find("[name='name_zh']").val(),
+                    'name_pt': $(value).find("[name='name_pt']").val(),
+                  }
+                  if (params.name_zh === '') {
+                    return layer.msg('请输入中文名称')
+                  }
+                  
+                  var loading = layer.load(2);
+                  $.ajax({
+                    url: '/login.php/language/add',
+                    data: params,
+                    dataType: 'json',
+                    type: 'post',
+                    success: function (res) {
+                      layer.close(loading);
+                      if (res.code === '0000') {
+                        layer.msg(res.msg, { icon: 1, time: 1000, shade: 0.4 });
+                        table.reload('language_table', {
+                          where: {
+                            'category': $("[name='screen_category']").val(),
+                            'keyword': $("[name='screen_keyword']").val(),
+                          },
+                          page: { curr: 1 }
+                        })
+                        layer.close(index);
+                      } else {
+                        layer.msg(res.msg, { icon: 2 })
+                      }
+                    }
+                  });
+                },
+                btn2: function (index) {
+                  layer.close(index);
+                }
+              });
+
+              form.render()
+            })
+          })
+        </script>
+        
+
+
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,191 @@
+<style type="text/css">
+	
+	.layui-btn{margin-top: 15px;}
+	.basic-information{height: 1300px;}
+	.basic-information-div{width: 100%;height: auto;line-height: 1.5;margin-top: 10px;}
+	.basic-information-div input{height: 30px;width:40%;padding-left: 15px;}
+	.basic-information-div span{width:120px;display: inline-block;}
+	
+	.basic-information-layedit{width: 80%;margin-top: 10px;}
+	.basic-information-layedit>span:nth-of-type(1){letter-spacing:8px;width:120px;display: inline-block;float: left;}
+	#Introduction{width:700px;display: inline-block;height: 380px;}
+	.layui-layedit{width:85%;margin-left: 120px;}
+	#basic-button{margin-top: 20px;float: right;margin-bottom:100px;margin-right: 40%;}
+</style>
+
+<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+  <ul class="layui-tab-title">
+    <li class="layui-this">{$languageObj['基本资料']['name_' . $language]}</li>
+   
+  
+	 
+  </ul>
+  
+  <div class="layui-tab-content">
+	<div class="layui-tab-item layui-show">
+		<div class="basic-information">
+			
+			<div style="width:100px;height:100px;border-radius: 100px;margin-left: 60px;margin-top: 30px;">
+				<img src="{$ico}" width="100%" style="border-radius: 100px;"   id="photo" >
+			</div>
+		<button type="button"  class="layui-btn" id="uploadico" style="width: 200px;text-align: center;letter-spacing: 8px;">
+		  <i class="layui-icon">&#xe64a;</i>{$languageObj['上传头像']['name_' . $language]}
+		</button>
+			<div class="basic-information-div"><span>{$languageObj['后台昵称']['name_' . $language]}：</span><input type="text" name="" id="username" value="{$username}" placeholder="请输入您的后台昵称" /></div>
+			<div class="basic-information-div"><span>{$languageObj['公司名称']['name_' . $language]}：</span><input type="text" name="" id="companyname" value="{$companyname}" placeholder="请输入您的营业执照名称" /></div>
+			<div class="basic-information-div"><span>{$languageObj['网站名称']['name_' . $language]}：</span><input type="text" name="" id="webname" value="{$webname}" placeholder="请输入您的网站名称" /></div>
+			<div class="basic-information-div"><span>{$languageObj['底部介绍']['name_' . $language]}：</span><input type="text" name="" id="domain" value="{$domain}" placeholder="请输入您的底部介绍" /></div>
+			<div class="basic-information-div"><span>{$languageObj['详细地址']['name_' . $language]}：</span><input type="text" name="" id="Address" value="{$Address}" placeholder="请输入您的详细地址" /></div>
+			<div class="basic-information-div"><span>{$languageObj['联系人']['name_' . $language]}：</span><input type="text" name="" id="person" value="{$person}" placeholder="请输入您的联系人名称" /></div>
+			<div class="basic-information-div"><span>{$languageObj['电话']['name_' . $language]}：</span><input type="text" name="" id="mobile" value="{$mobile}" placeholder="请输入您的电话号码" /></div>
+			<div class="basic-information-div"><span>{$languageObj['在线QQ']['name_' . $language]}：</span><input type="text" name="" id="qq" value="{$qq}" placeholder="请输入您的在线QQ" /></div>
+			<div class="basic-information-layedit" ><span>{$languageObj['版权信息']['name_' . $language]}：</span>
+			<textarea  id="Introduction" style="" lay-verify="content">	{$Introduction}</textarea>
+		   </div>
+		
+				<button type="button" id="basic-button" class="layui-btn"  data-type="content">{$languageObj['保存资料']['name_' . $language]}</button>
+		</div><!-- /*end*/ -->
+	</div>  <!-- item1 -->
+
+
+	  
+  </div>
+  
+</div> <!-- //选项卡 --> 
+
+<script>
+	
+var  photo;
+layui.use('upload', function(){
+  var upload = layui.upload;
+   
+  //执行实例
+  var uploadInst = upload.render({
+    elem: '#uploadico' //绑定元素
+    ,url: '/login.php/admin/basicicoapi' ,//上传接口
+	//,url: '/login.php/admin/aliossupfile' ,//上传接口
+	exts: 'jpg|png|jpeg'
+	,multiple:true
+	,drag:true
+	,data:{
+		
+	}
+    ,before:function(obj){
+		//预读本地文件示例，不支持ie8
+		     
+			  layer.confirm('头像最佳比例是1：1', {icon: 3, title:'提示'}, function(){
+				layer.msg('图片上传中...', {
+				                icon:16,
+				                shade: 0.05,
+				                time: 500
+				            });});}
+	,done: function(res){
+      //上传完毕回调
+	 $('#photo').attr('src', res.filepath);
+	  // console.log(res.filepath); 图片文件的路径
+	       photo=res.filepath;//赋值给photo 传给ajax丢数据
+    }
+    ,error: function(res){
+      //请求异常回调
+
+	  console.log(res);
+    }
+  });
+});
+</script>
+<script>
+var Introduction;	//layedit 文本
+	$(function() {
+
+	UE.delEditor('Introduction');
+
+	var ue = UE.getEditor('Introduction', {
+	   scaleEnabled:true,//设置不自动调整高度
+	    autoFloatEnabled:false, //取消悬浮
+	});
+				
+				
+				}); 
+
+
+</script>
+<script type="text/javascript">
+$(function(){
+	$("#basic-button").click(function(){
+		
+		
+		var username=$("#username").val();
+		var companyname=$("#companyname").val();
+		var webname=$("#webname").val();
+		var domain=$("#domain").val();
+		var Address=$("#Address").val();
+		var person=$("#person").val();
+		var mobile=$("#mobile").val();
+		var qq=$("#qq").val();
+		var photo=$("#photo").attr('src');
+	  Introduction=UE.getEditor('Introduction').getContent();
+		
+		
+	
+		$.ajax({
+			type:'POST', // 规定请求的类型（GET 或 POST）
+			url:'/login.php/newsad/userrole', // 请求的url地址
+			cache:true,// 否在缓存中读取数据的读取
+			dataType:'json', //预期的服务器响应的数据类型 
+			data:{
+				 Id:'{$userid}',
+				 photo:photo,
+				 username:username,
+				companyname:companyname,
+				webname:webname,
+				 domain:domain,
+				  Address:Address,
+				    person:person,
+					 mobile:mobile,
+					 qq:qq,
+					  Introduction:Introduction,
+					  sign:'基本资料'
+			},//规定要发送到服务器的数据
+			
+			success: function(res){ // 当请求成功时运行的函数
+				if(res.code==1){
+					
+					layer.msg('保存成功！', {
+					                icon:1,
+					                shade: 0.05,
+					                time: 800
+					            });
+				}else{
+					layer.msg('检测到数据未修改！', {
+					                icon:2,
+					                shade: 0.05,
+					                time: 800
+					            });
+					
+				}
+				
+				
+				
+				
+				
+			},
+			error:function(result){ //失败的函数
+			layer.msg('检测到数据未修改！', {
+			                icon:2,
+			                shade: 0.05,
+			                time: 800
+			            });
+					
+					
+					
+					
+			}
+			
+		})//ajax-end
+		
+	});
+	
+	
+		
+	});
+</script>

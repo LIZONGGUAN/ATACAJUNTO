@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="expires" content="0">
+    <link rel="stylesheet" href="/static/page/layui/css/layui.css">
+    <link rel="stylesheet" href="/static/page/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/static/page/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/page/css/style.css">
+    <script src="/static/page/js/jquery-3.2.1.min.js"></script>
+    <script src="/static/page/js/swiper-bundle.min.js"></script>
+    <script src="/static/page/layui/layui.js"></script>
+    <title>帮助中心_详情</title>
+</head>
+
+<body>
+    <!-- 该栏目可做共用 -->
+    <!-- 最顶栏 -->
+ {$headerhtml}
+ <script type="text/javascript">
+ 	$(".all_nav ").addClass('plan_two');//隐藏导航
+ </script>	
+    <div class="bg_gary classification">
+        <div class="classification_main">
+            <!-- 导航 -->
+            <div class="weizhi">
+                <a href="index.html">首页</a> >
+                <a href="help.html">帮助中心</a>
+            </div>
+            <!-- 图片跳转 -->
+            <div class="quick_jump">
+                <a href="javascript:void(0);">
+                    <img src="/static/page/img/buy1.jpg" alt="">
+                </a>
+                <a href="javascript:void(0);">
+                    <img src="/static/page/img/buy2.jpg" alt="">
+                </a>
+            </div>
+            <!-- 主体 -->
+            <div class="help_main">
+              <div class="help_left">
+                  <div class="help_left_title">帮助中心</div>
+                  <div class="help_left_list">
+              			{volist name='help' id='m'}
+                      <div class="help_left_item">
+                          <div class="help_item_title jian">{$m.name}</div>
+                          <div class="help_xiala {$m.name}" >
+              			
+                          
+                           
+                          </div>
+                      </div>
+              		    {/volist}
+                     
+                  </div>
+              </div>
+			  <script type="text/javascript">
+			  	
+			  	$(document).ready(function(){
+			  		$(".help_item_title").each(function(){
+			  			var name=$(this).text();
+			  			
+			  			$.post("/index.php/index/requ/articlelist?formname=help&newscalss="+name,function(str) {
+			  				console.log(str);
+			  				let htmlclass=''
+			  				str.forEach(x=>{
+			  					// console.log(x.Id);
+			  					// console.log(x.class);
+			  					// console.log(x.version);  
+			  					news_tit=x.news_tit;
+			  				
+			  					 news_tit=news_tit.substr(0,21);
+			  				
+			  				htmlclass +=' <a target="_blank" href="/login.php/newsad/newslist_detail?trid='+x.Id+'&formname=help">'+news_tit+'</a>';
+			  				});
+			  			
+			  			$('.'+name).html(htmlclass);
+			  			});
+			  		})
+			  		
+			  	
+			  		
+			  		});
+			  </script>
+                <div class="help_right">
+                    <div class="help_dt">{$detail.0.news_tit}</div>
+                    <div class="help_dc">
+
+                      {$detail.0.news_editor}
+                    </div>
+                </div>
+            </div>
+       
+		</div>
+    </div>
+    <!-- 该栏目可做共用 -->
+    <!-- 底部 -->
+ {$footerhtml}
+	<!-- 该栏目可做共用 -->
+    <!-- 右侧悬浮栏 -->
+    <div class="fixed_nav">
+        <div class="fixed_top">
+            热门推荐
+            <div class="close_nav"></div>
+        </div>
+        <div class="fixed_main">
+            <a href="javascript:void(0);" class="fixed_item">
+                <img src="/static/page/img/icon1.png" alt="">
+                <div>LOL美测试服</div>
+            </a>
+            <a href="javascript:void(0);" class="fixed_item">
+                <img src="/static/page/img/icon2.png" alt="">
+                <div>LOL手游充值</div>
+            </a>
+            <a href="javascript:void(0);" class="fixed_item">
+                <img src="/static/page/img/icon3.png" alt="">
+                <div>海外苹果ID</div>
+            </a>
+            <a href="javascript:void(0);" class="fixed_item">
+                <img src="/static/page/img/icon4.png" alt="">
+                <div>拳头游戏账号</div>
+            </a>
+            <a href="javascript:void(0);" class="fixed_item">
+                <img src="/static/page/img/icon5.png" alt="">
+                <div>国服精粹号</div>
+            </a>
+            <a href="javascript:void(0);" class="fixed_item">
+                <img src="/static/page/img/icon6.png" alt="">
+                <div>王者初始号</div>
+            </a>
+        </div>
+        <div class="fixed_main">
+            <div class="kf">去外服客服</div>
+            <a href="javascript:void(0);" class="fixed_item">
+                <img src="/static/page/img/online.png" alt="">
+                <div>在线客服</div>
+            </a>
+            <a href="javascript:void(0);" class="fixed_item">
+                <img src="/static/page/img/kefu.png" alt="">
+                <div>官方Q群</div>
+            </a>
+        </div>
+        <div>
+            <div class="kf">QQ客服验证</div>
+            <div class="yz_btn">
+                <input type="text" value="" id="input_qq">
+                <input type="button" value="验" id="checkbtn">
+            </div>
+        </div>
+        <div class="back_top">
+            <img src="/static/page/img/backtop.png" alt="">
+
+        </div>
+    </div>
+</body>
+<script src="js/all.js"></script>
+<script>
+    //点击收放子栏目
+    $(".help_item_title").click(function() {
+        if ($(this).hasClass("jian")) {
+            $(this).next().addClass("display");
+            $(this).removeClass("jian");
+            $(this).addClass("jia");
+        } else {
+            $(this).removeClass("jia");
+            $(this).addClass("jian");
+            $(this).next().removeClass("display");
+        }
+    });
+</script>
+
+</html>

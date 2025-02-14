@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=0,user-scalable=no">
+<meta name="viewport" content="width=device-width,initial-scale=0.1">
+   
+	<title>{$seotitle} - carrinho de compras</title>
+	<meta name="Keywords" content="{$seoseokey}"/>
+	<meta name="description" content="{$seoseodsc}">
+	{$seoseoheader}
+	
+    <link rel="stylesheet" href="/static/page/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/static/page/css/style.css">
+    <link rel="stylesheet" href="/static/page/font/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/page/layui/css/layui.css">
+    <!--<link rel="stylesheet" href="/static/page/css/media.css">-->
+    <script src="/static/page/js/jquery-1.10.2.min.js"></script>
+    <script src="/static/page/js/swiper-bundle.min.js"></script>
+    <script src="/static/page/layui/layui.js"></script>
+</head>
+<style>
+    @media screen and (max-width:640px) {
+        body header{
+            display: none;
+        }
+        body .page-img {
+            display: none;
+        }
+    }
+    header{
+        display: block;
+    }
+    .page-img {
+        display: block;
+    }
+</style>
+<body class="body-bg">
+    <header>
+        <div class="main display jc-between">
+            <a class="logo" href="index">
+                <img src="{$seo.weblogo}" alt="">
+            </a>
+            <div class="seach">
+                <div>
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <input type="text" placeholder="Introduz a procura de palavras chave">
+                </div>
+                <button class="selpro">pesquisa</button>
+            </div>
+            <div></div>
+        </div>
+		<script>
+			$(".selpro").click(function(){
+				window.location.href='?p=product&sel='+$(".seach input").val();
+			})
+		</script>
+        <ul class="nav-ul main display display-center">
+            <li class="nav-li">
+                <a href="?p=index">Página inicial</a>
+            </li>
+            <li class="nav-li">
+                <a href="?p=product">Todos os produtos</a>
+            </li>
+            <li class="nav-li">
+                <a href="?p=cart" class="nav-active">carrinho de compras</a>
+            </li>
+            <li class="nav-li">
+                <a href="?p=my">Sobre nós</a>
+            </li>
+        </ul>
+    </header>
+    <div class="page-img">
+        <!--<img src="/static/page/image/product.jpg" alt="">-->
+    </div>
+    <div class="kong kong1"></div>
+    <div class="main">
+
+        <div class="order-product">
+            <div class="order-product-div">
+                <!--<div class="orderProd-item display">-->
+                <!--    <div class="orderprod-item-img">-->
+                <!--        <img src="/static/upload_img/admin/ico/20230116/b29549322c1afaa408d8bae13f63b511.png" alt="">-->
+                <!--    </div>-->
+                <!--    <ul class="orderProd-item-ul">-->
+                <!--        <h4> PELICULA DE VIDRO 3D , MOTOROLA LINHA </h4>-->
+                <!--        <li class="orderprod-item-li display">-->
+                <!--            <p>G6 PLAY</p>-->
+                <!--            <p>单价：R$<span>3</span></p>-->
+                <!--            <p>数量：<span>3</span></p>-->
+                <!--            <p>小计：R$<span>9</span></p>-->
+                <!--        </li>-->
+                <!--    </ul>-->
+                <!--</div>-->
+            </div>
+            <div class="order-button display">
+                <div class="order-button-text">
+                    total：R$<span class="priceall">{$orderdata.0.prisum}</span>
+                </div>
+                <!--<button id="cancel">取消</button>-->
+                <button id="determine">Confirmar a submissão</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        var orderArr={$orderdata.0.buyarr};
+        var html='';
+        var orderHtml='';
+        for(var i = 0;i<orderArr.length;i++){
+            html+='<div class="orderProd-item display">';
+            html+='     <div class="orderprod-item-img">';
+            html+='         <img src="'+orderArr[i][1]+'" alt="">';
+            html+='     </div>';
+            html+='     <ul class="orderProd-item-ul">';
+            html+='         <h4>'+orderArr[i][0]+'</h4>';
+            html+='     </ul>';
+            html+='</div>';
+            $(".order-product-div").append(html);
+            html='';
+            for(var j=0;j<orderArr[i][2].length;j++){
+                orderHtml+='<li class="orderprod-item-li display">';
+                orderHtml+='    <p>'+orderArr[i][2][j][0]+'</p>';
+                orderHtml+='    <p>preço unitário：R$<span>'+orderArr[i][2][j][1]+'</span></p>';
+                orderHtml+='    <p>Quantidade：<span>'+orderArr[i][2][j][2]+'</span></p>';
+                orderHtml+='    <p>Subtotal：R$<span>'+parseInt(orderArr[i][2][j][1])*parseInt(orderArr[i][2][j][2])+'</span></p>';
+                orderHtml+='</li>';
+                $(".orderProd-item").eq(i).find(".orderProd-item-ul").append(orderHtml);
+                orderHtml='';
+            }
+        }
+        
+       
+    </script>
+    <div class="kong"></div>
+
+  
+<script>
+
+
+// 确认提交订单
+$('#determine').click(function(){
+    console.log(edigwcdata);
+ layer.confirm('Tem a certeza de enviar a ordem?', {icon: 3, title:'prompt'}, function(index){
+  //do something
+     $.ajax({
+    	type:'POST', // 规定请求的类型（GET 或 POST）
+    	url:'/index.php/index/requ/orderxg', // 请求的url地址
+    	cache:true,// 否在缓存中读取数据的读取
+    	dataType:'json', //预期的服务器响应的数据类型 
+    	data:{
+    	
+			trid:'{$Request.get.trid}'
+			
+			
+    	},//规定要发送到服务器的数据
+    	
+    	success: function(res){ // 当请求成功时运行的函数
+    		if(res.code==1){
+    			
+    		 layer.msg('Ordem confirmada! Aguarde por favor o webmaster para enviar os bens！'); 
+    		 setTimeout(function(){
+    			 window.location.href='?p=orderlist';
+    		 },1500)
+    		}
+    		
+    		
+    	}
+    	
+    })//ajax-end
+  layer.close(index);
+});
+ 
+ 
+})
+</script>
+<style>
+	.footer-top{background-color:rgba(0,0,0,0);}
+</style>
+    <footer>
+        <div class="footer-top">
+            <div class="main">
+                <ul class="footer-ul footerUl-bg display">
+                    <li class="display">
+                        <img src="/static/page/image/hao.png" alt="">
+                        <h4>Garantia de qualidade e serviço atencioso</h4>
+                    </li>
+                    <li class="display">
+                        <img src="/static/page/image/gou.png" alt="">
+                        <h4>Variedade rica e compras convenientes</h4>
+                    </li>
+                    <li class="display">
+                        <img src="/static/page/image/song.png" alt="">
+                        <h4>Materiais rápidos e entrega ultra rápida</h4>
+                    </li>
+                    <li class="display">
+                        <img src="/static/page/image/phone.png" alt="">
+                        <h4>Serviço pós-venda atencioso, respostas profissionais</h4>
+                    </li>
+                </ul>
+           <!--     <ul class="display footer-ul footer-item2">
+                    <li>
+                        <p>购物指南</p>
+                        <a href="">购物流程</a>
+                        <a href="">会员介绍</a>
+                        <a href="">订购流程</a>
+                        <a href="">订购流程</a>
+                    </li>
+                    <li>
+                        <p>购物指南</p>
+                        <a href="">购物流程</a>
+                        <a href="">会员介绍</a>
+                        <a href="">订购流程</a>
+                        <a href="">订购流程</a>
+                    </li>
+                    <li>
+                        <p>购物指南</p>
+                        <a href="">购物流程</a>
+                        <a href="">会员介绍</a>
+                        <a href="">订购流程</a>
+                        <a href="">订购流程</a>
+                    </li>
+                    <li>
+                        <p>购物指南</p>
+                        <a href="">购物流程</a>
+                        <a href="">会员介绍</a>
+                        <a href="">订购流程</a>
+                        <a href="">订购流程</a>
+                    </li>
+                </ul>
+            -->
+			</div>
+        </div>
+        <div class="footer-bottom">
+            <div class="main">
+                <a href="">
+                    Copyright @ 2018-2022 Company name All rights reserved.
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+     <!-- 移动端底部导航 -->
+     <div class="media-footer">
+        <ul class="display">
+            <li>
+                <a href="?p=index" style="color: #ff5212;">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <p>Página inicial</p>
+                </a>
+            </li>
+            <li>
+                <a href="?p=classification">
+                    <i class="fa fa-th-large" aria-hidden="true"></i>
+                    <p>classificação</p>
+                </a>
+            </li>
+            <li>
+                <a href="?p=cart">
+                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                    <p>carrinho de compras</p>
+                </a>
+            </li>
+            <li>
+                <a href="?p=my">
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                    <p>O meu</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+<style>
+    .layui-layer-page{
+        height: 80%!important;
+        overflow-y: auto;
+    }
+    
+</style>
+    <script src="/static/page/js/scr.js"></script>
+</body>
+
+</html>

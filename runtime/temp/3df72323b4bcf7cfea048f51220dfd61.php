@@ -1,0 +1,601 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:89:"/www/wwwroot/tb.youanfutang.cn/public/../application/admin/view/admin/page/welcome-1.html";i:1658590078;s:65:"/www/wwwroot/tb.youanfutang.cn/application/admin/view/layout.html";i:1658590062;s:70:"/www/wwwroot/tb.youanfutang.cn/application/admin/view/base/header.html";i:1658677912;s:70:"/www/wwwroot/tb.youanfutang.cn/application/admin/view/base/footer.html";i:1658590072;}*/ ?>
+
+<!DOCTYPE html>  
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="" http-equiv="refresh" content=""/>
+		<title><?php echo $webname; ?>-管理后台</title>
+	
+	  <!-- mini后台 -->
+	  <meta name="renderer" content="webkit">
+	     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	     <meta http-equiv="Access-Control-Allow-Origin" content="*">
+<!-- 	     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
+	     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	     <meta name="apple-mobile-web-app-capable" content="yes">
+	     <meta name="format-detection" content="telephone=no">
+		 
+	  <link rel="stylesheet" href="/static/layui/css/layui.css">
+	     <link rel="stylesheet" href="/static/layui/admin/layuimini/css/layuimini.css?v=2.0.4.2" media="all">
+	     <link rel="stylesheet" href="/static/layui/admin/layuimini/css/themes/default.css" media="all">
+	     <link rel="stylesheet" href="/static/layui/admin/layuimini/lib/font-awesome-4.7.0/css/font-awesome.min.css" media="all">
+	       <link rel="stylesheet" href="/static/layui/admin/layuimini/css/public.css" media="all">
+	  
+	  	<!-- mini后台 -->
+		
+    <script src="/static/JS/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/static/ueditor/ueditor.config.js"></script>
+	<!-- <script type="text/javascript" charset="utf-8" src="../static/ueditor/ueditor.all.min.js"> </script> -->
+	<script type="text/javascript" charset="utf-8" src="/static/ueditor/ueditor.all.js"> </script>
+	<script type="text/javascript" charset="utf-8" src="/static/ueditor/lang/zh-cn/zh-cn.js"></script>
+
+	<script src="/static/JS/jquery.cookie.min.js"></script>
+
+	<script type="text/javascript" src="/static/JS/jquery.qrcode.min.js"></script>  <!-- JQ二维码生成 -->
+ <script src="/static/layui/layui.all.js"></script>
+	
+	</head>
+
+
+<style>
+        .layui-card {border:1px solid #f2f2f2;border-radius:5px;}
+        .icon {margin-right:10px;color:#1aa094;}
+        .icon-cray {color:#ffb800!important;}
+        .icon-blue {color:#1e9fff!important;}
+        .icon-tip {color:#ff5722!important;}
+        .layuimini-qiuck-module {text-align:center;margin-top: 10px}
+        .layuimini-qiuck-module a i {display:inline-block;width:100%;height:60px;line-height:60px;text-align:center;border-radius:2px;font-size:30px;background-color:#F8F8F8;color:#333;transition:all .3s;-webkit-transition:all .3s;}
+        .layuimini-qiuck-module a cite {position:relative;top:2px;display:block;color:#666;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:14px;}
+        .welcome-module {width:100%;height:210px;}
+        .panel {background-color:#fff;border:1px solid transparent;border-radius:3px;-webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);box-shadow:0 1px 1px rgba(0,0,0,.05)}
+        .panel-body {padding:10px}
+        .panel-title {margin-top:0;margin-bottom:0;font-size:12px;color:inherit}
+        .label {display:inline;padding:.2em .6em .3em;font-size:100%;font-weight:700;line-height:1;color:#fff;text-align:center;white-space:nowrap;vertical-align:baseline;border-radius:.25em;margin-top: .3em;}
+        .layui-red {color:red}
+        .main_btn > p {height:40px;}
+        .layui-bg-number {background-color:#F8F8F8;}
+        .layuimini-notice:hover {background:#f6f6f6;}
+        .layuimini-notice {padding:7px 16px;clear:both;font-size:12px !important;cursor:pointer;position:relative;transition:background 0.2s ease-in-out;}
+        .layuimini-notice-title,.layuimini-notice-label {
+            padding-right: 70px !important;text-overflow:ellipsis!important;overflow:hidden!important;white-space:nowrap!important;}
+        .layuimini-notice-title {line-height:28px;font-size:14px;}
+        .layuimini-notice-extra {position:absolute;top:50%;margin-top:-8px;right:16px;display:inline-block;height:16px;color:#999;}
+		h1 {
+		    display: block;
+		    font-size: 2em;
+		   
+		   margin: 0;
+		}
+		.panel{margin: 0;}
+    </style>
+
+<body>
+<div class="layuimini-container">
+    <div class="layuimini-main">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md8">
+                <div class="layui-row layui-col-space15">
+                    <div class="layui-col-md6">
+                        <div class="layui-card">
+                            <div class="layui-card-header"><i class="fa fa-warning icon"></i>数据统计</div>
+                            <div class="layui-card-body">
+                                <div class="welcome-module">
+                                    <div class="layui-row layui-col-space10">
+                                        <div class="layui-col-xs6">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-blue">实时</span>
+                                                        <h5>用户统计</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h1 class="no-margins"><?php echo $allmb; ?></h1>
+                                                        <small>当前分类总记录数</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs6">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-cyan">实时</span>
+                                                        <h5>商品统计</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h1 class="no-margins"><?php echo $allkc; ?></h1>
+                                                        <small>当前分类总记录数</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs6">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-orange">实时</span>
+                                                        <h5>浏览统计</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h1 class="no-margins"><?php echo $alluv; ?></h1>
+                                                        <small>当前分类总记录数</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs6">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-green">实时</span>
+                                                        <h5>订单统计</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h1 class="no-margins"><?php echo $allorder; ?></h1>
+                                                        <small>当前分类总记录数</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <div class="layui-card">
+                            <div class="layui-card-header"><i class="fa fa-credit-card icon icon-blue"></i>快捷入口</div>
+                            <div class="layui-card-body">
+                                <div class="welcome-module">
+                                    <div class="layui-row layui-col-space10 layuimini-qiuck">
+                                        <div class="layui-col-xs3 layuimini-qiuck-module">
+                                            <a target="_blank" href="http://www.mifwl.com/design/templates.php?price=1"  data-title="H5模板中心" data-icon="fa fa-window-maximize">
+                                                <i class="fa fa-window-maximize"></i>
+                                                <cite>H5模板</cite>
+                                            </a>
+                                        </div>
+										<div class="layui-col-xs3 layuimini-qiuck-module">
+										    <a target="_blank" href="https://item.taobao.com/item.htm?id=617165671275&spm=2015.23436601.0.0" layuimini-content-href="https://item.taobao.com/item.htm?id=617165671275&spm=2015.23436601.0.0" data-title="天猫店铺" data-icon="fa fa-shopping-cart">
+										        <i class="fa fa-shopping-cart"></i>
+										        <cite>天猫店铺</cite>
+										    </a>
+										</div>
+										<div class="layui-col-xs3 layuimini-qiuck-module">
+										    <a target="_blank" href="http://mifwl.com/multisite/multiwords.php" layuimini-content-href="http://mifwl.com/multisite/multiwords.php" data-title="404页面" data-icon="fa fa-fire">
+										        <i class="fa fa-fire"></i>
+										        <cite>SEO推广</cite>
+										    </a>
+										</div>
+										<div class="layui-col-xs3 layuimini-qiuck-module">
+										    <a href="javascript:notes();" data-title="备忘录" data-icon="fa fa-bookmark-o">
+										        <i class="fa fa-bookmark-o"></i>
+										        <cite>备忘录</cite>
+										    </a>
+										</div>
+										
+										
+										<div class="layui-col-xs3 layuimini-qiuck-module">
+										    <a target="_blank" href="http://www.baidu.com" layuimini-content-href="http://www.baidu.com" data-title="百度搜索" data-icon="fa fa-search">
+										        <i class="fa fa-search"></i>
+										        <cite>百度搜索</cite>
+										    </a>
+										</div>
+                                        <div class="layui-col-xs3 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="admin/loadright?page=user" data-title="管理权限" data-icon="fa fa-user-plus">
+                                                <i class="fa fa-user-plus"></i>
+                                                <cite>管理权限</cite>
+                                            </a>
+                                        </div>
+                                        <div class="layui-col-xs3 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="admin/loadright?page=newslist" data-title="信息列表" data-icon="fa fa-th-list">
+                                                <i class="fa fa-th-list"></i>
+                                                <cite>信息列表</cite>
+                                            </a>
+                                        </div>
+                                        <div class="layui-col-xs3 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="admin/loadright?page=webdatapv" data-title="访客数据" data-icon="fa fa-bar-chart">
+                                                <i class="fa fa-bar-chart"></i>
+                                                <cite>访客数据</cite>
+                                            </a>
+                                        </div>
+										
+                                       
+                                     
+                                       
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="layui-col-md12">
+                        <div class="layui-card">
+                            <div class="layui-card-header"><i class="fa fa-line-chart icon"></i>报表统计</div>
+                            <div class="layui-card-body">
+                                <div id="echarts-records" style="width: 100%;min-height:500px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-col-md4">
+
+                <div class="layui-card">
+                    <div class="layui-card-header"><i class="fa fa-bullhorn icon icon-tip"></i>系统公告</div>
+                    <div class="layui-card-body layui-text">
+                        <div class="layuimini-notice">
+                            <div class="layuimini-notice-title">修改选项卡样式</div>
+                            <div class="layuimini-notice-extra">2019-07-11 23:06</div>
+                            <div class="layuimini-notice-content layui-hide">
+                                界面足够简洁清爽。<br>
+                                一个接口几行代码而已直接初始化整个框架，无需复杂操作。<br>
+                                支持多tab，可以打开多窗口。<br>
+                                支持无限级菜单和对font-awesome图标库的完美支持。<br>
+                                失效以及报错菜单无法直接打开，并给出弹出层提示完美的线上用户体验。<br>
+                                url地址hash定位，可以清楚看到当前tab的地址信息。<br>
+                                刷新页面会保留当前的窗口，并且会定位当前窗口对应左侧菜单栏。<br>
+                                移动端的友好支持。<br>
+                            </div>
+                        </div>
+                        <div class="layuimini-notice">
+                            <div class="layuimini-notice-title">新增系统404模板</div>
+                            <div class="layuimini-notice-extra">2019-07-11 12:57</div>
+                            <div class="layuimini-notice-content layui-hide">
+                                界面足够简洁清爽。<br>
+                                一个接口几行代码而已直接初始化整个框架，无需复杂操作。<br>
+                                支持多tab，可以打开多窗口。<br>
+                                支持无限级菜单和对font-awesome图标库的完美支持。<br>
+                                失效以及报错菜单无法直接打开，并给出弹出层提示完美的线上用户体验。<br>
+                                url地址hash定位，可以清楚看到当前tab的地址信息。<br>
+                                刷新页面会保留当前的窗口，并且会定位当前窗口对应左侧菜单栏。<br>
+                                移动端的友好支持。<br>
+                            </div>
+                        </div>
+                        <div class="layuimini-notice">
+                            <div class="layuimini-notice-title">新增treetable插件和菜单管理样式</div>
+                            <div class="layuimini-notice-extra">2019-07-05 14:28</div>
+                            <div class="layuimini-notice-content layui-hide">
+                                界面足够简洁清爽。<br>
+                                一个接口几行代码而已直接初始化整个框架，无需复杂操作。<br>
+                                支持多tab，可以打开多窗口。<br>
+                                支持无限级菜单和对font-awesome图标库的完美支持。<br>
+                                失效以及报错菜单无法直接打开，并给出弹出层提示完美的线上用户体验。<br>
+                                url地址hash定位，可以清楚看到当前tab的地址信息。<br>
+                                刷新页面会保留当前的窗口，并且会定位当前窗口对应左侧菜单栏。<br>
+                                移动端的友好支持。<br>
+                            </div>
+                        </div>
+                        <div class="layuimini-notice">
+                            <div class="layuimini-notice-title">修改logo缩放问题</div>
+                            <div class="layuimini-notice-extra">2019-07-04 11:02</div>
+                            <div class="layuimini-notice-content layui-hide">
+                                界面足够简洁清爽。<br>
+                                一个接口几行代码而已直接初始化整个框架，无需复杂操作。<br>
+                                支持多tab，可以打开多窗口。<br>
+                                支持无限级菜单和对font-awesome图标库的完美支持。<br>
+                                失效以及报错菜单无法直接打开，并给出弹出层提示完美的线上用户体验。<br>
+                                url地址hash定位，可以清楚看到当前tab的地址信息。<br>
+                                刷新页面会保留当前的窗口，并且会定位当前窗口对应左侧菜单栏。<br>
+                                移动端的友好支持。<br>
+                            </div>
+                        </div>
+                        <div class="layuimini-notice">
+                            <div class="layuimini-notice-title">修复左侧菜单缩放tab无法移动</div>
+                            <div class="layuimini-notice-extra">2019-06-17 11:55</div>
+                            <div class="layuimini-notice-content layui-hide">
+                                界面足够简洁清爽。<br>
+                                一个接口几行代码而已直接初始化整个框架，无需复杂操作。<br>
+                                支持多tab，可以打开多窗口。<br>
+                                支持无限级菜单和对font-awesome图标库的完美支持。<br>
+                                失效以及报错菜单无法直接打开，并给出弹出层提示完美的线上用户体验。<br>
+                                url地址hash定位，可以清楚看到当前tab的地址信息。<br>
+                                刷新页面会保留当前的窗口，并且会定位当前窗口对应左侧菜单栏。<br>
+                                移动端的友好支持。<br>
+                            </div>
+                        </div>
+                        <div class="layuimini-notice">
+                            <div class="layuimini-notice-title">修复多模块菜单栏展开有问题</div>
+                            <div class="layuimini-notice-extra">2019-06-13 14:53</div>
+                            <div class="layuimini-notice-content layui-hide">
+                                界面足够简洁清爽。<br>
+                                一个接口几行代码而已直接初始化整个框架，无需复杂操作。<br>
+                                支持多tab，可以打开多窗口。<br>
+                                支持无限级菜单和对font-awesome图标库的完美支持。<br>
+                                失效以及报错菜单无法直接打开，并给出弹出层提示完美的线上用户体验。<br>
+                                url地址hash定位，可以清楚看到当前tab的地址信息。<br>
+                                刷新页面会保留当前的窗口，并且会定位当前窗口对应左侧菜单栏。<br>
+                                移动端的友好支持。<br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="layui-card">
+                    <div class="layui-card-header"><i class="fa fa-fire icon"></i>版本信息</div>
+                    <div class="layui-card-body layui-text">
+                        <table class="layui-table">
+                            <colgroup>
+                                <col width="100">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <td>后台昵称</td>
+                                <td>
+                                    <?php echo $webname; ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>当前版本</td>
+                                <td>v1.0</td>
+                            </tr>
+							<tr>
+							    <td>作者昵称</td>
+							    <td>jaychen</td>
+							</tr>
+                            <tr>
+                                <td>主要特色</td>
+                                <td>零门槛 / 美观 / 清爽 / 极简</td>
+                            </tr>
+                          
+                            <tr>
+                                <td>Gitee</td>
+                                <td style="padding-bottom: 0;">
+                                    <div class="layui-btn-container">
+                                        <a href="" style="margin-right: 15px"><img src="https://gitee.com/zhongshaofa/layuimini/badge/star.svg?theme=dark" alt="star"></a>
+                                        <a href="" ><img src="https://gitee.com/zhongshaofa/layuimini/badge/fork.svg?theme=dark" alt="fork"></a>
+                                    </div>
+                                </td>
+                            </tr>
+                         
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="layui-card">
+                    <div class="layui-card-header"><i class="fa fa-paper-plane-o icon"></i>作者心语</div>
+                    <div class="layui-card-body layui-text layadmin-text">
+                        <p>本后台框架基于layui2.5.4+thinkphp以及font-awesome-4.7.0进行实现。</p>
+                        <p>后台特色：零门槛 / 美观 / 清爽 / 极简</p>
+					    <p>使用后台过程中如有问题可以联系网站制作专员！</p>
+						<p class="label layui-bg-red">亲爱的 <i class="label layui-bg-black"><?php echo $user; ?></i>，<?php echo $Hamtime; ?></p>
+                     
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 备忘录 -->
+<style type="text/css">
+	.notes{display:none;width:80%;height: 400px;}
+	.layui-layedit{width:100%;margin:0px auto;}
+</style>
+<div class="notes" id="notes"   style="" lay-verify="content">
+	
+
+</div>
+
+<script type="text/javascript">
+
+	var Introduction;	//layedit 文本
+   function notes(){
+   	layer.open({
+   		type:1,
+   		title:false,
+   		anim:1,
+   		area:['800px','500px'],
+   		content:$(".notes")
+   	});
+
+	layui.use(['layer','layedit', 'form','jquery'], function(){
+	  var layedit = layui.layedit,$=layui.jquery;
+	  var res=layedit.build('notes', {
+	    height: 400,//设置编辑器高度
+
+		 tool:[
+	  'strong' //加粗
+	  ,'italic' //斜体
+	  ,'underline' //下划线
+	  ,'del' //删除线
+	  ,'|' //分割线
+	  ,'face' //表情
+	  ,'left' //左对齐
+	  ,'center' //居中对齐
+	  ,'right' //右对齐
+	  ,'link' //超链接
+	  ,'unlink' //清除链接
+	 
+	]
+	  });
+	  layedit.setContent(res,'<?php echo $notes; ?>');//layui赋值
+
+   
+   $(".layui-layer-close").click(function(){
+   	$(".notes").hide();
+   	$(".layui-layedit").hide();
+   	Introduction=layedit.getContent(res);
+   
+   $.ajax({
+   	type:'POST', // 规定请求的类型（GET 或 POST）
+   	url:'/login.php/admin/danyeapi', // 请求的url地址
+   	dataType:'json', //预期的服务器响应的数据类型 
+   	data:{
+   		
+   		 editor:Introduction,
+   		 class:'备忘录'
+   
+   	},//规定要发送到服务器的数据
+   	
+   	success: function(res){ // 当请求成功时运行的函数
+   		if(res.code==1){
+   			
+   			layer.msg('保存成功！', {
+   			                icon:1,
+   			                shade: 0.05,
+   			                time: 800
+   			            },function(){
+					window.location.href="/login.php/admin/loadright?page=welcome-1";//重定向到iframe的src链接，刷新效果
+						});
+   		}
+   		
+   		
+   		
+   		
+   		
+   	},
+   	error:function(result){ //失败的函数
+   	layer.msg('服务器故障！', {
+   	                icon:2,
+   	                shade: 0.05,
+   	                time: 800
+   	            });
+   			
+   			
+   			
+   			
+   	}
+   	
+   })//ajax-end
+   })//
+
+	  
+	});
+   	
+   	
+   	
+   };//备忘录
+   
+
+
+	
+	
+	
+</script>
+
+<!-- 备忘录 -->
+<script src="/static/layui/layui.all.js"></script>
+<script src="/static/layui/admin/layuimini/js/lay-config.js" charset="utf-8"></script>
+<script>
+    layui.use(['layer', 'miniTab','echarts'], function () {
+        var $ = layui.jquery,
+            layer = layui.layer,
+            miniTab = layui.miniTab,
+            echarts = layui.echarts;
+
+        miniTab.listen();
+
+        /**
+         * 查看公告信息
+         **/
+        $('body').on('click', '.layuimini-notice', function () {
+            var title = $(this).children('.layuimini-notice-title').text(),
+                noticeTime = $(this).children('.layuimini-notice-extra').text(),
+                content = $(this).children('.layuimini-notice-content').html();
+            var html = '<div style="padding:15px 20px; text-align:justify; line-height: 22px;border-bottom:1px solid #e2e2e2;background-color: #2f4056;color: #ffffff">\n' +
+                '<div style="text-align: center;margin-bottom: 20px;font-weight: bold;border-bottom:1px solid #718fb5;padding-bottom: 5px"><h4 class="text-danger">' + title + '</h4></div>\n' +
+                '<div style="font-size: 12px">' + content + '</div>\n' +
+                '</div>\n';
+            parent.layer.open({
+                type: 1,
+                title: '系统公告'+'<span style="float: right;right: 1px;font-size: 12px;color: #b1b3b9;margin-top: 1px">'+noticeTime+'</span>',
+                area: '300px;',
+                shade: 0.8,
+                id: 'layuimini-notice',
+                btn: ['查看', '取消'],
+                btnAlign: 'c',
+                moveType: 1,
+                content:html,
+                success: function (layero) {
+                    var btn = layero.find('.layui-layer-btn');
+                    btn.find('.layui-layer-btn0').attr({
+                        href: 'https://gitee.com/zhongshaofa/layuimini',
+                        target: '_blank'
+                    });
+                }
+            });
+        });
+
+        /**
+         * 报表功能
+         */
+        var echartsRecords = echarts.init(document.getElementById('echarts-records'), 'walden');
+        var optionRecords = {
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data:['网站IP访问量','管理后台登录','文章访问量','产品访问量']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    name:'网站IP访问量',
+                    type:'line',
+                    data:<?php echo $viewUV; ?>
+                },
+                {
+                    name:'管理后台登录',
+                    type:'line',
+                    data:<?php echo $loginnum; ?>
+                },
+                {
+                    name:'文章访问量',
+                    type:'line',
+                    data:<?php echo $acviewnum; ?>
+                },
+                {
+                    name:'产品访问量',
+                    type:'line',
+                    data:<?php echo $pdviewnum; ?>
+                }
+            ]
+        };
+        echartsRecords.setOption(optionRecords);
+
+        // echarts 窗口缩放自适应
+        window.onresize = function(){
+            echartsRecords.resize();
+        }
+
+    });
+</script>
+</body>
+</html>
+
+
+
+</body>
+</html>
+
+<div class="wxfxanli-con" style="display: none;text-align: center;">
+	             <b style="font-size: 22px;margin: 10px 0px;display: block;">案例1</b>
+				 
+				<img width="90%" style="display: block;margin: auto;" src="/static/img/admin/wxfx.png" >
+				   <b style="font-size: 22px;margin: 10px 0px;display: block;">案例2</b>
+				<img width="90%" style="display: block;margin: auto;" src="/static/img/admin/pyqfx.png" >
+</div>
+		

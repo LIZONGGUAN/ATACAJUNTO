@@ -1,0 +1,251 @@
+<style type="text/css">
+	h5{font-size: 100%;margin: 0;}
+	.layui-tab-title li{
+		    padding: 0 20px!important;
+	}
+	
+   iframe .c-ffffff a {
+	    color: #565353!important;
+	    font-size: 10px;
+	}
+</style>
+<body class="layui-layout-body layuimini-all">
+<div class="layui-layout layui-layout-admin">
+
+    <div class="layui-header header">
+        <div class="layui-logo layuimini-logo"></div>
+
+        <div class="layuimini-header-content">
+            <a>
+                <div class="layuimini-tool"><i title="open" class="fa fa-outdent" data-side-fold="1"></i></div>
+            </a>
+
+            <!--电脑端头部菜单-->
+            <ul class="layui-nav layui-layout-left layuimini-header-menu layuimini-menu-header-pc layuimini-pc-show">
+				
+            </ul>
+           
+            <!--手机端头部菜单-->
+            <ul class="layui-nav layui-layout-left layuimini-header-menu layuimini-mobile-show">
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><i class="fa fa-list-ul"></i> {$languageObj['选择模块']['name_' . $language]}</a>
+                    <dl class="layui-nav-child layuimini-menu-header-mobile">
+                    </dl>
+                </li>
+            </ul>
+
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item" >
+                    <a href="javascript:indexurl();" style="background-color: white;" ><i class="fa fa-home"></i></a>
+                </li>
+				<script type="text/javascript">
+				
+					function indexurl(){
+						layer.msg('loading...', {
+						                icon:16,
+						                shade: 0.05,
+						                time: 800
+						            },function(){
+										
+								window.open("/","top");
+									}
+									
+									);
+					}
+			
+				
+				</script>
+                <li class="layui-nav-item" id="refresh" lay-unselect>
+                    <a href="javascript:;"  data-refresh="刷新"><i class="fa fa-refresh"></i></a>
+                </li>
+                <li class="layui-nav-item" lay-unselect>
+                    <a href="javascript:;" data-clear="清理" class="layuimini-clear"><i class="fa fa-trash-o"></i></a>
+                </li>
+				
+				
+                <li class="layui-nav-item mobile layui-hide-xs" lay-unselect>
+                    <a href="javascript:;" data-check-screen="full"><i class="fa fa-arrows-alt"></i></a>
+                </li>
+				
+
+                <li class="layui-nav-item" lay-unselect>
+                    <a href="javascript:;" layuimini-content-href="admin/loadright?page=language" data-title="{$languageObj['语言配置']['name_' . $language]}" title="{$languageObj['语言配置']['name_' . $language]}"><i class="fa fa-language"></i></a>
+                </li>
+
+
+                <li class="layui-nav-item layuimini-setting">
+                    <a href="javascript:;">
+                        {if $language == 'pt'}
+                        {$languageObj['葡萄牙语']['name_' . $language]}
+                        {else}
+                        {$languageObj['中文']['name_' . $language]}
+                        {/if}
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            {if $language != 'zh'}<a href="javascript:;" data-lang="zh" class="setLang">{$languageObj['中文']['name_' . $language]}</a>{/if}
+                            {if $language != 'pt'}<a href="javascript:;" data-lang="pt" class="setLang">{$languageObj['葡萄牙语']['name_' . $language]}</a>{/if}
+                        </dd>
+                    </dl>
+                </li>
+
+                <script>
+                    $(".setLang").click(function() {
+                        $.get("/login.php/language/setLang?lang=" + $(this).attr('data-lang'), function(res) {
+                            location.reload()
+                        })
+                    })
+                </script>
+				
+                <li class="layui-nav-item layuimini-setting">
+                    <a href="javascript:;"><img src="{$ico}" class="layui-nav-img">{$user}</a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="javascript:;" layuimini-content-href="admin/loadright?page=basic" data-title="基本资料" data-icon="fa fa-gears">{$languageObj['基本资料']['name_' . $language]}<span class="layui-badge-dot"></span></a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;" layuimini-content-href="admin/loadright?page=modifypw" data-title="修改密码" data-icon="fa fa-gears">{$languageObj['修改密码']['name_' . $language]}</a>
+                        </dd>
+                        <dd>
+                            <hr>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;" class="login-out">{$languageObj['退出登录']['name_' . $language]}</a>
+                        </dd>
+                    </dl>
+                </li>
+             <li class="layui-nav-item layuimini-select-bgcolor" lay-unselect>
+                 <a href="" ></a>
+             </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--无限极左侧菜单-->
+    <div class="layui-side layui-bg-black layuimini-menu-left">
+    </div>
+
+    <!--初始化加载层-->
+    <div class="layuimini-loader">
+        <div class="layuimini-loader-inner"></div>
+    </div>
+
+    <!--手机端遮罩层-->
+    <div class="layuimini-make"></div>
+
+    <!-- 移动导航 -->
+    <div class="layuimini-site-mobile"><i class="layui-icon"></i></div>
+
+    <div class="layui-body">
+
+        <div class="layuimini-tab layui-tab-rollTool layui-tab" lay-filter="layuiminiTab" lay-allowclose="true">
+            <ul class="layui-tab-title">
+                <li class="layui-this" id="layuiminiHomeTabId" lay-id=""></li>
+            </ul>
+            <div class="layui-tab-control">
+                <li class="layuimini-tab-roll-left layui-icon layui-icon-left"></li>
+                <li class="layuimini-tab-roll-right layui-icon layui-icon-right"></li>
+                <li class="layui-tab-tool layui-icon layui-icon-down">
+                    <ul class="layui-nav close-box">
+                        <li class="layui-nav-item">
+                            <a href="javascript:;"><span class="layui-nav-more"></span></a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="javascript:;" layuimini-tab-close="current">关 闭 当 前</a></dd>
+                                <dd><a href="javascript:;" layuimini-tab-close="other">关 闭 其 他</a></dd>
+                                <dd><a href="javascript:;" layuimini-tab-close="all">关 闭 全 部</a></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+            <div class="layui-tab-content">
+                <div id="layuiminiHomeTabIframe" class="layui-tab-item layui-show"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="/static/layui/admin/layuimini/js/lay-config.js?v=2.0.0" charset="utf-8"></script>
+<script>
+    layui.use(['jquery', 'layer', 'miniAdmin','miniTongji'], function () {
+        var $ = layui.jquery,
+            layer = layui.layer,
+            miniAdmin = layui.miniAdmin,
+            miniTongji = layui.miniTongji;
+
+        var options = {
+            iniUrl: "/login.php/base/getSystemInit",    // 初始化接口
+            clearUrl: "/static/layui/admin/layuimini/api/clear.json", // 缓存清理接口
+            urlHashLocation: true,      // 是否打开hash定位
+            bgColorDefault: false,      // 主题默认配置
+            multiModule: true,          // 是否开启多模块
+            menuChildOpen: false,       // 是否默认展开菜单
+            loadingTime: 0,             // 初始化加载时间
+            pageAnim: true,             // iframe窗口动画
+            maxTabNum: 20,              // 最大的tab打开数量
+        };
+        miniAdmin.render(options);
+      setTimeout(function(){var htmlpc=$(".layuimini-menu-header-pc").html();
+       htmlpc=htmlpc+'<div data-menu="multi_module_2" style="float:right;width: 190px;height: 60px;;line-height:85px;color:black"><iframe allowtransparency="true" frameborder="0" width="180" height="36" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=3&z=2&t=1&v=0&d=2&bd=0&k=000000&f=000000&ltf=009944&htf=cc0000&q=0&e=1&a=1&c=54511&w=180&h=36&align=center"></iframe></div>';
+      
+       $(".layuimini-menu-header-pc").html(htmlpc);},2000);
+
+       
+
+		
+		$(".login-out").click(function() {
+		
+			layer.confirm(`{$languageObj['确定要退出吗？']['name_' . $language]}`, {
+				icon: 3,
+				title: `{$languageObj['提示']['name_' . $language]}`
+			}, function(index) {
+		
+		
+				$.ajax({
+					type: 'POST', // 规定请求的类型（GET 或 POST）
+					url: 'admin/clearcookie', // 请求的url地址
+					cache: true, // 否在缓存中读取数据的读取
+					dataType: 'json', //预期的服务器响应的数据类型 
+					data: {
+						clear: "clearcookie",
+		
+					}, //规定要发送到服务器的数据
+		
+					success: function(result) { // 当请求成功时运行的函数
+		
+						layer.msg(`{$languageObj['正在退出...']['name_' . $language]}`, {
+							icon: 16,
+							shade: 0.05,
+							time: 1000
+						}, function() {
+							window.location.href = "/login.php";
+						});
+		
+		
+		
+					},
+					error: function(result) { //失败的函数
+						layer.msg('fail', {
+							icon: 5,
+							shade: 0.05,
+							time: 800
+						});
+		
+		
+		
+		
+					}
+		
+				}); //ajax-end
+		
+				layer.close(index);
+			});
+		
+		
+		
+		});
+    });
+</script>
+

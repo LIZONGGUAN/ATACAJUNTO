@@ -1,0 +1,559 @@
+<style>
+.layui-table tbody tr:hover, .layui-table thead tr, .layui-table-click, .layui-table-header, .layui-table-hover, .layui-table-mend, .layui-table-patch, .layui-table-tool, .layui-table-total, .layui-table-total tr, .layui-table[lay-even] tr:nth-child(even) {
+    background-color: #ffffff;
+}
+.layui-table-cell,.laytable-cell-1-0-3,.layui-table img{height:auto;max-height:85px;}
+.layui-table img{max-width: 85px;}
+
+</style>
+<div class="layuimini-container">
+    <div class="layuimini-main">
+
+        <fieldset class="table-search-fieldset">
+            <legend>搜索信息</legend>
+            <div style="margin: 10px 10px 10px 10px">
+                <form class="layui-form layui-form-pane" action="">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">内容标题</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="username" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    
+                        <div class="layui-inline">
+                            <button type="submit" class="layui-btn layui-btn-primary"  lay-submit lay-filter="data-search-btn"><i class="layui-icon"></i> 搜 索</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </fieldset>
+
+        <script type="text/html" id="toolbarDemo">
+            <div class="layui-btn-container">
+                <button class="layui-btn layui-btn-normal layui-btn-sm data-add-btn" lay-event="add"> 添加管理员 </button>
+                <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn" lay-event="delete"> 删除 </button>
+            </div>
+        </script>
+
+        <table class="layui-hide" id="currentTableId" lay-filter="currentTableFilter"></table>
+
+        <script type="text/html" id="currentTableBar">
+            <a class="layui-btn layui-btn-normal layui-btn-xs data-count-edit" lay-event="edit">编辑信息</a>
+			<a class="layui-btn layui-btn-normal layui-btn-xs data-count-edit layui-btn-warm" lay-event="role">权限设置</a>
+            <a class="layui-btn layui-btn-xs layui-btn-danger data-count-delete" lay-event="delete">删除</a>
+        </script>
+
+    </div>
+</div>
+<script src="/static/layui/layui.all.js"></script>
+<script>
+var trimg;
+var trid;
+    layui.use(['form', 'table'], function () {
+        var $ = layui.jquery,
+            form = layui.form,
+            table = layui.table;
+
+        table.render({
+            elem: '#currentTableId',
+            url: '/login.php/newsad/newslist?formname=user',
+            toolbar: '#toolbarDemo',
+            defaultToolbar: ['filter', 'exports', 'print', {
+                title: '提示',
+                layEvent: 'LAYTABLE_TIPS',
+                icon: 'layui-icon-tips'
+            }],
+            cols: [[
+                {type: "checkbox", width: 80},
+                {field: 'Id', width: 80, title: 'ID', sort: true},
+                {field: 'name', width: 200, title: '昵称'},
+				{field: 'ico', width: 300, title: '用户头像',templet: function(d) { return '<img src="'+d.ico+'" width="100%" height="100%" >'; }},
+                {field: 'user', width: 300, title: '管理员用户名'},
+				{field: 'lasttime', width: 250, title: '最后登陆时间', sort: true},
+				{field: 'status', width: 200, title: '账号状态', sort: true},
+			    
+    //             {field: 'newstime', width:180, title: '发布时间'},
+				  // ,{field: 'jiage', width:100,title: '二维码',templet: function(d) { return '<div class="qrcode" data='+d.jiage+' ></div>'; }}
+                //{field: 'newssort', title: '排序', minWidth: 100},
+                
+                {title: '操作',  toolbar: '#currentTableBar', align: "center"}
+            ]],
+            limits: [10, 15, 20, 25, 50, 100],
+            limit: 15,
+            page: true,
+            skin: 'line',
+			done:function(){
+				
+			}
+        });
+
+        // 监听搜索操作
+        form.on('submit(data-search-btn)', function (data) {
+            var result = JSON.stringify(data.field);
+          
+		 
+            //执行搜索重载
+            table.reload('currentTableId', {
+                page: {
+                    curr: 1
+                }
+                , where: {
+                    searchParams: result
+                }
+            }, 'data');
+
+            return false;
+        });
+
+        /**
+         * toolbar监听事件
+         */
+        table.on('toolbar(currentTableFilter)', function (obj) {
+			
+			var data = obj.data; //获得当前行数据
+			var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+			
+            if (obj.event === 'add') {  // 监听添加操作
+         
+				 layer.open({
+				   type: 1, 
+				   area:['350px','280px'],
+				   title:'添加管理员',
+				   anim:1,
+				   content:$(".adduser")
+				 }); 
+            } else if (obj.event === 'delete') {  // 监听删除操作
+                var checkStatus = table.checkStatus('currentTableId')
+                    , data = checkStatus.data;
+            
+			console.log(data);
+		    if(data==''){
+				layer.msg('请选择数据！');
+			}else{
+				if(data[0]['Id']==1){
+					layer.msg('不支持操作主管理员！');
+					return false;
+				}
+				
+				
+				layer.confirm('删除选中的数据吗？',function(index){
+				  layer.close(index);
+								 $.ajax({
+								 	type:'post', // 规定请求的类型（GET 或 POST）
+								 	url:'/login.php/newsad/newslist_del', // 请求的url地址
+								 	cache:false,// 否在缓存中读取数据的读取
+								 	dataType:'json', //预期的服务器响应的数据类型 
+								 	data:{
+								 		data:data,
+										formname:'user'
+								 	},//规定要发送到服务器的数据
+									success:function(){
+									
+										//执行表格重载
+										table.reload('currentTableId');
+									}
+								  }) //ajax
+								 
+				});
+			}
+			
+				
+            }
+        });
+
+        //监听表格复选框选择
+        table.on('checkbox(currentTableFilter)', function (obj) {
+            console.log(obj)
+        });
+
+        table.on('tool(currentTableFilter)', function (obj) {
+            var data = obj.data;
+			var tr = obj.tr; //获得当前行 tr 的 DOM 对象（如果有的话）
+			 trid=$($(tr).find('td')[1]).text();
+			 trimg=$($($(tr).find('td')[3]).find('img')).attr('src');
+			
+			$(".editimg").attr('src',trimg);
+			$('input[name="ediname"]').val($($(tr).find('td')[2]).text());
+			$('input[name="ediuser"]').val($($(tr).find('td')[4]).text());
+			if(trid==1){
+				layer.msg('不支持操作主管理员！');
+				return false;
+			}
+            if (obj.event === 'edit') {
+
+			  layer.open({
+			    type: 1, 
+			    area:['350px','435px'],
+			    title:'编辑账号',
+			    anim:1,
+			    content: $(".edituser")
+			  }); 
+            } else if (obj.event === 'delete') {
+                layer.confirm('真的删除行么！', function (index) {
+                    obj.del();
+                    layer.close(index);
+					$.ajax({
+						type:'post', // 规定请求的类型（GET 或 POST）
+						url:'/login.php/newsad/newslist_del', // 请求的url地址
+						cache:false,// 否在缓存中读取数据的读取
+						dataType:'json', //预期的服务器响应的数据类型 
+						data:{
+							trid:trid,
+							formname:'user'
+						}//规定要发送到服务器的数据
+					 }) //ajax
+                });
+            }else if(obj.event==='role'){
+			
+				
+				$.ajax({
+					type:'post', // 规定请求的类型（GET 或 POST）
+					url:'/login.php/newsad/userrole', // 请求的url地址
+					cache:false,// 否在缓存中读取数据的读取
+					dataType:'json', //预期的服务器响应的数据类型 
+					data:{
+						Id:trid,
+						sign:'获取权限'
+					},//规定要发送到服务器的数据
+					success:function(res){
+						if(res.code==1){
+					     var rolenum=0;
+						$(".editrole input").each(function(){
+							roletit=$(this).attr('title');
+							for(x=0;x<JSON.parse(res.role).length;x++){
+								console.log(JSON.parse(res.role)[x])
+								if(JSON.parse(res.role)[x]==roletit){
+									$(this).attr('checked','checked');
+								}
+							}
+							rolenum++;
+						})
+						
+						if(rolenum>=$(".editrole input").length){
+							
+							layui.use('form', function(){
+							  var form = layui.form;
+							    form.render();//select和复选框 这些需要表单重载
+							
+							});
+							
+							layer.open({
+											  type: 1, 
+											  area:['350px','410px'],
+											  title:'编辑权限',
+											  anim:1,
+											  content: $(".editrole"),
+											  end:function(){
+												location.reload();
+											  }//弹窗结束后 重载页面
+											  
+											}); 
+						}//each遍历完成执行
+						
+						
+						
+						}else if(res.code==0){
+							layer.msg('获取失败！', {
+							                icon:2,
+							                shade: 0.05,
+							                time: 800
+							            });
+							
+						}
+						
+					}
+				 }) //ajax
+				
+			}//role
+        });
+
+    });
+		
+</script>
+<style type="text/css">
+	.adduser{display: none;padding-top: 20px;}
+	.adduser>div{width: 90%;margin: auto;height: 45px;line-height: 45px;}
+	.adduser select{width: 70%; height: 35px;padding-left: 10px;}
+	.adduser input{height: 35px;width:80%;padding-left: 5px;display: inline;}
+	.submitadd{display: block;margin:20px auto;}
+</style>
+<div class="adduser">
+	<div><span>昵称：</span><input class="layui-input" name="user-name" type="text"  placeholder="请输入管理员昵称"></div>
+	<div><span>账号：</span><input class="layui-input" name="user" type="text" value="" placeholder="请输入管理员账号"></div>
+	<div><span>密码：</span><input class="layui-input" name="userpwd" type="text" value="" placeholder="请输入管理员密码"></div>
+	<button type="button" class="layui-btn submitadd">新增管理员</button>
+	
+</div>
+
+<script type="text/javascript">
+	$(function(){
+		
+		$(".submitadd").click(function(){
+			
+			var username=$('input[name="user-name"]').val();
+			var user=$('input[name="user"]').val();
+			var userpwd=$('input[name="userpwd"]').val();
+
+			if(!username||!user||!userpwd){
+				layer.msg('请填写完整信息！');
+				return false;
+			};
+			
+			if(userpwd.length<6){
+				layer.msg('密码不能小于6位数！');
+				return false;					
+			}
+			
+			$.ajax({
+				type:'post', // 规定请求的类型（GET 或 POST）
+				url:'/login.php/newsad/userrole', // 请求的url地址
+				cache:false,// 否在缓存中读取数据的读取
+				dataType:'json', //预期的服务器响应的数据类型 
+				data:{
+					username:username,
+					user:user,
+					userpwd:userpwd,
+					sign:'添加管理员'
+				},//规定要发送到服务器的数据
+				success:function(res){
+					if(res.code==1){
+						layer.msg('添加成功！', {
+						                icon:1,
+						                shade: 0.05,
+						                time: 800
+						            },function(){
+										window.location.href='/login.php/admin/loadright?page=user';
+									});
+					}else if(res.code==0){
+						
+						layer.msg('存在重复的账号！', {
+						                icon:2,
+						                shade: 0.05,
+						                time: 800
+						            });
+					}
+					
+				}
+			 }) //ajax
+			
+			
+		})
+		
+	})
+</script>
+
+
+<style type="text/css">
+	.edituser{display: none;padding-top: 20px;}
+	.edituser>div{width: 90%;margin: auto;height: auto;min-height: 45px;line-height: 45px;}
+	.edituser  select{width: 70%; height: 35px;padding-left: 10px;cursor: pointer;}
+	.edituser  input{height: 35px;width:70%;padding-left: 5px;display: inline;}
+	.submitedit{display: block;margin:20px auto;}
+	.layui-input{display: inline;}
+	.editimg{width: 120px;display: block;margin: auto;cursor: pointer;}
+</style>
+
+<div class="edituser">
+	<div>
+		<img id="uploadlogo" class="editimg" src="" >
+	</div>
+	<div><span>管理昵称：</span>
+	    <input class="layui-input" type="text" class="text" name="ediname" value="" placeholder="&nbsp;&nbsp;请输入管理昵称">
+	</div>
+	<div><span>管理账号：</span>
+	    <input class="layui-input" type="text" class="text" name="ediuser" value="" placeholder="&nbsp;&nbsp;请输入管理账号">
+	</div>
+	<div><span>账号状态：</span>
+	    <select class="layui-input" name="status">
+		<option value="开启">开启</option>
+		<option value="停用">停用</option>
+	</select>
+	</div>	
+	<div><span>重置密码：</span>
+	    <input class="layui-input" type="text" class="text" name="edipw" value="" placeholder="&nbsp;&nbsp;输入内容后重置生效">
+	</div>
+	
+	
+		<button type="button" class="layui-btn submitedit">保存信息</button>
+	
+</div>
+<script type="text/javascript">
+	$(".submitedit").click(function(){
+			
+			var img=$('#uploadlogo').attr('src');
+			var ediname=$('input[name="ediname"]').val();
+			var ediuser=$('input[name="ediuser"]').val();
+			var status=$('select[name="status"]').val();
+			var edipw=$('input[name="edipw"]').val();
+
+			if(!ediname||!ediuser){
+				layer.msg('请填写完整信息！');
+				return false;
+			};
+			
+			if(edipw.length<6&&edipw.length!==0){
+				layer.msg('密码不能小于6位数！');
+				return false;					
+			}
+			
+			$.ajax({
+				type:'post', // 规定请求的类型（GET 或 POST）
+				url:'/login.php/newsad/userrole', // 请求的url地址
+				cache:false,// 否在缓存中读取数据的读取
+				dataType:'json', //预期的服务器响应的数据类型 
+				data:{
+					Id:trid,
+					img:img,
+					ediname:ediname,
+					ediuser:ediuser,
+					status:status,
+					edipw:edipw,
+					sign:'编辑管理员'
+				},//规定要发送到服务器的数据
+				success:function(res){
+					if(res.code==1){
+						layer.msg('保存成功！', {
+						                icon:1,
+						                shade: 0.05,
+						                time: 800
+						            },function(){
+										window.location.href='/login.php/admin/loadright?page=user';
+									});
+					}else if(res.code==0){
+						layer.msg('保存失败！', {
+						                icon:2,
+						                shade: 0.05,
+						                time: 800
+						            });
+						
+					}
+					
+				}
+			 }) //ajax
+			
+			
+		})
+
+	var  uploadlogo;
+	layui.use('upload', function(){
+	  var upload = layui.upload;
+	   
+	  //执行实例
+	  var uploadInst = upload.render({
+	    elem: '#uploadlogo' //绑定元素
+	    ,url: '/login.php/admin/basicicoapi' //上传接口
+		,exts: 'jpg|png|jpeg'
+		,multiple:true
+		,drag:true
+		,data:{
+			
+		}
+	    ,before:function(obj){
+			//预读本地文件示例，不支持ie8
+			//layer.msg("请上传尺寸：372 x 124的网站logo！");
+			setTimeout(function(){
+				layer.msg('图片上传中...', {
+				                icon:16,
+				                shade: 0.05,
+				                time: 800
+				            })
+			},1000);
+			
+			 }
+		,done: function(res){
+	      //上传完毕回调
+		  setTimeout(function(){
+			   $('#uploadlogo').attr('src', res.filepath);
+		  },2000)
+		
+		  // console.log(res.filepath); 图片文件的路径
+		        uploadlogo=res.filepath;//赋值给photo 传给ajax丢数据
+	    }
+	    ,error: function(res){
+	      //请求异常回调
+	
+		  console.log(res);
+	    }
+	  });
+	}); //图片API
+	
+	
+</script>
+
+
+<style type="text/css">
+	.editrole{display: none;padding: 20px;}
+	.editrole .layui-form{display: flex;flex-wrap: wrap}
+	.editrole .layui-form-checkbox{display: block;margin:15px 23px;}
+     .button-btn{display: flex;justify-content: center;margin-top: 20px;}
+</style>
+
+<div class="editrole">
+
+ <div class="layui-form">
+	<!-- <input type="checkbox" name="wzgl" title="网站管理"  > -->
+	 <input type="checkbox" name="lunbo"  title="轮播管理" >
+	   <input type="checkbox" name="shengben" title="升本管理" >
+	   <input type="checkbox" name="news" title="新闻管理" >
+	    <input type="checkbox" name="kecheng" title="课程中心" >
+		 <input type="checkbox" name="order" title="订单系统" >
+		  <input type="checkbox" name="webdata" title="网站数据" >
+		  <input type="checkbox" name="zhaoping" title="招聘管理" >
+		    <input type="checkbox" name="xitong" title="系统设置" >
+ </div>
+	<div class="button-btn">
+	
+	<button type="button" class="layui-btn layui-btn-primary submitrole">保存信息</button>	
+	</div>
+	
+	
+</div>
+<script type="text/javascript">
+
+	$(".submitrole").click(function(){
+	    var data=new Array();
+		$(".editrole .layui-form input[type='checkbox']:checked").each(function(){
+			 checked=$(this).attr('title');
+			data.push(checked);
+		});
+		console.log(JSON.stringify(data));
+		$.ajax({
+			type:'post', // 规定请求的类型（GET 或 POST）
+			url:'/login.php/newsad/userrole', // 请求的url地址
+			cache:false,// 否在缓存中读取数据的读取
+			dataType:'json', //预期的服务器响应的数据类型 
+			data:{
+				Id:trid,
+				data:JSON.stringify(data),
+				sign:'账号权限'
+			},//规定要发送到服务器的数据
+			success:function(res){
+				if(res.code==1){
+					layer.msg('保存成功！', {
+					                icon:1,
+					                shade: 0.05,
+					                time: 800
+					            },function(){
+									window.location.href='/login.php/admin/loadright?page=user';
+								});
+				}else if(res.code==0){
+					layer.msg('保存失败！', {
+					                icon:2,
+					                shade: 0.05,
+					                time: 800
+					            });
+					
+				}
+				
+			}
+		 }) //ajax
+		
+	})
+</script>
+
+<script type="text/javascript">
+	$(".layui-layer-close").click(function(){
+		alert('ss');
+	})
+</script>

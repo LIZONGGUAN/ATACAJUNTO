@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+
+	
+    <link rel="stylesheet" href="/static/page/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/static/page/css/style.css">
+    <link rel="stylesheet" href="/static/page/font/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/page/layui/css/layui.css">
+    <link rel="stylesheet" href="/static/page/css/media.css">
+    <script src="/static/page/js/jquery-1.10.2.min.js"></script>
+    <script src="/static/page/js/swiper-bundle.min.js"></script>
+    <script src="/static/page/layui/layui.js"></script>
+</head>
+<style>
+    @media screen and (max-width:640px) {
+        body header{
+            display: none;
+        }
+        body .page-img {
+            display: none;
+        }
+    }
+    header{
+        display: block;
+    }
+    .page-img {
+        display: block;
+    }
+</style>
+<body class="body-bg">
+
+ 
+    <div class="kong kong1"></div>
+    <div class="main">
+       <div class="order-info">
+            <ul class="order-ul1">
+                <li class="order-li1 display">
+                    <div>
+                        <p>{$languageObj['客户名称']['name_' . $language]}：</p><span>{$orderdata.0.name}</span>
+                    </div>
+                    <div>
+                        <p>{$languageObj['订单号码']['name_' . $language]}：</p><span>{$orderdata.0.trade}</span>
+                    </div>
+                    <div>
+                        <p>{$languageObj['下单时间']['name_' . $language]}：</p><span id="time">{$orderdata.0.trdate}</span>
+                    </div>
+                </li>
+                <li class="order-li1 display">
+                    <div>
+                        <p>{$languageObj['电话']['name_' . $language]}：</p><span>{$orderdata.0.phone}</span>
+                    </div>
+                 <!--   <div>
+                        <p>跟单员：</p><span>xxxxxxxxx</span>
+                    </div> -->
+                </li>
+                <li class="order-li1 display">
+                    <div>
+                        <!--<p>客户地址：</p>-->
+                        <span>{$orderdata.0.shouhuo}</span>
+                    </div>
+                </li>
+               <!-- <li class="order-li1 display">
+                    <div>
+                        <p>发货途径：</p><span>xxxxxxxxx</span>
+                    </div>
+                </li> -->
+                <li class="order-li1 display">
+                    <div>
+                        <p>{$languageObj['备注']['name_' . $language]}：</p><textarea class="beizhu">{$orderdata.0.beizhu}</textarea>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="order-product">
+            <div class="order-product-div">
+                <!--<div class="orderProd-item display">-->
+                <!--    <div class="orderprod-item-img">-->
+                <!--        <img src="/static/upload_img/admin/ico/20230116/b29549322c1afaa408d8bae13f63b511.png" alt="">-->
+                <!--    </div>-->
+                <!--    <ul class="orderProd-item-ul">-->
+                <!--        <h4> PELICULA DE VIDRO 3D , MOTOROLA LINHA </h4>-->
+                <!--        <li class="orderprod-item-li display">-->
+                <!--            <p>G6 PLAY</p>-->
+                <!--            <p>单价：R$<span>3</span></p>-->
+                <!--            <p>数量：<span>3</span></p>-->
+                <!--            <p>小计：R$<span>9</span></p>-->
+                <!--        </li>-->
+                <!--    </ul>-->
+                <!--</div>-->
+            </div>
+            <div class="order-button display">
+                <div class="order-button-text">
+                    {$languageObj['总计']['name_' . $language]}：R$<span class="priceall">{$orderdata.0.prisum}</span>
+                </div>
+                <!--<button id="cancel">取消</button>-->
+                <!--<button id="determine">确认提交</button>-->
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        var orderArr={$orderdata.0.buyarr};
+        var html='';
+        var orderHtml='';
+        for(var i = 0;i<orderArr.length;i++){
+            html+='<div class="orderProd-item display">';
+            html+='     <div class="orderprod-item-img">';
+            html+='         <img src="'+orderArr[i][1]+'" alt="">';
+            html+='     </div>';
+            html+='     <ul class="orderProd-item-ul">';
+            html+='         <h4>'+orderArr[i][0]+'</h4>';
+            html+='     </ul>';
+            html+='</div>';
+            $(".order-product-div").append(html);
+            html='';
+            for(var j=0;j<orderArr[i][2].length;j++){
+                orderHtml+='<li class="orderprod-item-li display">';
+                orderHtml+='    <p>'+orderArr[i][2][j][0]+'</p>';
+                orderHtml+=`    <p>{$languageObj['单价']['name_' . $language]}：R$<span>`+orderArr[i][2][j][1]+'</span></p>';
+                orderHtml+=`    <p>{$languageObj['数量']['name_' . $language]}：<span>`+orderArr[i][2][j][2]+'</span></p>';
+                orderHtml+=`    <p>{$languageObj['小计']['name_' . $language]}：R$<span>`+parseInt(orderArr[i][2][j][1])*parseInt(orderArr[i][2][j][2])+'</span></p>';
+                orderHtml+='</li>';
+                $(".orderProd-item").eq(i).find(".orderProd-item-ul").append(orderHtml);
+                orderHtml='';
+            }
+        }
+        
+       
+       $(document).ready(function(){
+           
+            window.print();
+       })
+       
+    </script>
+    <div class="kong"></div>
+
+  
+
+  
+
+    <script src="/static/page/js/scr.js"></script>
+</body>
+
+</html>

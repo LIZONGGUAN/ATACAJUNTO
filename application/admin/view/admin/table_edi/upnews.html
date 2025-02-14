@@ -1,0 +1,346 @@
+<style type="text/css">
+	.news{width: 100%;margin-top: 30px;height: auto;min-height:1550px;border: 1px solid gainsboro;}
+	#news_class{width: 80%;}
+	#news_class>span{color: #606266;font-size: 14px;width:100px;display: inline-block;text-align: center;min-width: 100px;}
+	#news_class>select{width: 80% ;display: inline-block;border:1px solid #dcdfe6;height:40px;padding-left: 10px;margin-left:-3px;margin-bottom: 20px;}
+	#news_title,#pics{width: 80%;}
+	#pics{margin-top: 20px;min-height: 50px;height: auto;}
+	#news_title>span,#pics>span{color: #606266;font-size: 14px;width:100px;display: inline-block;text-align: center;min-width: 100px;}
+	#news_title>input{width: 80% ;display: inline-block;border:1px solid #dcdfe6;height:30px;padding-left: 10px;}
+	#news_jianjie{width: 80%;margin-top:50px;}
+	#news_jianjie>span{color: #606266;font-size: 14px;width: 20%;;width:100px;display: inline-block;text-align: center;min-width: 100px;}
+	#news_jianjie>textarea{width: 80% ;display: inline-block;border:1px solid #dcdfe6;height:60px;padding-left: 10px;margin-top: -20px;}
+	#news_slt{width: 80%;margin:30px 0px;min-height: 100px;max-height: 250px;cursor: pointer;}
+	#news_slt>span{float: left;color: #606266;font-size: 14px;width: 20%;;width:100px;display: inline-block;text-align: center;min-width: 100px;}
+	#zx_img{opacity:0;width: 100px;height: 100px;;margin-top: -100px;z-index: 999;position: absolute;}
+	#img_preview,#slide-pc{/* margin-left: 100px;margin-top: -20px; */border:1px solid #dcdfe6}
+
+
+
+	/* #edui1140_iframeholder{height: 100%!important;} */
+	#news_sub{width: 80%;text-align:right;margin-top: 150px;height: 150px;margin-bottom: 0px;}
+	#news_submit{border: 0;width:100px;height:40px;color: white;background-color: rgba(0,150,136,1);border-radius:8px;cursor:pointer;margin-right: 10%;float: right;}
+	#news_time,#news_view,#news_sort{width: 80%;margin-top: 30px;}
+	#news_time>span,#news_view>span,#news_sort>span{color: #606266;font-size: 14px;;width:100px;display: inline-block;text-align: center;min-width: 100px;}
+	#news_time>input,#news_view>input,#news_sort>input{width: 80% ;display: inline-block;border:1px solid #dcdfe6;height:30px;padding-left: 10px;}
+	select{cursor: pointer;}
+</style>
+
+<div class="news">
+	<div class="headertip">
+	   <li>信息发布</li>	
+	</div>
+<div id="news_class">
+<span>信息分类：</span>	
+ <select name="" id="newsclass">
+	   
+	 	
+</select>
+<script  type="text/javascript" charset="utf-8">
+	$(document).ready(function(){
+	$.post("/login.php/newsad/newsTree",function(str) {
+		let htmlclass='';
+		console.log(str);
+		str.data.forEach(x=>{
+	
+	
+		htmlclass +='<option  value='+x.name+'>'+x.name+'</option>';
+	
+		});
+	$("#newsclass").html(htmlclass);
+	
+	});
+	
+	})
+	
+</script>  <!-- 文章class获取 -->
+</div>
+	
+<div id="news_title"><span>信息标题：</span><input type="text" name="news_title" id="news_tit" value="" placeholder="文章标题9个字内" /></div>
+<div id="news_slt"><span>缩略图：</span> <div style="float: left;"><img id="img_preview" src="/static/img/admin/news_slt.jpg"style="max-width: 300px;max-height: 120px"></div> 
+</div>
+<style>
+.layui-upload-img { width: 90px; height: 90px; margin: 0; }
+.pic-more { width:100%; left; margin: 10px 0px 0px 0px;}
+.pic-more li { width:90px; float: left; margin-right: 5px;}
+.pic-more li .layui-input { display: initial; }
+.pic-more li a { position: absolute; top: 0; display: block; }
+.pic-more li a i { font-size: 24px; background-color: #008800; }    
+#slide-pc-priview .item_img img{ width: 90px; height: 90px;}
+#slide-pc-priview li{position: relative;}
+#slide-pc-priview li .operate{ color: #000; display: none;}
+#slide-pc-priview li .toleft{ position: absolute;top: 40px; left: 1px; cursor:pointer;}
+#slide-pc-priview li .toright{ position: absolute;top: 40px; right: 1px;cursor:pointer;}
+#slide-pc-priview li .close{position: absolute;top: 5px; right: 5px;cursor:pointer;}
+#slide-pc-priview li:hover .operate{ display: block;}  
+ .pic-more>span{    float: left;
+    color: #606266;
+    font-size: 14px;
+    width: 20%;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+    min-width: 100px;} 
+  
+</style>
+<!-- <div class="layui-form-item" id="pics">
+  <span style="float: left;">相册图集：</span>  <button type="button" class="layui-btn layui-btn-primary " id="slide-pc">选择多图</button> 
+  <div class="layui-input-block" style="width: 100%;margin-left: 0px;">
+    <div class="layui-upload">
+    
+      <div class="pic-more">
+		  <span>&nbsp;</span>
+        <ul class="pic-more-upload-list" id="slide-pc-priview">
+        </ul>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<script type="text/javascript">
+	
+	// 多图上传
+layui.use('upload', function(){
+         var $ = layui.jquery;
+         var upload = layui.upload;            
+ upload.render({
+     elem: '#slide-pc',
+     url: '/login.php/admin/basicicoapi',// 多图上传
+     size: 500,
+     exts: 'jpg|png|jpeg',
+     multiple: true,
+     before: function(obj) {
+         layer.msg('图片上传中...', {
+                icon: 16,
+                shade: 0.01,
+                time: 0
+            })
+     },
+     done: function(res) {
+        layer.close(layer.msg());//关闭上传提示窗口
+         if(res.status == 0) {
+             return layer.msg(res.message);
+         }
+         //$('#slide-pc-priview').append('<input type="hidden" name="pc_src[]" value="' + res.filepath + '" />');
+         $('#slide-pc-priview').append('<li class="item_img"><div class="operate"><i class="toleft layui-icon"></i><i class="toright layui-icon"></i><i  class="close layui-icon"></i></div><img src="' + res.filepath + '" class="img" ><input type="hidden" name="pc_src[]" value="' + res.filepath + '" /></li>');
+     }
+ });
+});
+//点击多图上传的X,删除当前的图片    
+$("body").on("click",".close",function(){
+    $(this).closest("li").remove();
+  });
+ //多图上传点击<>左右移动图片
+  $("body").on("click",".pic-more ul li .toleft",function(){
+    var li_index=$(this).closest("li").index();
+    if(li_index>=1){
+      $(this).closest("li").insertBefore($(this).closest("ul").find("li").eq(Number(li_index)-1));
+    }
+  });
+  $("body").on("click",".pic-more ul li .toright",function(){
+    var li_index=$(this).closest("li").index();
+    $(this).closest("li").insertAfter($(this).closest("ul").find("li").eq(Number(li_index)+1));
+  });
+	
+	// 多图上传
+</script>
+<div id="news_jianjie"><span>信息描述：</span><textarea rows="10" cols="50" id="news_jj"></textarea></div>	
+
+<!-- 	
+<div id="news_view"><span>浏览数量:</span><input type="text" class="layui-input" id="view"></div>
+ -->
+<div id="news_time"><span>发布时间:</span><input type="text" class="layui-input" id="newstime"></div>
+
+<script>
+	var newstime='';
+layui.use('laydate', function(){
+  var laydate = layui.laydate;
+  
+  //执行一个laydate实例
+  laydate.render({
+    elem: '#newstime' //指定元素
+	,done: function(value, date, endDate){
+	  
+	    newstime=value;
+	  }
+  });
+});
+</script>
+
+<div id="news_sort"><span>信息排序:</span><input type="text" class="layui-input" id="newssort"></div>
+
+<div id="news_xq" style="    width: 100%;
+    margin-top: 30px;"><span style="color: #606266;
+    font-size: 14px;
+   
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+
+    min-width: 100px;
+    float: left;">信息详情页:</span><script id="editor" style=" 
+    height: 600px;
+    margin-bottom: 15px;
+    display: inline-block;
+    width: 90%;" type="text/plain" style=""></script></div>
+<div id="news_sub"><button type="button" id="news_submit" >提交保存</button></div>
+</div>
+
+<script type="text/javascript">
+	var news_slt="";
+	
+	$(function() {
+
+	UE.delEditor('editor');
+
+	var ue = UE.getEditor('editor', {
+	   scaleEnabled:true,//设置不自动调整高度
+	    autoFloatEnabled:false, //取消悬浮
+	});
+				
+				
+				}); 
+	
+	
+		// 利用layui来上传图片
+		layui.use('upload', function(){
+		  var upload = layui.upload;
+		   
+		  //执行实例
+		  var uploadInst = upload.render({
+		    elem: '#img_preview' //绑定元素
+		    ,url: '/login.php/admin/basicicoapi' //缩略图上传
+			,exts: 'jpg|png|jpeg'
+			,multiple: true
+			,number:5
+			,drag:true
+			,data:{
+				
+			}
+		    ,before:function(obj){
+				//预读本地文件示例，不支持ie8
+				    layer.msg('图片上传中...', {
+				                    icon:16,
+				                    shade: 0.05,
+				                    time: 500
+				                }); 
+					;}
+			,done: function(res){
+		      //上传完毕回调
+			 $('#img_preview').attr('src', res.filepath);
+			 //  console.log(res.filepath); //图片文件的路径
+			       news_slt=res.filepath;//赋值给photo 传给ajax丢数据
+				   
+		    }
+		    ,error: function(res){
+		      //请求异常回调
+		
+			  console.log(res);
+		    }
+		  });
+		});
+		
+		
+		// 利用layui来上传图片
+		$(function(){
+			
+			$("#news_submit").click(function(){
+				var newsclass=$("#newsclass").val();
+	            var newssort=$("#newssort").val();
+				var news_tit=$("#news_tit").val();
+				var news_jj=$("#news_jj").val();
+				var news_view=$("#view").val();
+				
+				var ziclass=$("#ziclass").val();
+				//新增
+				var jiage=$("#jiage").val();
+				var bianhao=$("#bianhao").val();
+				var daqu=$("#daqu").val();
+				var fuwuqi=$("#fuwuqi").val();
+				var leixing=$("#leixing").val();
+				var dengji=$("#dengji").val();
+				var xingbie=$("#xingbie").val();
+				var menpai=$("#menpai").val();
+				var shenshou=$("#shenshou").val();
+				var yijia=$("#yijia").val();
+				//新增
+			    //获取多图src
+				var si=0;//多图的数目
+				var srcimg=new Array();//创建JS数组
+				$("#slide-pc-priview img").each(function(){
+					src=$(this).attr("src");
+					srcimg[si]=src;
+					si++;
+				  
+				})  //多图链接一条记录存储，前端用逗号分割循环输出。
+					
+				var editor=UE.getEditor('editor').getContent();
+				$.ajax({
+					type:'POST', // 规定请求的类型（GET 或 POST）
+					url:'/login.php/newsad/upnews?formname={$formname}', // 请求的url地址
+					cache:true,// 否在缓存中读取数据的读取
+					dataType:'json', //预期的服务器响应的数据类型 
+					data:{
+						 news_tit:news_tit,
+						 news_jj:news_jj,
+						 editor:editor,
+						 news_slt:news_slt,
+						 newsclass:newsclass,
+						 newstime:newstime,
+						 news_view:news_view,
+						 newssort:newssort,
+						 ziclass:ziclass,
+						 srcimg:srcimg,
+						 jiage:jiage,//新增字段
+						 bianhao:bianhao,
+						 daqu:daqu,
+						 fuwuqi:fuwuqi,
+						 leixing:leixing,
+						 dengji:dengji,
+						 xingbie:xingbie,
+						 menpai:menpai,
+						 shenshou:shenshou,
+						 yijia:yijia//新增字段
+					},//规定要发送到服务器的数据
+					
+					success: function(res){ // 当请求成功时运行的函数
+						 console.log(res) ; 
+						// news_slt=null;
+						if(res.code==1){
+							layer.msg('文章保存中...', {
+														icon: 16,
+														shade: 0.05,
+														time: 1000
+													}, function() {
+							window.location.href="/login.php/admin/loadright?page=newslist";
+													});
+							
+						}else{
+							
+							layer.msg('保存失败！', {
+							                icon:2,
+							                shade: 0.05,
+							                time: 800
+							            });
+						}
+						
+					
+						
+						
+						
+					},
+					error:function(result){ //失败的函数
+							alert('接口请求失败！');
+							console.log(result);
+							
+							
+					}
+					
+				})
+				
+				
+			})
+			
+		})
+	
+</script>

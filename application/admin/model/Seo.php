@@ -1,0 +1,21 @@
+<?php
+namespace app\admin\model;
+use think\Model;
+
+
+class Seo extends Model {
+
+public function findseo(){
+	
+	    $seores= $this->order('id','asc')->where('Id',1)->select();
+		
+	
+		return   $seores;
+	
+}
+
+
+} //class
+
+
+?>
